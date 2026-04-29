@@ -159,5 +159,21 @@
 
 </deck-stage>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { TweaksPanel, EditModeTools } = window;
+
+function App() {
+  return (
+    <TweaksPanel title="Tweaks · Edición">
+      <EditModeTools resourcesPath='../../recursos' />
+    </TweaksPanel>
+  );
+}
+
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);
+</script>
+
 </body>
 </html>

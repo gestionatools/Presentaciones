@@ -479,7 +479,7 @@ const ARCHIVO_TWEAKS = /*EDITMODE-BEGIN*/{
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel">
 const { useEffect } = React;
-const { TweaksPanel, useTweaks, TweakSection, TweakRadio, TweakToggle } = window;
+const { TweaksPanel, useTweaks, TweakSection, TweakRadio, TweakToggle, EditModeTools } = window;
 
 function App() {
   const [tweaks, setTweak] = useTweaks(ARCHIVO_TWEAKS);
@@ -531,6 +531,7 @@ function App() {
           onChange={(v) => setTweak('showNorms', v)}
         />
       </TweakSection>
+      <EditModeTools resourcesPath='../../recursos' />
     </TweaksPanel>
   );
 }

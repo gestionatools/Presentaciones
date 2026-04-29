@@ -1,5 +1,16 @@
 # Log de cambios
 
+## v2.12.0 - 2026-04-29
+- Se incorporó un **MODO EDICIÓN** reutilizable en `tweaks-panel.jsx` (aplicado en `ARCHIVO/`, `Archivo 2/` y `Configuracion procesos - Gestiona/`) con capacidades de:
+  - seleccionar elementos en slide,
+  - sustituir imágenes con recursos de `recursos/`,
+  - editar texto seleccionado,
+  - eliminar objetos seleccionados,
+  - añadir imágenes nuevas al slide activo.
+- Se añadió la sección `EditModeTools` en los paneles React de `ARCHIVO/Archivo electronico - Gestiona.html` y `Archivo 2/Archivo electronico - Gestiona.html` para habilitar edición directa desde el panel.
+- Se integró un panel de tweaks mínimo en `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` para activar el MODO EDICIÓN también en esta presentación.
+- Consolidación de versión de la app: **v2.12.0**.
+
 ## v2.11.0 - 2026-04-29
 - En la diapositiva de **Flujo y lógicas de tramitación** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se sustituyeron los iconos del primer pantallazo por recursos gráficos locales según la correspondencia solicitada:
   - **Fases resolutorias** → `recursos/resolucion.png`

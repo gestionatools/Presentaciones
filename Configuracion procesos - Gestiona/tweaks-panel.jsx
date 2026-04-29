@@ -418,8 +418,107 @@ function TweakButton({ label, onClick, secondary = false }) {
   );
 }
 
+
+
+function EditModeTools({ resourcesPath = '../../recursos' }) {
+  const [selected, setSelected] = React.useState(null);
+  const [newImage, setNewImage] = React.useState('');
+  const [textDraft, setTextDraft] = React.useState('');
+
+  React.useEffect(() => {
+    const mark = (node) => {
+      if (!node || node.dataset?.editBound === '1') return;
+      node.dataset.editBound = '1';
+      node.style.cursor = 'pointer';
+      node.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setSelected(node);
+        setTextDraft(node.textContent || '');
+        document.querySelectorAll('[data-edit-selected="1"]').forEach((n) => {
+          n.dataset.editSelected = '0';
+          n.style.outline = '';
+        });
+        node.dataset.editSelected = '1';
+        node.style.outline = '2px dashed #0ea5e9';
+      });
+    };
+
+    document.querySelectorAll('deck-stage section img, deck-stage section p, deck-stage section h1, deck-stage section h2, deck-stage section h3, deck-stage section li, deck-stage section span, deck-stage section b').forEach(mark);
+
+    return () => {
+      document.querySelectorAll('[data-edit-selected="1"]').forEach((n) => {
+        n.dataset.editSelected = '0';
+        n.style.outline = '';
+      });
+    };
+  }, []);
+
+  const applyText = () => {
+    if (!selected) return;
+    selected.textContent = textDraft;
+  };
+
+  const replaceImage = () => {
+    if (!selected || selected.tagName !== 'IMG' || !newImage) return;
+    selected.src = `${resourcesPath}/${newImage}`;
+  };
+
+  const removeSelected = () => {
+    if (!selected) return;
+    const target = selected;
+    setSelected(null);
+    target.remove();
+  };
+
+  const addImage = () => {
+    if (!newImage) return;
+    const slide = document.querySelector('deck-stage section[data-deck-active]');
+    if (!slide) return;
+    const img = document.createElement('img');
+    img.src = `${resourcesPath}/${newImage}`;
+    img.alt = newImage;
+    img.style.maxWidth = '320px';
+    img.style.maxHeight = '220px';
+    img.style.position = 'absolute';
+    img.style.left = '60px';
+    img.style.top = '60px';
+    slide.appendChild(img);
+  };
+
+  const files = [
+    'modelo-datos.svg','agentes.svg','tareas.svg','configuración.png','icono-documentos.svg','icono-tramites.svg','icono-pdf.svg','resolucion.png','flujograma.png','automatización.png','logo-gestiona.svg','Gestiona-PANTONE.svg'
+  ];
+
+  return (
+    <>
+      <TweakSection label="Modo edición" />
+      <TweakText
+        label="Texto"
+        value={textDraft}
+        placeholder="Selecciona un texto"
+        onChange={setTextDraft}
+      />
+      <div className="twk-row twk-row-h">
+        <TweakButton label="Aplicar texto" onClick={applyText} />
+        <TweakButton label="Eliminar" secondary onClick={removeSelected} />
+      </div>
+      <TweakSelect
+        label="Recurso imagen"
+        value={newImage}
+        options={[{ value: '', label: 'Selecciona recurso…' }, ...files.map((f) => ({ value: f, label: f }))]}
+        onChange={setNewImage}
+      />
+      <div className="twk-row twk-row-h">
+        <TweakButton label="Sustituir imagen" onClick={replaceImage} />
+        <TweakButton label="Añadir imagen" secondary onClick={addImage} />
+      </div>
+    </>
+  );
+}
+
 Object.assign(window, {
   useTweaks, TweaksPanel, TweakSection, TweakRow,
   TweakSlider, TweakToggle, TweakRadio, TweakSelect,
-  TweakText, TweakNumber, TweakColor, TweakButton,
+  TweakText, TweakNumber, TweakColor, TweakButton, EditModeTools,
 });
