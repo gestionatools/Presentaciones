@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.15.0';
+const APP_VERSION = 'v2.16.0';
 
 const presentations = [
   {
@@ -199,3 +199,86 @@ presentations.forEach((deck) => {
 
   container.appendChild(article);
 });
+
+
+const presentajsonInput = document.getElementById('presentaJsonInput');
+const importPresentaJsonBtn = document.getElementById('importPresentaJsonBtn');
+
+function isPresentaJsonPayload(payload) {
+  return Boolean(
+    payload &&
+    payload.format === 'presentajson' &&
+    payload.document &&
+    typeof payload.document.headHtml === 'string' &&
+    typeof payload.document.bodyHtml === 'string'
+  );
+}
+
+function renderImportedPresentaJson(payload) {
+  const title = payload.document.title || 'Presentación importada';
+  const lang = payload.document.lang || 'es';
+  const runtime = '<script>window.__presentaJsonImported=true;<\/script>';
+  const html = `<!doctype html>
+<html lang="${lang}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>${title}</title>
+${payload.document.headHtml}
+${runtime}
+</head>
+<body>
+${payload.document.bodyHtml}
+</body>
+</html>`;
+
+  const importedWindow = window.open('', '_blank', 'noopener,noreferrer');
+  if (!importedWindow) {
+    throw new Error('El navegador bloqueó la ventana emergente para la importación.');
+  }
+
+  importedWindow.document.open();
+  importedWindow.document.write(html);
+  importedWindow.document.close();
+}
+
+async function importPresentaJsonFile(file) {
+  const content = await file.text();
+  const payload = JSON.parse(content);
+
+  if (!isPresentaJsonPayload(payload)) {
+    throw new Error('El archivo no cumple el formato PresentaJSON esperado.');
+  }
+
+  renderImportedPresentaJson(payload);
+}
+
+if (importPresentaJsonBtn && presentajsonInput) {
+  importPresentaJsonBtn.addEventListener('click', async () => {
+    const file = presentajsonInput.files?.[0];
+    if (!file) {
+      importPresentaJsonBtn.textContent = 'Selecciona archivo';
+      setTimeout(() => {
+        importPresentaJsonBtn.textContent = 'Abrir importado';
+      }, 1200);
+      return;
+    }
+
+    const originalText = importPresentaJsonBtn.textContent;
+    importPresentaJsonBtn.disabled = true;
+    importPresentaJsonBtn.textContent = 'Importando...';
+
+    try {
+      await importPresentaJsonFile(file);
+      importPresentaJsonBtn.textContent = 'Importado ✅';
+    } catch (error) {
+      console.error(error);
+      importPresentaJsonBtn.textContent = 'Importación fallida';
+    } finally {
+      setTimeout(() => {
+        importPresentaJsonBtn.textContent = originalText;
+        importPresentaJsonBtn.disabled = false;
+      }, 1600);
+    }
+  });
+}

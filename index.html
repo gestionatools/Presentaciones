@@ -11,7 +11,12 @@
     <header class="hero">
       <img src="recursos/brand-wave.svg" alt="Decoración" class="hero__bg" />
       <h1>Centro de Presentaciones</h1>
-      <p>Selecciona una presentación para abrirla en una nueva pestaña.</p>
+      <p>Selecciona una presentación para abrirla en una nueva pestaña o importa un archivo PresentaJSON autónomo.</p>
+      <div class="importer">
+        <label for="presentaJsonInput" class="importer__label">Importar PresentaJSON</label>
+        <input id="presentaJsonInput" class="importer__input" type="file" accept=".json,.presentajson" />
+        <button id="importPresentaJsonBtn" class="btn btn--ghost" type="button">Abrir importado</button>
+      </div>
     </header>
 
     <section>

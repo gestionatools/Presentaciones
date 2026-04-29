@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.16.0 - 2026-04-29
+- Se añadió en `index.html` un bloque de importación de archivos **PresentaJSON** con selector de archivo y acción explícita **"Abrir importado"**.
+- Se implementó en `app.js` un importador de PresentaJSON autónomo que valida estructura mínima (`format`, `document.headHtml`, `document.bodyHtml`) y renderiza la presentación en una nueva pestaña sin depender de rutas externas del repositorio.
+- Se actualizaron estilos en `recursos/app.css` para soportar la nueva interfaz de importación manteniendo coherencia visual con la portada.
+- Consolidación de versión de la app: **v2.16.0**.
+
 ## v2.15.0 - 2026-04-29
 - Se añadió en la app lanzadora (`index.html` + `app.js`) la funcionalidad de exportación completa por presentación a formato **presentajson** mediante un botón **"Exportar PresentaJSON"** en cada tarjeta.
 - La exportación serializa estructura HTML (head/body), estilos inline, hojas CSS externas (con contenido cuando es accesible), scripts inline/externos y un inventario de assets multimedia referenciados, con metadatos de origen y fecha de exportación.

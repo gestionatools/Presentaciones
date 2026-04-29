@@ -97,3 +97,23 @@ body {
   margin-top: 1.5rem;
   opacity: .8;
 }
+
+.importer {
+  margin-top: .9rem;
+  display: flex;
+  gap: .55rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.importer__label {
+  font-weight: 600;
+}
+
+.importer__input {
+  color: var(--text);
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: .36rem .45rem;
+}
