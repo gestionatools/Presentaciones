@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.16.0';
+const APP_VERSION = 'v2.17.0';
 
 const presentations = [
   {
@@ -46,6 +46,78 @@ async function fetchTextSafe(url) {
   }
 }
 
+async function fetchBinaryAsDataUrl(url) {
+  try {
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+      return { ok: false, status: response.status, dataUrl: null };
+    }
+    const blob = await response.blob();
+    const dataUrl = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+    return { ok: true, status: response.status, dataUrl: typeof dataUrl === 'string' ? dataUrl : null };
+  } catch (error) {
+    return { ok: false, status: 0, dataUrl: null, error: String(error) };
+  }
+}
+
+async function inlineMediaSources(doc, htmlUrl) {
+  const sourceNodes = Array.from(doc.querySelectorAll('[src]'));
+  const linkAssetNodes = Array.from(doc.querySelectorAll('link[rel~="icon"], link[rel="preload"][as="image"]'));
+  const styleNodes = Array.from(doc.querySelectorAll('[style]'));
+  const report = [];
+
+  for (const node of sourceNodes) {
+    const src = node.getAttribute('src');
+    if (!src || src.startsWith('data:') || src.startsWith('blob:')) continue;
+    const absoluteSrc = toAbsoluteUrl(src, htmlUrl);
+    if (!absoluteSrc) continue;
+    const binary = await fetchBinaryAsDataUrl(absoluteSrc);
+    if (binary.ok && binary.dataUrl) {
+      node.setAttribute('src', binary.dataUrl);
+    }
+    report.push({ attr: 'src', original: src, inlined: Boolean(binary.ok && binary.dataUrl) });
+  }
+
+  for (const node of linkAssetNodes) {
+    const href = node.getAttribute('href');
+    if (!href || href.startsWith('data:') || href.startsWith('blob:')) continue;
+    const absoluteHref = toAbsoluteUrl(href, htmlUrl);
+    if (!absoluteHref) continue;
+    const binary = await fetchBinaryAsDataUrl(absoluteHref);
+    if (binary.ok && binary.dataUrl) {
+      node.setAttribute('href', binary.dataUrl);
+    }
+    report.push({ attr: 'href', original: href, inlined: Boolean(binary.ok && binary.dataUrl) });
+  }
+
+  for (const node of styleNodes) {
+    const styleValue = node.getAttribute('style') || '';
+    const matches = [...styleValue.matchAll(/url\((['"]?)([^'")]+)\1\)/g)];
+    let nextStyle = styleValue;
+    for (const match of matches) {
+      const candidate = match[2];
+      if (!candidate || candidate.startsWith('data:') || candidate.startsWith('blob:')) continue;
+      const absoluteCandidate = toAbsoluteUrl(candidate, htmlUrl);
+      if (!absoluteCandidate) continue;
+      const binary = await fetchBinaryAsDataUrl(absoluteCandidate);
+      if (binary.ok && binary.dataUrl) {
+        nextStyle = nextStyle.replace(match[0], `url("${binary.dataUrl}")`);
+      }
+      report.push({ attr: 'style:url()', original: candidate, inlined: Boolean(binary.ok && binary.dataUrl) });
+    }
+    if (nextStyle !== styleValue) {
+      node.setAttribute('style', nextStyle);
+    }
+  }
+
+  return report;
+}
+
 async function buildPresentaJson(deck) {
   const htmlUrl = toAbsoluteUrl(deck.path, window.location.href);
   const htmlResult = await fetchTextSafe(htmlUrl);
@@ -56,6 +128,7 @@ async function buildPresentaJson(deck) {
 
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlResult.content, 'text/html');
+  const autonomousDoc = parser.parseFromString(htmlResult.content, 'text/html');
 
   const styleNodes = Array.from(doc.querySelectorAll('link[rel="stylesheet"]'));
   const inlineStyles = Array.from(doc.querySelectorAll('style')).map((node, index) => ({
@@ -77,6 +150,16 @@ async function buildPresentaJson(deck) {
       };
     })
   );
+
+  externalStyles.forEach((style) => {
+    if (!style.href || !style.loaded || !style.content) return;
+    const linkNode = autonomousDoc.querySelector(`link[rel="stylesheet"][href="${CSS.escape(style.href)}"]`);
+    if (!linkNode) return;
+    const styleTag = autonomousDoc.createElement('style');
+    styleTag.setAttribute('data-origin-href', style.href);
+    styleTag.textContent = style.content;
+    linkNode.replaceWith(styleTag);
+  });
 
   const scriptNodes = Array.from(doc.querySelectorAll('script'));
   const scripts = await Promise.all(
@@ -104,6 +187,22 @@ async function buildPresentaJson(deck) {
     })
   );
 
+  scripts.forEach((script) => {
+    if (script.type !== 'external' || !script.src) return;
+    const scriptNode = autonomousDoc.querySelector(`script[src="${CSS.escape(script.src)}"]`);
+    if (!scriptNode) return;
+    if (script.loaded && script.content) {
+      const inlineScript = autonomousDoc.createElement('script');
+      inlineScript.setAttribute('data-origin-src', script.src);
+      inlineScript.textContent = script.content;
+      scriptNode.replaceWith(inlineScript);
+      return;
+    }
+    scriptNode.remove();
+  });
+
+  const embeddedAssetsReport = await inlineMediaSources(autonomousDoc, htmlUrl);
+
   const mediaSelectors = ['img[src]', 'video[src]', 'audio[src]', 'source[src]'];
   const mediaAssets = Array.from(doc.querySelectorAll(mediaSelectors.join(','))).map((node) => {
     const src = node.getAttribute('src') || '';
@@ -130,21 +229,23 @@ async function buildPresentaJson(deck) {
     document: {
       title: doc.title,
       lang: doc.documentElement.lang || 'es',
-      headHtml: doc.head?.innerHTML || '',
-      bodyHtml: doc.body?.innerHTML || ''
+      headHtml: autonomousDoc.head?.innerHTML || '',
+      bodyHtml: autonomousDoc.body?.innerHTML || ''
     },
     styles: {
       external: externalStyles,
       inline: inlineStyles
     },
     scripts,
-    assets: {
-      media: mediaAssets
-    },
     notes: [
-      'El bodyHtml conserva estructura y atributos para reproducir clases, animaciones y efectos CSS.',
-      'Los estilos y scripts externos se serializan con su contenido cuando la carga es exitosa.'
+      'El PresentaJSON exportado es autónomo: sustituye hojas de estilo y scripts externos por contenido inline cuando están disponibles.',
+      'Los assets multimedia y referencias visuales compatibles se convierten a data URLs para evitar dependencias de GitHub o rutas remotas.',
+      'Si un recurso externo no fue accesible durante la exportación, quedará marcado en "assets.embeddingReport" como no incrustado.'
     ],
+    assets: {
+      media: mediaAssets,
+      embeddingReport: embeddedAssetsReport
+    },
     exportFileName: `${presentationName}.presentajson.json`
   };
 }
