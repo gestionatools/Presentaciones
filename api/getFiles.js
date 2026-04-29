@@ -17,6 +17,27 @@ function githubHeaders() {
   };
 }
 
+function buildPresentations(files) {
+  const map = new Map();
+  files.forEach((f) => {
+    const chunks = f.path.split('/');
+    if (chunks.length < 2) return;
+    const folder = chunks[0];
+    if (/_v\d+$/i.test(folder)) return;
+    const item = map.get(folder) || { name: folder, files: [] };
+    item.files.push(f.path);
+    map.set(folder, item);
+  });
+
+  return Array.from(map.values())
+    .map((p) => ({
+      ...p,
+      files: p.files.sort(),
+      mainFile: p.files.find((x) => x.toLowerCase().endsWith('.html')) || p.files[0],
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   try {
@@ -25,8 +46,11 @@ export default async function handler(req, res) {
     const response = await fetch(url, { headers: githubHeaders() });
     const data = await response.json();
     if (!response.ok) return res.status(response.status).json({ error: data.message || 'Error GitHub API' });
+
     const files = (data.tree || []).filter((f) => f.type === 'blob' && /\.(html|css|js)$/i.test(f.path));
-    return res.status(200).json({ files });
+    const presentations = buildPresentations(files);
+
+    return res.status(200).json({ files, presentations });
   } catch (error) {
     return res.status(500).json({ error: error.message || 'Error interno' });
   }

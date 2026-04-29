@@ -7,6 +7,33 @@ const headers = () => ({
 });
 const repoBase = () => `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}`;
 
+async function getTree() {
+  const resp = await fetch(`${repoBase()}/git/trees/${process.env.GITHUB_BRANCH}?recursive=1`, { headers: headers() });
+  const data = await resp.json();
+  if (!resp.ok) throw new Error(data.message || 'No se pudo leer árbol');
+  return data.tree || [];
+}
+
+function buildVersionedPath(path, tree) {
+  const parts = path.split('/');
+  if (parts.length < 2) return path;
+  const baseFolder = parts[0];
+  const rest = parts.slice(1).join('/');
+  const regex = new RegExp(`^${baseFolder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}_v(\\d+)$`, 'i');
+  const versions = new Set();
+
+  tree.forEach((node) => {
+    if (!node.path) return;
+    const root = node.path.split('/')[0];
+    const match = root.match(regex);
+    if (match) versions.add(Number(match[1]));
+  });
+
+  const next = versions.size ? Math.max(...versions) + 1 : 1;
+  const padded = String(next).padStart(3, '0');
+  return `${baseFolder}_v${padded}/${rest}`;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { path, content, message } = req.body || {};
@@ -16,24 +43,28 @@ export default async function handler(req, res) {
     const missing = required.filter((key) => !process.env[key]);
     if (missing.length) throw new Error(`Faltan variables de entorno: ${missing.join(', ')}`);
 
-    const currentResp = await fetch(`${repoBase()}/contents/${encodeURIComponent(path)}?ref=${process.env.GITHUB_BRANCH}`, { headers: headers() });
-    const currentData = await currentResp.json();
-    if (!currentResp.ok) return res.status(currentResp.status).json({ error: currentData.message || 'No se pudo leer archivo' });
+    const tree = await getTree();
+    const versionedPath = buildVersionedPath(path, tree);
 
-    const updateResp = await fetch(`${repoBase()}/contents/${encodeURIComponent(path)}`, {
+    const createResp = await fetch(`${repoBase()}/contents/${encodeURIComponent(versionedPath)}`, {
       method: 'PUT',
       headers: headers(),
       body: JSON.stringify({
-        message: message || `Update ${path} from editor`,
+        message: message || `Create version for ${path}`,
         content: Buffer.from(content, 'utf-8').toString('base64'),
-        sha: currentData.sha,
         branch: process.env.GITHUB_BRANCH,
       }),
     });
-    const updateData = await updateResp.json();
-    if (!updateResp.ok) return res.status(updateResp.status).json({ error: updateData.message || 'No se pudo guardar' });
 
-    return res.status(200).json({ ok: true, sha: updateData.content.sha, commit: updateData.commit.sha });
+    const createData = await createResp.json();
+    if (!createResp.ok) return res.status(createResp.status).json({ error: createData.message || 'No se pudo guardar versión' });
+
+    return res.status(200).json({
+      ok: true,
+      sha: createData.content.sha,
+      commit: createData.commit.sha,
+      versionedPath,
+    });
   } catch (error) {
     return res.status(500).json({ error: error.message || 'Error interno' });
   }

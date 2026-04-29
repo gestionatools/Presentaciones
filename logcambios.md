@@ -139,3 +139,12 @@
 - Se corrigió el enrutado en `vercel.json` para evitar el error 404 NOT_FOUND al abrir `/public/editor`.
 - Se añadieron reescrituras de compatibilidad para `/public/editor`, `/public/editor.html`, `/public/index` y `/public/index.html`.
 - Se actualizó el enlace principal en `public/index.html` para usar `/editor` como ruta canónica y se documentó la ruta de compatibilidad.
+
+## v1.1.0 - 2026-04-29
+- Se añadió modo **Visualización** en el editor para ver presentaciones existentes en carpetas del repositorio.
+- Se añadió selector de presentación para navegar por carpetas y listar archivos asociados.
+- En modo visualización, el iframe carga la presentación principal (`.html`) de la carpeta seleccionada.
+- Se reforzó el modo **Edición** para permitir editar archivos existentes con Monaco y preview en vivo.
+- Se cambió la lógica de guardado: ahora cada guardado crea una nueva carpeta versionada (`<carpeta>_v001`, `<carpeta>_v002`, ...), conservando la ruta interna del archivo editado.
+- `api/getFiles.js` ahora devuelve además estructura de presentaciones agrupadas por carpeta.
+- `README.md` actualizado con el nuevo flujo de visualización + versionado.
