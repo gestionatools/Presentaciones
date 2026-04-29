@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.17.0';
+const APP_VERSION = 'v2.18.0';
 
 const presentations = [
   {
@@ -305,10 +305,20 @@ presentations.forEach((deck) => {
 const presentajsonInput = document.getElementById('presentaJsonInput');
 const importPresentaJsonBtn = document.getElementById('importPresentaJsonBtn');
 
+function normalizeFormatValue(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+}
+
 function isPresentaJsonPayload(payload) {
+  const format = normalizeFormatValue(payload?.format);
+  const hasValidFormat = ['presentajson', 'presentajson'].includes(format);
+
   return Boolean(
     payload &&
-    payload.format === 'presentajson' &&
+    hasValidFormat &&
     payload.document &&
     typeof payload.document.headHtml === 'string' &&
     typeof payload.document.bodyHtml === 'string'
@@ -319,12 +329,17 @@ function renderImportedPresentaJson(payload) {
   const title = payload.document.title || 'Presentación importada';
   const lang = payload.document.lang || 'es';
   const runtime = '<script>window.__presentaJsonImported=true;<\/script>';
+  const sourceUrl = payload?.source?.url || payload?.source?.path || '';
+  const baseHref = toAbsoluteUrl(sourceUrl, window.location.href) || window.location.href;
+  const safeBaseHref = baseHref.replace(/"/g, '&quot;');
+
   const html = `<!doctype html>
 <html lang="${lang}">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
+<base href="${safeBaseHref}" />
 ${payload.document.headHtml}
 ${runtime}
 </head>
