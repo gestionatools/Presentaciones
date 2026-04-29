@@ -34,3 +34,8 @@ Aplicación web para gestionar presentaciones existentes del repo con dos modos:
 4. **Edición**: abrir un archivo, editar en Monaco y previsualizar en vivo.
 5. Guardar: el backend crea una carpeta versionada (`<carpeta>_v001`, `_v002`, etc.) y guarda allí el archivo editado.
 6. El commit en GitHub dispara redeploy automático en Vercel.
+
+## Compatibilidad de carga de presentaciones
+
+- Si existen variables GitHub configuradas, el editor carga archivos desde GitHub API.
+- Si no existen variables GitHub, el editor cae automáticamente a lectura desde filesystem del proyecto para no perder la visualización de presentaciones existentes.

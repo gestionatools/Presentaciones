@@ -148,3 +148,9 @@
 - Se cambió la lógica de guardado: ahora cada guardado crea una nueva carpeta versionada (`<carpeta>_v001`, `<carpeta>_v002`, ...), conservando la ruta interna del archivo editado.
 - `api/getFiles.js` ahora devuelve además estructura de presentaciones agrupadas por carpeta.
 - `README.md` actualizado con el nuevo flujo de visualización + versionado.
+
+## v1.1.1 - 2026-04-29
+- Se recuperó la funcionalidad de carga de presentaciones en el selector cuando no hay variables GitHub configuradas.
+- `api/getFiles.js` ahora usa doble origen: GitHub API (si hay credenciales) o escaneo de filesystem del proyecto (fallback).
+- `api/getFile.js` también incorpora fallback a filesystem para poder abrir archivos de presentaciones locales y visualizarlos/editarlos.
+- Se añadió normalización y validación de rutas en lectura de archivo para evitar rutas inválidas.
