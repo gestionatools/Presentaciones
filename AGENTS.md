@@ -10,7 +10,6 @@ Al diseñar o rediseñar cualquier presentación dentro de este repositorio, sig
    - uso moderado de color,
    - composiciones limpias,
    - equilibrio entre texto y elementos visuales.
-4. **Usar animaciones sencillas y elegantes**, evitando efectos recargados o distractores.
 5. **Mantener un tono moderno** en titulares, textos de apoyo y enfoque visual.
 
 ## Criterios de coherencia visual
