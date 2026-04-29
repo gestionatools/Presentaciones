@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.1.1 - 2026-04-29
+- Se corrigió la lógica visual de animaciones en `Configuracion procesos - Gestiona/styles-config.css` para que el contenido también se renderice cuando el slide activo usa el atributo `data-deck-active` (mecanismo real de `deck-stage.js`).
+- Se actualizaron los selectores de estado activo/inactivo (`.anim`, `.draw`, `.grow`, `.pulse`, `.drift`, `.spin`) para evitar que el texto y bloques queden en `opacity: 0` en todas las diapositivas.
+- Resultado: vuelve a verse el contenido completo de las diapositivas en la presentación de Configuración de procesos.
+
 ## v2.0.0 - 2026-04-29
 - Se creó una copia independiente de la presentación base en `Archivo 2/`.
 - En la Slide 1 se eliminó el texto "Módulo formativo".

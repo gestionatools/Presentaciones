@@ -186,38 +186,52 @@ deck-stage section {
 }
 
 /* Slide enter — al activarse, los hijos animan en cascada */
-deck-stage section.is-active .anim {
+deck-stage section.is-active .anim,
+deck-stage section[data-deck-active] .anim {
   animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-deck-stage section:not(.is-active) .anim { opacity: 0; }
+deck-stage section:not(.is-active):not([data-deck-active]) .anim { opacity: 0; }
 
-deck-stage section.is-active .anim-1 { animation-delay: 0.08s; }
-deck-stage section.is-active .anim-2 { animation-delay: 0.18s; }
-deck-stage section.is-active .anim-3 { animation-delay: 0.30s; }
-deck-stage section.is-active .anim-4 { animation-delay: 0.42s; }
-deck-stage section.is-active .anim-5 { animation-delay: 0.54s; }
-deck-stage section.is-active .anim-6 { animation-delay: 0.66s; }
-deck-stage section.is-active .anim-7 { animation-delay: 0.78s; }
-deck-stage section.is-active .anim-8 { animation-delay: 0.90s; }
+deck-stage section.is-active .anim-1,
+deck-stage section[data-deck-active] .anim-1 { animation-delay: 0.08s; }
+deck-stage section.is-active .anim-2,
+deck-stage section[data-deck-active] .anim-2 { animation-delay: 0.18s; }
+deck-stage section.is-active .anim-3,
+deck-stage section[data-deck-active] .anim-3 { animation-delay: 0.30s; }
+deck-stage section.is-active .anim-4,
+deck-stage section[data-deck-active] .anim-4 { animation-delay: 0.42s; }
+deck-stage section.is-active .anim-5,
+deck-stage section[data-deck-active] .anim-5 { animation-delay: 0.54s; }
+deck-stage section.is-active .anim-6,
+deck-stage section[data-deck-active] .anim-6 { animation-delay: 0.66s; }
+deck-stage section.is-active .anim-7,
+deck-stage section[data-deck-active] .anim-7 { animation-delay: 0.78s; }
+deck-stage section.is-active .anim-8,
+deck-stage section[data-deck-active] .anim-8 { animation-delay: 0.90s; }
 
-deck-stage section.is-active .draw {
+deck-stage section.is-active .draw,
+deck-stage section[data-deck-active] .draw {
   animation: drawLine 1.6s 0.4s ease-out both;
 }
-deck-stage section:not(.is-active) .draw { stroke-dashoffset: var(--len, 1000); }
+deck-stage section:not(.is-active):not([data-deck-active]) .draw { stroke-dashoffset: var(--len, 1000); }
 
-deck-stage section.is-active .grow {
+deck-stage section.is-active .grow,
+deck-stage section[data-deck-active] .grow {
   transform-origin: bottom;
   animation: growBar 0.9s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
-deck-stage section:not(.is-active) .grow { transform: scaleY(0); transform-origin: bottom; }
+deck-stage section:not(.is-active):not([data-deck-active]) .grow { transform: scaleY(0); transform-origin: bottom; }
 
-deck-stage section.is-active .pulse {
+deck-stage section.is-active .pulse,
+deck-stage section[data-deck-active] .pulse {
   animation: pulse 2.4s 1s ease-in-out infinite;
 }
-deck-stage section.is-active .drift {
+deck-stage section.is-active .drift,
+deck-stage section[data-deck-active] .drift {
   animation: drift 4s 0.5s ease-in-out infinite;
 }
-deck-stage section.is-active .spin {
+deck-stage section.is-active .spin,
+deck-stage section[data-deck-active] .spin {
   animation: spin 18s linear infinite;
 }
 
