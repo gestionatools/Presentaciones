@@ -1,5 +1,15 @@
 # Log de cambios
 
+## v2.13.0 - 2026-04-29
+- Se añadió un botón flotante visible **“Entrar en modo edición”** en las presentaciones que usan `tweaks-panel.jsx`, para poder activar la edición sin depender de atajos o integraciones externas.
+- Se evolucionó el MODO EDICIÓN a un flujo más visual:
+  - activación/desactivación explícita de **Edición visual**,
+  - selección con resaltado,
+  - **drag & drop** de elementos seleccionados en la slide activa,
+  - **resize contextual** mediante tirador visual en la esquina inferior derecha del elemento seleccionado.
+- Se consolidó la mejora en los tres entornos de presentación (`ARCHIVO/`, `Archivo 2/` y `Configuracion procesos - Gestiona/`) al sincronizar `tweaks-panel.jsx`.
+- Consolidación de versión de la app: **v2.13.0**.
+
 ## v2.12.0 - 2026-04-29
 - Se incorporó un **MODO EDICIÓN** reutilizable en `tweaks-panel.jsx` (aplicado en `ARCHIVO/`, `Archivo 2/` y `Configuracion procesos - Gestiona/`) con capacidades de:
   - seleccionar elementos en slide,

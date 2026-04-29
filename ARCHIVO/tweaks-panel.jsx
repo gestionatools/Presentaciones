@@ -131,6 +131,11 @@ const __TWEAKS_STYLE = `
   .twk-swatch::-webkit-color-swatch-wrapper{padding:0}
   .twk-swatch::-webkit-color-swatch{border:0;border-radius:5.5px}
   .twk-swatch::-moz-color-swatch{border:0;border-radius:5.5px}
+  .twk-entry{position:fixed;right:16px;bottom:16px;z-index:2147483645;appearance:none;
+    border:0;border-radius:999px;padding:10px 14px;background:#0f172a;color:#fff;
+    font:600 12px/1 ui-sans-serif,system-ui;letter-spacing:.02em;cursor:pointer;
+    box-shadow:0 8px 24px rgba(15,23,42,.35)}
+  .twk-entry:hover{background:#1e293b}
 `;
 
 // ── useTweaks ───────────────────────────────────────────────────────────────
@@ -159,6 +164,7 @@ function useTweaks(defaults) {
 // is what actually hides the panel.
 function TweaksPanel({ title = 'Tweaks', children }) {
   const [open, setOpen] = React.useState(false);
+  const [standaloneVisible, setStandaloneVisible] = React.useState(window.parent === window);
   const dragRef = React.useRef(null);
   const offsetRef = React.useRef({ x: 16, y: 16 });
   const PAD = 16;
@@ -200,6 +206,15 @@ function TweaksPanel({ title = 'Tweaks', children }) {
     return () => window.removeEventListener('message', onMsg);
   }, []);
 
+  React.useEffect(() => {
+    setStandaloneVisible(window.parent === window && !open);
+  }, [open]);
+
+  const openStandalone = () => {
+    setOpen(true);
+    window.dispatchEvent(new CustomEvent('editmode:toggle', { detail: true }));
+  };
+
   const dismiss = () => {
     setOpen(false);
     window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
@@ -227,10 +242,12 @@ function TweaksPanel({ title = 'Tweaks', children }) {
     window.addEventListener('mouseup', up);
   };
 
-  if (!open) return null;
+  if (!open && !standaloneVisible) return null;
   return (
     <>
       <style>{__TWEAKS_STYLE}</style>
+      {standaloneVisible && <button type="button" className="twk-entry" onClick={openStandalone}>Entrar en modo edición</button>}
+      {open && (
       <div ref={dragRef} className="twk-panel"
            style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
         <div className="twk-hd" onMouseDown={onDragStart}>
@@ -241,6 +258,7 @@ function TweaksPanel({ title = 'Tweaks', children }) {
         </div>
         <div className="twk-body">{children}</div>
       </div>
+      )}
     </>
   );
 }
@@ -424,23 +442,45 @@ function EditModeTools({ resourcesPath = '../../recursos' }) {
   const [selected, setSelected] = React.useState(null);
   const [newImage, setNewImage] = React.useState('');
   const [textDraft, setTextDraft] = React.useState('');
+  const [editEnabled, setEditEnabled] = React.useState(false);
+  const dragState = React.useRef(null);
+
+  const clearSelection = React.useCallback(() => {
+    document.querySelectorAll('[data-edit-selected="1"]').forEach((n) => {
+      n.dataset.editSelected = '0';
+      n.style.outline = '';
+    });
+  }, []);
+
+  const selectNode = React.useCallback((node) => {
+    if (!node) return;
+    setSelected(node);
+    setTextDraft(node.textContent || '');
+    clearSelection();
+    node.dataset.editSelected = '1';
+    node.style.outline = '2px dashed #0ea5e9';
+  }, [clearSelection]);
 
   React.useEffect(() => {
     const mark = (node) => {
       if (!node || node.dataset?.editBound === '1') return;
       node.dataset.editBound = '1';
-      node.style.cursor = 'pointer';
+      node.style.cursor = editEnabled ? 'move' : 'pointer';
       node.addEventListener('click', (e) => {
+        if (!editEnabled) return;
         e.preventDefault();
         e.stopPropagation();
-        setSelected(node);
-        setTextDraft(node.textContent || '');
-        document.querySelectorAll('[data-edit-selected="1"]').forEach((n) => {
-          n.dataset.editSelected = '0';
-          n.style.outline = '';
-        });
-        node.dataset.editSelected = '1';
-        node.style.outline = '2px dashed #0ea5e9';
+        selectNode(node);
+      });
+      node.addEventListener('pointerdown', (e) => {
+        if (!editEnabled) return;
+        if (!node.closest('section[data-deck-active]')) return;
+        if (e.target?.dataset?.resizeHandle === '1') return;
+        e.preventDefault();
+        selectNode(node);
+        const r = node.getBoundingClientRect();
+        if (getComputedStyle(node).position === 'static') node.style.position = 'absolute';
+        dragState.current = { node, x: e.clientX, y: e.clientY, left: r.left, top: r.top };
       });
     };
 
@@ -452,7 +492,64 @@ function EditModeTools({ resourcesPath = '../../recursos' }) {
         n.style.outline = '';
       });
     };
+    const move = (e) => {
+      if (!dragState.current) return;
+      const { node, x, y, left, top } = dragState.current;
+      node.style.left = `${left + (e.clientX - x)}px`;
+      node.style.top = `${top + (e.clientY - y)}px`;
+    };
+    const up = () => { dragState.current = null; };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    return () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+      clearSelection();
+    };
+  }, [editEnabled, selectNode, clearSelection]);
+
+  React.useEffect(() => {
+    const onToggle = (e) => setEditEnabled(!!e.detail);
+    window.addEventListener('editmode:toggle', onToggle);
+    return () => window.removeEventListener('editmode:toggle', onToggle);
   }, []);
+
+  React.useEffect(() => {
+    if (!selected || !editEnabled) return;
+    const handle = document.createElement('span');
+    handle.dataset.resizeHandle = '1';
+    handle.style.position = 'absolute';
+    handle.style.width = '14px';
+    handle.style.height = '14px';
+    handle.style.right = '-7px';
+    handle.style.bottom = '-7px';
+    handle.style.borderRadius = '50%';
+    handle.style.background = '#0ea5e9';
+    handle.style.cursor = 'nwse-resize';
+    handle.style.zIndex = '9999';
+    if (getComputedStyle(selected).position === 'static') selected.style.position = 'relative';
+    selected.appendChild(handle);
+    const onDown = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const startW = selected.offsetWidth;
+      const startH = selected.offsetHeight;
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const move = (ev) => {
+        selected.style.width = `${Math.max(40, startW + ev.clientX - startX)}px`;
+        selected.style.height = `${Math.max(24, startH + ev.clientY - startY)}px`;
+      };
+      const up = () => {
+        window.removeEventListener('pointermove', move);
+        window.removeEventListener('pointerup', up);
+      };
+      window.addEventListener('pointermove', move);
+      window.addEventListener('pointerup', up);
+    };
+    handle.addEventListener('pointerdown', onDown);
+    return () => handle.remove();
+  }, [selected, editEnabled]);
 
   const applyText = () => {
     if (!selected) return;
@@ -493,6 +590,7 @@ function EditModeTools({ resourcesPath = '../../recursos' }) {
   return (
     <>
       <TweakSection label="Modo edición" />
+      <TweakToggle label="Edición visual" value={editEnabled} onChange={(v) => setEditEnabled(v)} />
       <TweakText
         label="Texto"
         value={textDraft}
