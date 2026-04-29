@@ -1,13 +1,5 @@
 # Log de cambios
 
-## v2.15.0 - 2026-04-29
-- En la diapositiva de **Flujo y lógicas de tramitación** se volvió a incrementar el tamaño de iconos (hasta 92px) para resolver el problema de legibilidad detectado en la revisión.
-- Se añadió una nueva diapositiva de **Resumen operativo** inmediatamente después de **Obtención de materiales** para sintetizar las tres capas que luego se desarrollan: flujo y lógicas, modelo de datos y agentes/roles/órganos.
-- Se reordenó la secuencia del bloque para que **Agentes, roles y órganos resolutorios** aparezca antes que **Modelo de datos del procedimiento**, tal como se solicitó.
-- Se rediseñó la diapositiva de **Agentes, roles y órganos resolutorios** con una composición asimétrica (columna editorial + tarjetas en stack) para aportar mayor diversidad visual frente a layouts repetidos.
-- Se ajustaron etiquetas y numeración de pie para reflejar el nuevo total de 14 diapositivas.
-- Consolidación de versión de la app: **v2.15.0**.
-
 ## v2.14.0 - 2026-04-29
 - En la diapositiva **09 Flujo y lógicas de tramitación** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se aumentó el tamaño visual de los tres iconos de bloques (Fases resolutorias, Subprocesos y Nodos especiales) para que sean coherentes con el peso gráfico del resto de tarjetas.
 - En la misma diapositiva 09 se sustituyó el texto de apoyo bajo el título por la nueva redacción solicitada orientada a lógicas de proceso reglado, circuitos de resolución, subprocesos y nodos especiales de automatización.
