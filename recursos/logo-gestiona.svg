@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" role="img" aria-label="Gestiona logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0a5fb4"/>
+      <stop offset="1" stop-color="#2d9cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="90" rx="12" fill="#ffffff"/>
+  <rect x="10" y="10" width="70" height="70" rx="10" fill="url(#g)"/>
+  <path d="M28 45c0-10 8-18 18-18 7 0 13 3 16 9l-8 4c-2-3-5-5-8-5-5 0-9 4-9 10s4 10 9 10c3 0 6-2 8-5l8 4c-3 6-9 9-16 9-10 0-18-8-18-18z" fill="#fff"/>
+  <text x="95" y="55" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#1a2a44">Gestiona</text>
+</svg>

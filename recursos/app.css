@@ -1,0 +1,72 @@
+:root {
+  --bg: #071126;
+  --card: #13203d;
+  --card-border: #2a3f69;
+  --text: #e6ecff;
+  --accent: #5cb8ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top right, #182b4e, var(--bg) 40%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: rgba(19, 32, 61, 0.82);
+  padding: 1.25rem;
+}
+
+.hero__bg {
+  position: absolute;
+  right: -120px;
+  top: -40px;
+  width: 420px;
+  opacity: .55;
+  pointer-events: none;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  animation: fadeUp .45s ease both;
+}
+
+.btn {
+  margin-top: .75rem;
+  display: inline-block;
+  color: #021429;
+  background: var(--accent);
+  padding: .5rem .9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
