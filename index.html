@@ -18,6 +18,15 @@
       <h2>Presentaciones disponibles</h2>
       <div id="presentations" class="grid" aria-live="polite"></div>
     </section>
+    <section class="importer" aria-label="Importar PresentaJSON">
+      <h2>Importar PresentaJSON</h2>
+      <p>Carga un archivo exportado para abrir su presentación de origen.</p>
+      <div class="importer__actions">
+        <label class="btn btn--ghost" for="importPresentaJsonInput">Importar JSON</label>
+        <input id="importPresentaJsonInput" type="file" accept="application/json,.json" hidden />
+        <small id="importStatus" aria-live="polite"></small>
+      </div>
+    </section>
     <footer class="app__footer"><small id="appVersion"></small></footer>
   </main>
 

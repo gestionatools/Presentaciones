@@ -97,3 +97,27 @@ body {
   margin-top: 1.5rem;
   opacity: .8;
 }
+
+
+.importer {
+  margin-top: 1.5rem;
+  border: 1px solid var(--card-border);
+  background: rgba(19, 32, 61, 0.7);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.importer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+}
+
+#importStatus {
+  opacity: .9;
+}
+
+.importer__status--error {
+  color: #ff9fa8;
+}

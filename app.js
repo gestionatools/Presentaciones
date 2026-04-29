@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.15.0';
+const APP_VERSION = 'v2.16.0';
 
 const presentations = [
   {
@@ -24,6 +24,66 @@ const appVersionNode = document.getElementById('appVersion');
 if (appVersionNode) {
   appVersionNode.textContent = `Versión ${APP_VERSION}`;
 }
+
+const importInput = document.getElementById('importPresentaJsonInput');
+const importStatus = document.getElementById('importStatus');
+
+function setImportStatus(message, isError = false) {
+  if (!importStatus) return;
+  importStatus.textContent = message;
+  importStatus.classList.toggle('importer__status--error', isError);
+}
+
+function resolveDeckPathFromImport(payload) {
+  const importedPath = payload?.source?.path;
+  if (!importedPath || typeof importedPath !== 'string') {
+    return null;
+  }
+
+  const matchByPath = presentations.find((deck) => deck.path === importedPath);
+  if (matchByPath) {
+    return matchByPath.path;
+  }
+
+  const matchByTitle = presentations.find((deck) => deck.title === payload?.source?.title);
+  return matchByTitle?.path ?? null;
+}
+
+importInput?.addEventListener('change', async (event) => {
+  const file = event.target.files?.[0];
+  if (!file) {
+    return;
+  }
+
+  setImportStatus('Importando...');
+
+  try {
+    const rawText = await file.text();
+    const payload = JSON.parse(rawText);
+
+    if (payload?.format !== 'presentajson') {
+      throw new Error('El archivo no es un PresentaJSON válido.');
+    }
+
+    const deckPath = resolveDeckPathFromImport(payload);
+    if (!deckPath) {
+      throw new Error('No se encontró la presentación en esta app.');
+    }
+
+    setImportStatus('Importación correcta. Abriendo presentación...');
+    const targetUrl = toAbsoluteUrl(deckPath, window.location.href);
+    if (!targetUrl) {
+      throw new Error('No se pudo resolver la ruta de la presentación.');
+    }
+
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
+  } catch (error) {
+    console.error(error);
+    setImportStatus(error.message || 'No se pudo importar el archivo.', true);
+  } finally {
+    importInput.value = '';
+  }
+});
 
 function toAbsoluteUrl(relativeOrAbsolute, baseUrl) {
   try {
