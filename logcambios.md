@@ -35,3 +35,16 @@
 - Se revisaron las tres presentaciones HTML activas para corregir rutas de imágenes tras la reorganización de carpetas.
 - Se sustituyeron todas las referencias de logo desde `assets/logo-gestiona.jpeg` y `../assets/logo-gestiona.jpeg` a la nueva ruta compartida `../recursos/logo-gestiona.svg`.
 - Se añadió `recursos/logo-gestiona.svg` para garantizar que el logo esté disponible de forma centralizada para todas las presentaciones.
+
+## v2.3.0 - 2026-04-29
+- Se sustituyó el logo en todas las presentaciones HTML activas para usar `recursos/Gestiona-PANTONE.eps`.
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`:
+  - Slide 1: se eliminó "Taller guiado..." y se quitó "Máster" dejando "Clase práctica".
+  - Slide 2: se cambió "Agenda" por "Contenidos" y se reforzó la aparición animada de los 3 puntos.
+  - Slide 4: se eliminaron las letras grandes D, A, N (sustituidas por numeración).
+  - Slide 5: se eliminó completamente.
+  - Slide 7: se actualizó el título a "Normativa: la base de todo proceso administrativo" y se rediseñó el contenido visual con el flujo Normativa > Documentos administrativos > Modelos de plantillas ESPUBLICO.
+  - Slide 8: se rehízo como slide específica de "OBTENCIÓN DE MATERIALES" con mayor detalle de Documentos, Trámites y PDF.
+  - Slide 9: se rehízo como slide específica de flujo y lógicas con desglose 2.1/2.2/2.3.
+  - Se añadió un nuevo slide 10 para separar y ampliar "Modelo de datos" y "Agentes" (partición del contenido que antes estaba condensado), manteniendo coherencia narrativa.
+  - Se renumeraron etiquetas y contadores finales de diapositivas para reflejar la nueva estructura de 12 slides.
