@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.18.0 - 2026-04-29
+- Se migraron las tres presentaciones HTML principales (`ARCHIVO/`, `Archivo 2/` y `Configuracion procesos - Gestiona/`) a estructura compatible con **Reveal.js** (`.reveal > .slides > section`) para navegación nativa por slides.
+- Se incorporaron librerías oficiales de Reveal.js (core + tema + plugins de markdown y highlight) e inicialización global con `hash`, `slideNumber`, transición `slide` y `backgroundTransition` `fade`.
+- Se retiró la dependencia de `deck-stage.js` en las presentaciones migradas para unificar el runtime de presentación en Reveal.js.
+- Se añadió ajuste base de alineación (`.reveal .slides section { text-align: initial; }`) para preservar la maquetación existente.
+- Consolidación de versión de la app: **v2.18.0**.
+
 ## v2.17.0 - 2026-04-29
 - Se rediseñó la exportación de PresentaJSON en `app.js` para generar paquetes **autónomos**: las hojas de estilo externas ahora se sustituyen por `<style>` inline con su contenido cuando son accesibles.
 - Los scripts externos de cada presentación se transforman a scripts inline dentro del `head/body` exportado; si no se pueden recuperar en exportación se eliminan del documento autónomo para evitar referencias rotas.
