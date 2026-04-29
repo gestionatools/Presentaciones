@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.18.0 - 2026-04-29
+- Se reforzó el importador en `app.js` para interpretar el `format` de forma tolerante (normalización de mayúsculas/minúsculas y caracteres separadores) y aceptar variantes válidas de PresentaJSON sin fallar por formato textual.
+- El renderizado de PresentaJSON importado ahora inyecta una etiqueta `<base href="...">` calculada desde `source.url` (o `source.path`) para resolver rutas relativas de CSS/JS/assets de forma autónoma al abrirlo en línea, aunque el archivo no esté alojado en GitHub.
+- Se actualizó la versión de la app a **v2.18.0**.
+
 ## v2.17.0 - 2026-04-29
 - Se rediseñó la exportación de PresentaJSON en `app.js` para generar paquetes **autónomos**: las hojas de estilo externas ahora se sustituyen por `<style>` inline con su contenido cuando son accesibles.
 - Los scripts externos de cada presentación se transforman a scripts inline dentro del `head/body` exportado; si no se pueden recuperar en exportación se eliminan del documento autónomo para evitar referencias rotas.
