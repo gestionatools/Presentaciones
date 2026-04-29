@@ -12,3 +12,10 @@
 - Se eliminó completamente la Slide 14.
 - En la Slide 15 se cambió el enfoque a un mensaje más técnico y menos comercial.
 - Se actualizó el contador global de diapositivas de 16 a 12 para mantener coherencia.
+
+## v2.1.0 - 2026-04-29
+- Se creó una nueva carpeta `Configuracion procesos - Gestiona/` con una presentación completamente nueva para formación de máster.
+- Se añadió el archivo `Configuración de procesos - Gestiona.html` con 11 diapositivas y narrativa en 3 bloques: plataforma, ejecución y entregables normalizados.
+- Se incorporó enfoque explícito de design thinking (Empatizar, Definir, Idear, Prototipar, Testear) en una slide específica.
+- Se reutilizaron los recursos visuales y de animación existentes copiando `styles-archivo.css`, `deck-stage.js` y `tweaks-panel.jsx` a la nueva carpeta.
+- Se mantuvo tono formativo orientado a clase magistral y consultoría aplicada en Gestiona.
