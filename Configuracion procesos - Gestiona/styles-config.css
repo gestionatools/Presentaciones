@@ -965,6 +965,3 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
   background: var(--teal-50);
 }
 .eni-cell.required .val { color: var(--teal-700); }
-
-/* Fix visibilidad: en algunos entornos deck-stage no aplica is-active y ocultaba todo el contenido animado */
-deck-stage section .anim { opacity: 1 !important; }

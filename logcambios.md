@@ -19,8 +19,3 @@
 - Se incorporó enfoque explícito de design thinking (Empatizar, Definir, Idear, Prototipar, Testear) en una slide específica.
 - Se reutilizaron los recursos visuales y de animación existentes copiando `styles-archivo.css`, `deck-stage.js` y `tweaks-panel.jsx` a la nueva carpeta.
 - Se mantuvo tono formativo orientado a clase magistral y consultoría aplicada en Gestiona.
-
-## v2.1.1 - 2026-04-29
-- Se corrigió un problema de visibilidad en la nueva presentación `Configuracion procesos - Gestiona/` donde parte del contenido quedaba oculto si `deck-stage` no aplicaba la clase `is-active` en tiempo de ejecución.
-- Se añadió una regla de fallback en `styles-config.css` para forzar la visibilidad de elementos con clase `.anim`.
-- Consolidación orientada a resolver el síntoma reportado: "las diapos están vacías".
