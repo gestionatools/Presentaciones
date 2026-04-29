@@ -70,3 +70,30 @@ body {
   from { transform: translateY(8px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+.card__actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+}
+
+.btn--ghost {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--card-border);
+}
+
+.btn:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.app__footer {
+  margin-top: 1.5rem;
+  opacity: .8;
+}

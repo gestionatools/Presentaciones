@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.15.0 - 2026-04-29
+- Se añadió en la app lanzadora (`index.html` + `app.js`) la funcionalidad de exportación completa por presentación a formato **presentajson** mediante un botón **"Exportar PresentaJSON"** en cada tarjeta.
+- La exportación serializa estructura HTML (head/body), estilos inline, hojas CSS externas (con contenido cuando es accesible), scripts inline/externos y un inventario de assets multimedia referenciados, con metadatos de origen y fecha de exportación.
+- Se incorporó versionado explícito en la app (`APP_VERSION`) y visualización de versión en el pie de la portada.
+- Se ajustaron estilos en `recursos/app.css` para soportar acciones múltiples por tarjeta y estados visuales del botón de exportación.
+- Consolidación de versión de la app: **v2.15.0**.
+
 ## v2.14.0 - 2026-04-29
 - En la diapositiva **09 Flujo y lógicas de tramitación** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se aumentó el tamaño visual de los tres iconos de bloques (Fases resolutorias, Subprocesos y Nodos especiales) para que sean coherentes con el peso gráfico del resto de tarjetas.
 - En la misma diapositiva 09 se sustituyó el texto de apoyo bajo el título por la nueva redacción solicitada orientada a lógicas de proceso reglado, circuitos de resolución, subprocesos y nodos especiales de automatización.
