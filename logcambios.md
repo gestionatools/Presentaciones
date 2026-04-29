@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.10.0 - 2026-04-29
+- Se creó `conocimientos.md` con una base detallada y estructurada sobre: tesauros (modelo de datos), tipologías y tipado fuerte, niveles de configuración, obligatoriedad, clasificación/agrupación, momento de captura, estados de tramitación, tipos de tareas, lógicas de salida, automatización, subprocesos y circuitos de resolución.
+- Se incorporó en `conocimientos.md` una guía editorial para trasladar estos conceptos a presentaciones, incluyendo mensajes clave, errores a evitar y checklist operativo previo al diseño.
+- Se actualizó `AGENTS.md` para establecer la instrucción explícita de consultar `conocimientos.md` siempre que se soliciten slides o presentaciones, y priorizarlo ante ambigüedad conceptual.
+- Consolidación de versión de la app: **v2.10.0**.
+
 ## v2.8.0 - 2026-04-29
 - Se creó `instrucciones para la incorporación de recursos gráficos.md` con inventario completo de recursos en `recursos/`, descripción y guía de uso coherente por tipología.
 - Se estableció en ese documento la regla operativa para futuras altas de recursos: registrar archivo, describir y recomendar uso.

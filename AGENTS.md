@@ -17,3 +17,8 @@ Al diseñar o rediseñar cualquier presentación dentro de este repositorio, sig
 - Reutilizar patrones de layout ya presentes cuando aplique.
 - Favorecer recursos locales de `recursos/` frente a dependencias externas.
 - Evitar cambios que rompan la identidad general del conjunto de presentaciones.
+
+## Instrucción de conocimiento para agentes
+- Siempre que se pida crear, editar o rediseñar slides/presentaciones, el agente debe consultar primero `conocimientos.md` y usarlo como base conceptual prioritaria.
+- En caso de conflicto interpretativo en contenidos de modelo de datos, nodos/tareas, procesos resolutorios y subprocesos, prevalece `conocimientos.md`.
+
