@@ -134,3 +134,8 @@
 - Se añadió `vercel.json` para rutas limpias (`/` y `/editor`) y despliegue compatible con Vercel.
 - Se actualizó `.gitignore` con exclusiones de entorno y artefactos locales.
 - Se creó documentación operativa y de despliegue en `README.md`.
+
+## v1.0.1 - 2026-04-29
+- Se corrigió el enrutado en `vercel.json` para evitar el error 404 NOT_FOUND al abrir `/public/editor`.
+- Se añadieron reescrituras de compatibilidad para `/public/editor`, `/public/editor.html`, `/public/index` y `/public/index.html`.
+- Se actualizó el enlace principal en `public/index.html` para usar `/editor` como ruta canónica y se documentó la ruta de compatibilidad.
