@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.7.0 - 2026-04-29
+- Se rediseñó la diapositiva 8 (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) con una distribución asimétrica moderna (bloque editorial + columna vertical de tarjetas) para diferenciarla visualmente de la diapositiva 7.
+- Se rediseñó la diapositiva 9 con layout en cuadrícula 2x2 y tarjeta principal de ancho completo para romper la estructura repetida de tres tarjetas homogéneas.
+- Se corrigió el pie de la diapositiva 8 de `08 / 12` a `08 / 13` para mantener coherencia con el total actual de slides.
+- Se añadió una animación sutil y elegante `elegantFloat` en `Configuracion procesos - Gestiona/styles-config.css`, aplicada a la columna de tarjetas de la diapositiva 8.
+- Consolidación de versión de la app: **v2.7.0**.
+
 ## v2.4.0 - 2026-04-29
 - Se sustituyó el logo de la presentación `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` para usar `recursos/Gestiona-PANTONE.svg` y se ajustó su tamaño visual mediante estilos existentes de cabecera.
 - En la diapositiva 2 se limitó la animación tipo pulso a 5 repeticiones en `Configuracion procesos - Gestiona/styles-config.css`.

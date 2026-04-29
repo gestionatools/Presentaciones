@@ -185,6 +185,11 @@ deck-stage section {
   to   { transform: rotate(360deg); }
 }
 
+@keyframes elegantFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 /* Slide enter — al activarse, los hijos animan en cascada */
 deck-stage section.is-active .anim,
 deck-stage section[data-deck-active] .anim {
@@ -241,6 +246,11 @@ deck-stage section[data-deck-active] .drift {
 deck-stage section.is-active .spin,
 deck-stage section[data-deck-active] .spin {
   animation: spin 18s linear infinite;
+}
+
+deck-stage section.is-active .elegant-float,
+deck-stage section[data-deck-active] .elegant-float {
+  animation: elegantFloat 5.5s 0.8s ease-in-out infinite;
 }
 
 /* === PORTADA === */
