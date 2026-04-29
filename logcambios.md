@@ -65,3 +65,10 @@
   - Nueva diapositiva 10: **Modelo de datos del procedimiento**.
   - Nueva diapositiva 11: **Agentes, roles y órganos resolutorios**.
 - Se renumeró la secuencia final de la presentación de 12 a 13 diapositivas para mantener coherencia en pies y etiquetas.
+
+## v2.6.0 - 2026-04-29
+- Slide 2 (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`): se sustituyó la animación `pulse` por una animación de entrada de izquierda a derecha para los 3 bloques de contenidos.
+- `Configuracion procesos - Gestiona/styles-config.css`: se eliminó la keyframe `pulse`, se añadió `@keyframes enterLeft` y la clase de animación `.enter-ltr` para controlar el efecto solicitado.
+- Slide 4 (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`): se eliminó el texto "Si una pieza está incompleta...", se renombró "Arquitectura mínima viable" por "Arquitectura de la plataforma" y se redistribuyó el espacio del layout.
+- Slide 4: se añadió un cuarto bloque "Analítica de datos" con icono de gráfico de tarta y se equilibró la grilla en 2x2.
+- Consolidación de versión de la app: **v2.6.0**.

@@ -164,9 +164,9 @@ deck-stage section {
   from { stroke-dashoffset: var(--len, 1000); }
   to   { stroke-dashoffset: 0; }
 }
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.06); opacity: 0.85; }
+@keyframes enterLeft {
+  from { opacity: 0; transform: translateX(-72px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 @keyframes shimmer {
   0%   { background-position: -400px 0; }
@@ -208,6 +208,14 @@ deck-stage section.is-active .anim-7,
 deck-stage section[data-deck-active] .anim-7 { animation-delay: 0.78s; }
 deck-stage section.is-active .anim-8,
 deck-stage section[data-deck-active] .anim-8 { animation-delay: 0.90s; }
+
+deck-stage section.is-active .enter-ltr,
+deck-stage section[data-deck-active] .enter-ltr {
+  animation-name: enterLeft;
+  animation-duration: 0.72s;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  animation-fill-mode: both;
+}
 
 deck-stage section.is-active .draw,
 deck-stage section[data-deck-active] .draw {
