@@ -38,7 +38,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-deck-stage > section {
+.reveal .slides > section {
   background: var(--paper);
   color: var(--ink-900);
   font-family: var(--font-sans);

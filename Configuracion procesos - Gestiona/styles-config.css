@@ -65,7 +65,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: #06181c; font-family: var(--font-sans); }
 
-deck-stage section {
+.reveal .slides section {
   width: 1920px;
   height: 1080px;
   background: var(--paper);
@@ -191,65 +191,65 @@ deck-stage section {
 }
 
 /* Slide enter — al activarse, los hijos animan en cascada */
-deck-stage section.is-active .anim,
-deck-stage section[data-deck-active] .anim {
+.reveal .slides section.present .anim,
+.reveal .slides section.present .anim {
   animation: fadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-deck-stage section:not(.is-active):not([data-deck-active]) .anim { opacity: 0; }
+.reveal .slides section:not(.present) .anim { opacity: 0; }
 
-deck-stage section.is-active .anim-1,
-deck-stage section[data-deck-active] .anim-1 { animation-delay: 0.08s; }
-deck-stage section.is-active .anim-2,
-deck-stage section[data-deck-active] .anim-2 { animation-delay: 0.18s; }
-deck-stage section.is-active .anim-3,
-deck-stage section[data-deck-active] .anim-3 { animation-delay: 0.30s; }
-deck-stage section.is-active .anim-4,
-deck-stage section[data-deck-active] .anim-4 { animation-delay: 0.42s; }
-deck-stage section.is-active .anim-5,
-deck-stage section[data-deck-active] .anim-5 { animation-delay: 0.54s; }
-deck-stage section.is-active .anim-6,
-deck-stage section[data-deck-active] .anim-6 { animation-delay: 0.66s; }
-deck-stage section.is-active .anim-7,
-deck-stage section[data-deck-active] .anim-7 { animation-delay: 0.78s; }
-deck-stage section.is-active .anim-8,
-deck-stage section[data-deck-active] .anim-8 { animation-delay: 0.90s; }
+.reveal .slides section.present .anim-1,
+.reveal .slides section.present .anim-1 { animation-delay: 0.08s; }
+.reveal .slides section.present .anim-2,
+.reveal .slides section.present .anim-2 { animation-delay: 0.18s; }
+.reveal .slides section.present .anim-3,
+.reveal .slides section.present .anim-3 { animation-delay: 0.30s; }
+.reveal .slides section.present .anim-4,
+.reveal .slides section.present .anim-4 { animation-delay: 0.42s; }
+.reveal .slides section.present .anim-5,
+.reveal .slides section.present .anim-5 { animation-delay: 0.54s; }
+.reveal .slides section.present .anim-6,
+.reveal .slides section.present .anim-6 { animation-delay: 0.66s; }
+.reveal .slides section.present .anim-7,
+.reveal .slides section.present .anim-7 { animation-delay: 0.78s; }
+.reveal .slides section.present .anim-8,
+.reveal .slides section.present .anim-8 { animation-delay: 0.90s; }
 
-deck-stage section.is-active .enter-ltr,
-deck-stage section[data-deck-active] .enter-ltr {
+.reveal .slides section.present .enter-ltr,
+.reveal .slides section.present .enter-ltr {
   animation-name: enterLeft;
   animation-duration: 0.72s;
   animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
   animation-fill-mode: both;
 }
 
-deck-stage section.is-active .draw,
-deck-stage section[data-deck-active] .draw {
+.reveal .slides section.present .draw,
+.reveal .slides section.present .draw {
   animation: drawLine 1.6s 0.4s ease-out both;
 }
-deck-stage section:not(.is-active):not([data-deck-active]) .draw { stroke-dashoffset: var(--len, 1000); }
+.reveal .slides section:not(.present) .draw { stroke-dashoffset: var(--len, 1000); }
 
-deck-stage section.is-active .grow,
-deck-stage section[data-deck-active] .grow {
+.reveal .slides section.present .grow,
+.reveal .slides section.present .grow {
   transform-origin: bottom;
   animation: growBar 0.9s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
-deck-stage section:not(.is-active):not([data-deck-active]) .grow { transform: scaleY(0); transform-origin: bottom; }
+.reveal .slides section:not(.present) .grow { transform: scaleY(0); transform-origin: bottom; }
 
-deck-stage section.is-active .pulse,
-deck-stage section[data-deck-active] .pulse {
+.reveal .slides section.present .pulse,
+.reveal .slides section.present .pulse {
   animation: pulse 2.4s 1s ease-in-out 5;
 }
-deck-stage section.is-active .drift,
-deck-stage section[data-deck-active] .drift {
+.reveal .slides section.present .drift,
+.reveal .slides section.present .drift {
   animation: drift 4s 0.5s ease-in-out infinite;
 }
-deck-stage section.is-active .spin,
-deck-stage section[data-deck-active] .spin {
+.reveal .slides section.present .spin,
+.reveal .slides section.present .spin {
   animation: spin 18s linear infinite;
 }
 
-deck-stage section.is-active .elegant-float,
-deck-stage section[data-deck-active] .elegant-float {
+.reveal .slides section.present .elegant-float,
+.reveal .slides section.present .elegant-float {
   animation: elegantFloat 5.5s 0.8s ease-in-out infinite;
 }
 
@@ -929,12 +929,12 @@ body.hide-norm .norm-only { display: none !important; }
 /* === Density variants === */
 body.density-comfortable .h2 { font-size: 70px; }
 body.density-comfortable .lead { font-size: 32px; }
-body.density-comfortable deck-stage section { font-size: 28px; }
+body.density-comfortable .reveal .slides section { font-size: 28px; }
 body.density-comfortable .frame { padding: 64px 110px 40px; }
 
 body.density-compact .h2 { font-size: 56px; }
 body.density-compact .lead { font-size: 26px; }
-body.density-compact deck-stage section { font-size: 24px; }
+body.density-compact .reveal .slides section { font-size: 24px; }
 body.density-compact .frame { padding: 48px 80px 30px; }
 body.density-compact .lifecycle .stage { padding: 24px 22px; min-height: 320px; }
 body.density-compact .lifecycle .stage .name { font-size: 26px; }
