@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.8.0 - 2026-04-29
+- Se creó `instrucciones para la incorporación de recursos gráficos.md` con inventario completo de recursos en `recursos/`, descripción y guía de uso coherente por tipología.
+- Se estableció en ese documento la regla operativa para futuras altas de recursos: registrar archivo, describir y recomendar uso.
+- Se revisó la presentación `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` (slide de piezas del proceso) y se sustituyó el icono externo de analítica por recurso local `recursos/configuración.png` para mantener coherencia visual y dependencia interna del repositorio.
+- Consolidación de versión de la app: **v2.8.0**.
+
+
 ## v2.7.0 - 2026-04-29
 - Se rediseñó la diapositiva 8 (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) con una distribución asimétrica moderna (bloque editorial + columna vertical de tarjetas) para diferenciarla visualmente de la diapositiva 7.
 - Se rediseñó la diapositiva 9 con layout en cuadrícula 2x2 y tarjeta principal de ancho completo para romper la estructura repetida de tres tarjetas homogéneas.
