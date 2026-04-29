@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.17.0 - 2026-04-29
+- Se rediseñó la exportación de PresentaJSON en `app.js` para generar paquetes **autónomos**: las hojas de estilo externas ahora se sustituyen por `<style>` inline con su contenido cuando son accesibles.
+- Los scripts externos de cada presentación se transforman a scripts inline dentro del `head/body` exportado; si no se pueden recuperar en exportación se eliminan del documento autónomo para evitar referencias rotas.
+- Se añadió un proceso de incrustación de assets (`img`, `video`, `audio`, `source`, favicon/preload de imagen y `url(...)` en estilos inline) a formato **data URL**, eliminando dependencias de rutas remotas (incluyendo GitHub/URL externas).
+- El importador existente mantiene compatibilidad con PresentaJSON nuevos porque renderiza directamente `document.headHtml` + `document.bodyHtml`, que ahora llegan autocontenidos desde exportación.
+- Se actualizó la versión de la app a **v2.17.0**.
+
 ## v2.16.0 - 2026-04-29
 - Se añadió en `index.html` un bloque de importación de archivos **PresentaJSON** con selector de archivo y acción explícita **"Abrir importado"**.
 - Se implementó en `app.js` un importador de PresentaJSON autónomo que valida estructura mínima (`format`, `document.headHtml`, `document.bodyHtml`) y renderiza la presentación en una nueva pestaña sin depender de rutas externas del repositorio.
