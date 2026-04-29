@@ -1014,3 +1014,7 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
   object-fit: contain;
   flex: none;
 }
+
+.icon-teal {
+  filter: hue-rotate(145deg) saturate(120%) brightness(0.95);
+}

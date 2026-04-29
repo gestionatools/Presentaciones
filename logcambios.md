@@ -1,5 +1,15 @@
 # Log de cambios
 
+## v2.14.0 - 2026-04-29
+- En la diapositiva **09 Flujo y lógicas de tramitación** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se aumentó el tamaño visual de los tres iconos de bloques (Fases resolutorias, Subprocesos y Nodos especiales) para que sean coherentes con el peso gráfico del resto de tarjetas.
+- En la misma diapositiva 09 se sustituyó el texto de apoyo bajo el título por la nueva redacción solicitada orientada a lógicas de proceso reglado, circuitos de resolución, subprocesos y nodos especiales de automatización.
+- En la diapositiva **10 Modelo de datos del procedimiento** se aplicaron los cambios de iconografía solicitados:
+  - **Analítica y KPIs** → `recursos/grafico de tarta.png`
+  - **Datos de lógica** → `recursos/base de datos.png`
+- En la diapositiva 10 se unificó el tratamiento cromático del icono de **Formularios y plantillas** hacia un tono más verde-azulado para mantener coherencia visual con el resto de bloques.
+- En la diapositiva 10 se reemplazó el texto descriptivo bajo el título por la nueva formulación extensa solicitada para variables de flujo, formularios/plantillas y explotación analítica de datos.
+- Consolidación de versión de la app: **v2.14.0**.
+
 ## v2.13.0 - 2026-04-29
 - Se añadió un botón flotante visible **“Entrar en modo edición”** en las presentaciones que usan `tweaks-panel.jsx`, para poder activar la edición sin depender de atajos o integraciones externas.
 - Se evolucionó el MODO EDICIÓN a un flujo más visual:
