@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Webinar - Configuración de procesos en Gestiona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-webinar.css">
+<script src="deck-stage.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+<section data-label="01 Portada">
+  <div class="cover-archivo">
+    <div class="top-row">
+      <div class="brand-chip anim anim-1"><img src="../recursos/Gestiona-PANTONE.svg" alt="Gestiona"><span class="sep"></span><span>Master class</span></div>
+      <div class="session-tag anim anim-2">Webinar · Formación</div>
+    </div>
+    <div class="left">
+      <h1 class="anim anim-4">cONFIGURACIÓN DE PROCESOS<br><span class="thin">EN</span><br><span class="accent">GESTIONA</span></h1>
+      <p class="subtitle anim anim-5">Sesión formativa para comprender cómo diseñar procesos robustos desde la normativa hasta la automatización.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="02 Agenda">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Webinar</span></div><span class="crumb">Contenidos</span></div>
+    <div class="body" style="flex-direction:column; gap:26px; justify-content:center;">
+      <h2 class="h2 anim anim-1">Bloques de la clase</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <div class="norm-quote anim anim-2 enter-ltr"><span class="scale">01</span><div><p class="body"><b>La plataforma</b><br>Modelo de datos, agentes y nodos.</p></div></div>
+        <div class="norm-quote anim anim-3 enter-ltr"><span class="scale">02</span><div><p class="body"><b>Cómo lo ejecutamos</b><br>Normativa y método de consultoría.</p></div></div>
+        <div class="norm-quote anim anim-4 enter-ltr"><span class="scale">03</span><div><p class="body"><b>Entregables normalizados</b><br>Sistematización y automatización.</p></div></div>
+      </div>
+    </div><div class="foot"><span>Gestiona · Formación</span><span class="num">02 / 11</span></div></div>
+</section>
+
+<section data-label="03 Bloque 1">
+  <div class="section-divider"><div class="big-num anim anim-1">01</div><div class="body"><p class="eyebrow anim anim-2">Bloque 1</p><h2 class="anim anim-3">La plataforma</h2><p class="subtitle anim anim-4">Las piezas de configuración deben entenderse como un sistema único: dato + responsabilidad + flujo.</p></div></div>
+</section>
+
+<section data-label="04 Piezas del proceso">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Bloque 1</span></div><span class="crumb">Arquitectura</span></div>
+    <div class="body" style="gap:26px; align-items:flex-start;">
+      <div style="flex:1;" class="anim anim-1"><h2 class="h2">Las piezas que componen un proceso</h2><p class="lead">Cada decisión técnica tiene impacto funcional y jurídico en la tramitación real.</p></div>
+      <div style="flex:1.2; display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="anim anim-2">
+        <div class="norm-quote media-quote"><img class="quote-visual" src="../recursos/modelo-datos.svg" alt="Modelo de datos"><div><b>Modelo de datos (tesauros)</b><p class="body">Tipado fuerte, validaciones y reutilización por entidad.</p></div></div>
+        <div class="norm-quote media-quote"><img class="quote-visual" src="../recursos/agentes.svg" alt="Agentes"><div><b>Agentes</b><p class="body">Grupos, roles y personas con trazabilidad de responsabilidad.</p></div></div>
+        <div class="norm-quote media-quote" style="grid-column:1 / span 2;"><img class="quote-visual" src="../recursos/tareas.svg" alt="Nodos"><div><b>Nodos o tareas</b><p class="body">Trámites externos, formularios, documentos, subprocesos, plazos, circuitos de resolución y de firma.</p></div></div>
+      </div>
+    </div><div class="foot"><span>Gestiona · Formación</span><span class="num">04 / 11</span></div></div>
+</section>
+
+<section data-label="05 Bloque 2">
+  <div class="section-divider"><div class="big-num anim anim-1">02</div><div class="body"><p class="eyebrow anim anim-2">Bloque 2</p><h2 class="anim anim-3">Cómo lo ejecutamos</h2><p class="subtitle anim anim-4">Metodología para pasar del procedimiento escrito al flujo ejecutable en plataforma.</p></div></div>
+</section>
+
+<section data-label="06 Normativa">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Bloque 2</span></div><span class="crumb">Normativa</span></div>
+  <div class="body" style="flex-direction:column; gap:20px; justify-content:center;">
+    <h2 class="h2 anim anim-1">Normativa: análisis vital del procedimiento</h2>
+    <p class="lead anim anim-2">Toda configuración parte del marco jurídico aplicable. Sin ese análisis, el flujo puede ser técnicamente correcto pero jurídicamente inválido.</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; width:100%;" class="anim anim-3">
+      <div class="norm-quote"><span class="scale">1</span><div><p class="body"><b>Normativa aplicable</b><br>Límites, plazos y garantías.</p></div></div>
+      <div class="norm-quote anim anim-4"><span class="scale">2</span><div><p class="body"><b>Referencias documentales</b><br>Actos, evidencias y trazabilidad.</p></div></div>
+      <div class="norm-quote anim anim-5"><span class="scale">3</span><div><p class="body"><b>Modelajes ESPUBLICO</b><br>Base reutilizable para acelerar configuración.</p></div></div>
+    </div>
+  </div><div class="foot"><span>Gestiona · Formación</span><span class="num">06 / 11</span></div></div>
+</section>
+
+<section data-label="07 Consultoría I">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Bloque 2</span></div><span class="crumb">Consultoría</span></div>
+  <div class="body" style="flex-direction:column; gap:16px; justify-content:center;">
+    <h2 class="h2 anim anim-1">1) Obtención de materiales + 2) Flujo de proceso</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="anim anim-2">
+      <div class="norm-quote"><img class="scale-icon" src="../recursos/icono-documentos.svg" alt="Documentos"><div><p class="body"><b>1. Obtención de documentos, trámites y PDF</b><br>Consolidar insumos mínimos antes de modelar.</p></div></div>
+      <div class="norm-quote"><img class="scale-icon" src="../recursos/icono-tramites.svg" alt="Flujo"><div><p class="body"><b>2. Estudio del flujo y lógicas de tramitación</b><br>Definir transiciones de salida y excepciones.</p></div></div>
+      <div class="norm-quote anim anim-3"><img class="scale-icon" src="../recursos/icono-subprocesos.svg" alt="Subprocesos"><div><p class="body"><b>2.1 Subprocesos</b><br>Bloques reutilizables para casuísticas repetidas.</p></div></div>
+      <div class="norm-quote anim anim-4"><img class="scale-icon" src="../recursos/icono-fases.svg" alt="Fases"><div><p class="body"><b>2.2 Fases resolutorias</b><br>Hitos de decisión con órgano competente.</p></div></div>
+    </div>
+    <div class="norm-quote anim anim-5"><img class="scale-icon" src="../recursos/icono-nodos.svg" alt="Nodos especiales"><div><p class="body"><b>2.3 Nodos especiales</b><br>Calculadoras, automatizaciones e integraciones con terceros.</p></div></div>
+  </div><div class="foot"><span>Gestiona · Formación</span><span class="num">07 / 11</span></div></div>
+</section>
+
+<section data-label="08 Consultoría II">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Bloque 2</span></div><span class="crumb">Consultoría</span></div>
+  <div class="body" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center;">
+    <div class="norm-quote anim anim-1"><img class="scale-icon" src="../recursos/modelo-datos.svg" alt="Modelo"><div><p class="body"><b>3. Modelo de datos</b><br>3.1 Lógica de tramitación · 3.2 Plantillas/formularios · 3.3 Analítica.</p></div></div>
+    <div class="norm-quote anim anim-2"><img class="scale-icon" src="../recursos/agentes.svg" alt="Agentes"><div><p class="body"><b>4. Agentes</b><br>4.1 Grupos/personas · 4.2 Roles de tramitación · 4.3 Órganos resolutorios.</p></div></div>
+    <div class="norm-quote anim anim-3" style="grid-column:1 / span 2;"><span class="scale">Clave</span><div><p class="body"><b>Enfoque operativo recomendado</b><br>Configurar primero en entidad para reutilizar y después ajustar actividades específicas.</p></div></div>
+  </div><div class="foot"><span>Gestiona · Formación</span><span class="num">08 / 11</span></div></div>
+</section>
+
+<section data-label="09 Bloque 3">
+  <div class="section-divider"><div class="big-num anim anim-1">03</div><div class="body"><p class="eyebrow anim anim-2">Bloque 3</p><h2 class="anim anim-3">Entregables normalizados</h2><p class="subtitle anim anim-4">Objetivo: automatización de la configuración o, como mínimo, sistematización replicable.</p></div></div>
+</section>
+
+<section data-label="10 Entregables">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Bloque 3</span></div><span class="crumb">Output</span></div>
+    <div class="body" style="flex-direction:column; gap:18px; justify-content:center;">
+      <h2 class="h2 anim anim-1">Entregables para estandarizar la configuración</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="anim anim-2">
+        <div class="norm-quote"><span class="scale">A</span><div><p class="body"><b>Matriz normativa → nodos</b><br>Trazabilidad legal por fase y tarea.</p></div></div>
+        <div class="norm-quote"><span class="scale">B</span><div><p class="body"><b>Mapa de flujo</b><br>Salidas, automatismos y excepciones.</p></div></div>
+        <div class="norm-quote"><span class="scale">C</span><div><p class="body"><b>Diccionario de tesauros</b><br>Tipado, obligatoriedad y reutilización.</p></div></div>
+        <div class="norm-quote"><span class="scale">D</span><div><p class="body"><b>RACI de agentes</b><br>Quién hace qué, cuándo y con qué permisos.</p></div></div>
+      </div>
+    </div><div class="foot"><span>Gestiona · Formación</span><span class="num">10 / 11</span></div></div>
+</section>
+
+<section data-label="11 Cierre">
+  <div class="frame"><div class="head"><div class="brand-mini"><img src="../recursos/Gestiona-PANTONE.svg" alt=""><span class="sep"></span><span>Cierre</span></div><span class="crumb">Webinar</span></div>
+  <div class="body" style="flex-direction:column; justify-content:center; gap:24px;">
+    <h2 class="h2 anim anim-1">Mensaje final para la clase</h2>
+    <p class="lead anim anim-2">Un buen proceso en Gestiona no es solo una secuencia de pantallas: es un diseño integral de dato, decisión y responsabilidad.</p>
+    <div class="norm-quote anim anim-3"><span class="scale">✓</span><div><p class="body">Si normalizamos entregables, reducimos tiempo de configuración y mejoramos calidad entre procedimientos.</p></div></div>
+  </div><div class="foot"><span>Gestiona · Formación</span><span class="num">11 / 11</span></div></div>
+</section>
+
+</deck-stage>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+</body>
+</html>

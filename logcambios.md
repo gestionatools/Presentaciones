@@ -1,5 +1,13 @@
 # Log de cambios
 
+## v2.11.0 - 2026-04-29
+- Se creó la nueva carpeta `Webinar/` con una presentación inédita `Webinar - Configuración de procesos en Gestiona.html` orientada a formación para clase de máster, estructurada en 3 bloques: plataforma, ejecución y entregables normalizados.
+- Se incorporó narrativa alineada con `conocimientos.md` para reforzar conceptos de tesauros/modelo de datos tipado, agentes, nodos/tareas, subprocesos, fases resolutorias y circuitos de resolución/firma.
+- Se reutilizaron recursos locales de `recursos/` para mantener coherencia visual (logo corporativo e iconografía funcional de datos, agentes, tareas, subprocesos, fases y nodos especiales).
+- Se añadieron `Webinar/deck-stage.js`, `Webinar/tweaks-panel.jsx` y `Webinar/styles-webinar.css` como base técnica y estética consistente con presentaciones existentes.
+- Se actualizó `app.js` para incluir la nueva presentación en el lanzador principal.
+- Consolidación de versión de la app: **v2.11.0**.
+
 ## v2.10.0 - 2026-04-29
 - Se creó `conocimientos.md` con una base detallada y estructurada sobre: tesauros (modelo de datos), tipologías y tipado fuerte, niveles de configuración, obligatoriedad, clasificación/agrupación, momento de captura, estados de tramitación, tipos de tareas, lógicas de salida, automatización, subprocesos y circuitos de resolución.
 - Se incorporó en `conocimientos.md` una guía editorial para trasladar estos conceptos a presentaciones, incluyendo mensajes clave, errores a evitar y checklist operativo previo al diseño.

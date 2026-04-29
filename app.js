@@ -13,6 +13,11 @@ const presentations = [
     title: 'Configuración de procesos - Gestiona',
     path: 'Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html',
     description: 'Presentación enfocada en flujos y configuración de procesos.'
+  },
+  {
+    title: 'Webinar - Configuración de procesos en Gestiona',
+    path: 'Webinar/Webinar - Configuración de procesos en Gestiona.html',
+    description: 'Nueva presentación formativa para clase de máster (webinar).'
   }
 ];
 
