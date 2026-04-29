@@ -224,7 +224,7 @@ deck-stage section:not(.is-active):not([data-deck-active]) .grow { transform: sc
 
 deck-stage section.is-active .pulse,
 deck-stage section[data-deck-active] .pulse {
-  animation: pulse 2.4s 1s ease-in-out infinite;
+  animation: pulse 2.4s 1s ease-in-out 5;
 }
 deck-stage section.is-active .drift,
 deck-stage section[data-deck-active] .drift {
@@ -979,3 +979,20 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
   background: var(--teal-50);
 }
 .eni-cell.required .val { color: var(--teal-700); }
+
+
+.accent-blue { color: #1a7fdf; }
+.media-quote { align-items: center; gap: 14px; }
+.quote-visual {
+  width: 112px;
+  height: 84px;
+  object-fit: contain;
+  flex: none;
+  border-radius: 10px;
+}
+.scale-icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex: none;
+}

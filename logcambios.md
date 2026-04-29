@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.4.0 - 2026-04-29
+- Se sustituyó el logo de la presentación `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` para usar `recursos/Gestiona-PANTONE.svg` y se ajustó su tamaño visual mediante estilos existentes de cabecera.
+- En la diapositiva 2 se limitó la animación tipo pulso a 5 repeticiones en `Configuracion procesos - Gestiona/styles-config.css`.
+- En la diapositiva 4 se rediseñaron los bloques de **Modelo de datos**, **Agentes** y **Nodos o tareas** para incorporar imágenes dentro de tarjetas y ajustar su distribución para encaje.
+- Se incorporaron nuevos recursos gráficos en `recursos/`: `modelo-datos.svg`, `agentes.svg`, `tareas.svg`.
+- En la diapositiva 7 se crearon iconos para sustituir las letras grandes D, T y PDF en la diapositiva de obtención de materiales.
+- Se incorporaron nuevos recursos de iconos en `recursos/`: `icono-documentos.svg`, `icono-tramites.svg`, `icono-pdf.svg`.
+- En la diapositiva 8 se eliminaron los prefijos 2.1/2.2/2.3 y se resaltaron en azul los títulos **Subprocesos**, **Fases resolutorias** y **Nodos especiales**.
+
 ## v2.1.1 - 2026-04-29
 - Se corrigió la lógica visual de animaciones en `Configuracion procesos - Gestiona/styles-config.css` para que el contenido también se renderice cuando el slide activo usa el atributo `data-deck-active` (mecanismo real de `deck-stage.js`).
 - Se actualizaron los selectores de estado activo/inactivo (`.anim`, `.draw`, `.grow`, `.pulse`, `.drift`, `.spin`) para evitar que el texto y bloques queden en `opacity: 0` en todas las diapositivas.
