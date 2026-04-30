@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.22.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se corrigió la superposición del título con la cabecera/logo en la diapositiva **13 Cadena de construcción del proceso**.
+- Se ajustó el bloque superior de la slide con mayor separación vertical (`padding-top`) y se redujo el tamaño del título para mantener jerarquía sin invadir la franja de marca.
+- Se redujo drásticamente el tamaño de tipografía en las 4 cajas descriptivas inferiores para recuperar legibilidad y proporción visual.
+- Se mantuvo la progresión cromática azul de izquierda a derecha en nodos, flechas y acentos de tarjetas.
+- Consolidación de versión de la app: **v2.22.0**.
+
 ## v2.21.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se reestructuró de nuevo la diapositiva **13 Cadena de construcción del proceso** para mejorar legibilidad real en pantalla.
 - Se eliminó el texto introductorio que comenzaba por **“De la documentación base...”** y se dejó el foco visual en título + secuencia de etapas.
