@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.33.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se movió la diapositiva **Modelo de datos del procedimiento** para situarla después de **Cadena de construcción del proceso**, según el orden solicitado.
+- Se renumeraron las etiquetas de sección para mantener la secuencia narrativa: **11 Agentes y órganos**, **12 Cadena de construcción del proceso**, **13 Modelo de datos**.
+- Se ajustaron los contadores de pie de diapositiva afectados para conservar coherencia con el total de 15 slides.
+- Se actualizó la versión visible de la app en `app.js` a **v2.33.0**.
+- Consolidación de versión de la app: **v2.33.0**.
+
 ## v2.32.0 - 2026-04-30
 - En la diapositiva **09 Los componentes de un proceso** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se sustituyó la composición triangular por una composición **en línea** de tres bloques para evitar solapes y recortes.
 - Se reordenaron los bloques en secuencia horizontal (**Modelo de datos → Flujo y lógicas → Agentes y órganos**) con flechas intermedias y animación de aparición escalonada de una sola pasada.
