@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.20.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se rediseñó la diapositiva **13 Cadena de construcción del proceso** para aproximarla visualmente a un esquema de etapas con círculos prominentes.
+- Se sustituyó la composición de tarjetas lineales por una estructura de **4 nodos circulares** con doble aro y gradiente interior, reforzando el peso visual de cada etapa.
+- Se aumentó el tamaño de los iconos y de las flechas de conexión entre etapas para una lectura secuencial más clara y contundente.
+- Se mantuvieron las 4 fases funcionales existentes, trasladando sus descripciones a tarjetas inferiores para conservar legibilidad y coherencia con el tono de la presentación.
+- Consolidación de versión de la app: **v2.20.0**.
+
 ## v2.19.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se añadió una nueva diapositiva antes de **Bloque 3** con el título **Cadena de construcción del proceso**.
 - La nueva slide incorpora una disposición horizontal inspirada en cadena de etapas (tarjetas + flechas), manteniendo la paleta y el estilo visual existente de la presentación.
