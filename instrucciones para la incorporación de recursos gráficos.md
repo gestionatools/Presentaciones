@@ -82,3 +82,7 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
 - `app.css`  
   **Descripción:** hoja de estilos de la app lanzadora (no es recurso visual insertable).  
   **Uso recomendado:** estilos globales del índice de presentaciones.
+
+- `fondo-red.svg`  
+  **Descripción:** fondo vectorial de red nodal con estética padronal en tonos turquesa.  
+  **Uso recomendado:** pie decorativo en diapositivas de temática padrón/territorio y separadores de bloque.

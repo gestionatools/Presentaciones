@@ -117,3 +117,6 @@ body {
   border-radius: 8px;
   padding: .36rem .45rem;
 }
+
+
+.folders{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}.folder-link{display:inline-flex;align-items:center;padding:10px 14px;border:1px solid #0b7285;border-radius:999px;color:#0b7285;text-decoration:none;background:#e8f8fb;font-weight:600}.folder-link:hover{background:#d3f0f7}
