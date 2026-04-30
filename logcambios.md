@@ -245,3 +245,12 @@
 ## v2.9.0 - 2026-04-29
 - Se creó `AGENTS.md` en la raíz del repositorio con directrices obligatorias para diseño de presentaciones: revisión de presentaciones existentes, uso del documento de recursos gráficos, estilo elegante y consistente, animaciones sencillas y tono moderno.
 - Consolidación de versión de la app: **v2.9.0**.
+
+## v2.18.0 - 2026-04-30
+- Se eliminó del landing toda referencia y funcionalidad de importación/exportación de PresentaJSON en `index.html`, `app.js` y `recursos/app.css`.
+- Se rediseñó el listado de presentaciones en formato acordeón por carpetas (nivel 1: nombre de carpeta, nivel 2: botón **Acceder a la presentación**) en `app.js` y `recursos/app.css`.
+- Se añadió un botón **Expandir** por presentación para abrir en nueva pestaña e intentar activar pantalla completa automáticamente desde `app.js`.
+- Se actualizó el estilo visual del landing a una gama cromática basada en `#006E87` y se ajustó la hero para mantener coherencia estética en `recursos/app.css`.
+- Se incorporó el logo de Gestiona en la esquina superior derecha del encabezado principal usando `recursos/logo-gestiona.svg` en `index.html`.
+- Se eliminó el botón flotante **Entrar en modo edición** y su lógica de visibilidad en los tres `tweaks-panel.jsx` (`ARCHIVO/`, `Archivo 2/`, `Configuracion procesos - Gestiona/`) para retirar la edición visual directa en línea.
+- Consolidación de versión de la app: **v2.18.0**.

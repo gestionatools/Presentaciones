@@ -164,7 +164,6 @@ function useTweaks(defaults) {
 // is what actually hides the panel.
 function TweaksPanel({ title = 'Tweaks', children }) {
   const [open, setOpen] = React.useState(false);
-  const [standaloneVisible, setStandaloneVisible] = React.useState(window.parent === window);
   const dragRef = React.useRef(null);
   const offsetRef = React.useRef({ x: 16, y: 16 });
   const PAD = 16;
@@ -206,14 +205,6 @@ function TweaksPanel({ title = 'Tweaks', children }) {
     return () => window.removeEventListener('message', onMsg);
   }, []);
 
-  React.useEffect(() => {
-    setStandaloneVisible(window.parent === window && !open);
-  }, [open]);
-
-  const openStandalone = () => {
-    setOpen(true);
-    window.dispatchEvent(new CustomEvent('editmode:toggle', { detail: true }));
-  };
 
   const dismiss = () => {
     setOpen(false);
@@ -242,11 +233,10 @@ function TweaksPanel({ title = 'Tweaks', children }) {
     window.addEventListener('mouseup', up);
   };
 
-  if (!open && !standaloneVisible) return null;
+  if (!open) return null;
   return (
     <>
       <style>{__TWEAKS_STYLE}</style>
-      {standaloneVisible && <button type="button" className="twk-entry" onClick={openStandalone}>Entrar en modo edición</button>}
       {open && (
       <div ref={dragRef} className="twk-panel"
            style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
@@ -589,7 +579,6 @@ function EditModeTools({ resourcesPath = '../../recursos' }) {
 
   return (
     <>
-      <TweakSection label="Modo edición" />
       <TweakToggle label="Edición visual" value={editEnabled} onChange={(v) => setEditEnabled(v)} />
       <TweakText
         label="Texto"

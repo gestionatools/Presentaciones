@@ -10,18 +10,14 @@
   <main class="app">
     <header class="hero">
       <img src="recursos/brand-wave.svg" alt="Decoración" class="hero__bg" />
+      <img src="recursos/logo-gestiona.svg" alt="Logo Gestiona" class="hero__logo" />
       <h1>Centro de Presentaciones</h1>
-      <p>Selecciona una presentación para abrirla en una nueva pestaña o importa un archivo PresentaJSON autónomo.</p>
-      <div class="importer">
-        <label for="presentaJsonInput" class="importer__label">Importar PresentaJSON</label>
-        <input id="presentaJsonInput" class="importer__input" type="file" accept=".json,.presentajson" />
-        <button id="importPresentaJsonBtn" class="btn btn--ghost" type="button">Abrir importado</button>
-      </div>
+      <p>Selecciona una carpeta y accede a su presentación.</p>
     </header>
 
     <section>
       <h2>Presentaciones disponibles</h2>
-      <div id="presentations" class="grid" aria-live="polite"></div>
+      <div id="presentations" class="accordion" aria-live="polite"></div>
     </section>
     <footer class="app__footer"><small id="appVersion"></small></footer>
   </main>
