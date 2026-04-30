@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.23.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se cambió la animación de la slide 13 para entrada de izquierda a derecha (`enter-ltr`) y se eliminó el efecto de movimiento continuo asociado a `elegant-float`.
+- Se ajustó la grilla horizontal reduciendo el ancho de las columnas de flecha para que las tarjetas de texto ganen anchura útil dentro de cada caja.
+- Se forzó el texto de las cajas a ocupar más ancho efectivo (`max-width:none` y paddings laterales más contenidos) manteniendo legibilidad.
+- Se reemplazó el azul del último nodo/acento por un tono más alineado con la paleta corporativa (`#1a7f8e`) en lugar del azul más eléctrico anterior.
+- Consolidación de versión de la app: **v2.23.0**.
+
 ## v2.22.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se corrigió la superposición del título con la cabecera/logo en la diapositiva **13 Cadena de construcción del proceso**.
 - Se ajustó el bloque superior de la slide con mayor separación vertical (`padding-top`) y se redujo el tamaño del título para mantener jerarquía sin invadir la franja de marca.
