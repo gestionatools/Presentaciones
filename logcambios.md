@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.28.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se añadió en la **slide 07 Normativa** un botón **NORMATIVA** con enlace externo a ESPUBLICO (`https://www.espublico.com/BD/getNorma/644?ancla=a71`) ubicado bajo las tres tarjetas para encaje visual natural.
+- En `Configuracion procesos - Gestiona/styles-config.css` se incorporó el estilo `.normativa-btn` (botón tipo píldora, paleta corporativa teal, microinteracción hover y foco visible) para mantener coherencia elegante con el resto de la presentación.
+- Consolidación de versión de la app: **v2.28.0**.
+
 ## v2.27.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aumentó en un **50%** el tamaño de letra de las 4 cajas descriptivas de la slide 13.
 - Se pasó de `font-size:16px` a `font-size:24px`, manteniendo alineación centrada y resto de ajustes de caja.
