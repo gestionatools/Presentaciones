@@ -1080,7 +1080,7 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
 
 .component-card {
   position: absolute;
-  width: min(36%, 440px);
+  width: min(32%, 390px);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1092,9 +1092,9 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
 
 .component-card .body { font-size: 26px; line-height: 1.35; }
 .component-card img { margin: 0 auto; }
-.component-card--top { top: 12px; left: 50%; transform: translateX(-50%); }
-.component-card--left { bottom: 24px; left: 5%; }
-.component-card--right { bottom: 24px; right: 5%; }
+.component-card--top { top: 8px; left: 50%; transform: translateX(-50%); }
+.component-card--left { bottom: 18px; left: 15%; }
+.component-card--right { bottom: 18px; right: 15%; }
 
 .components-arrow {
   position: absolute;
@@ -1103,6 +1103,6 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
   font-weight: 800;
   text-shadow: 0 4px 10px rgba(0,0,0,.12);
 }
-.components-arrow--top-left { left: 34%; top: 235px; }
-.components-arrow--left-right { left: 49%; bottom: 170px; transform: translateX(-50%); }
-.components-arrow--right-top { right: 34%; top: 235px; }
+.components-arrow--top-left { left: 39%; top: 230px; }
+.components-arrow--left-right { left: 50%; bottom: 158px; transform: translateX(-50%); }
+.components-arrow--right-top { right: 39%; top: 230px; }

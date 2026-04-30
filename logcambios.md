@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.30.0 - 2026-04-30
+- En la diapositiva **09 Los componentes de un proceso** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se reajustó la geometría del layout triangular para que quede claramente en formato isósceles: **1 bloque arriba** y **2 bloques abajo** sin solapes visuales.
+- En `Configuracion procesos - Gestiona/styles-config.css` se redujo ligeramente el ancho de tarjetas, se recentraron los bloques inferiores y se recolocaron flechas para mantener simetría y lectura limpia del triángulo.
+- Se actualizó la versión visible de la app en `app.js` a **v2.30.0**.
+- Consolidación de versión de la app: **v2.30.0**.
+
 ## v2.29.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se centró el CTA de la diapositiva **07 Normativa** y se añadió una clase dedicada para animación recurrente suave del botón **NORMATIVA** (micro-shake cada 3s).
 - En `Configuracion procesos - Gestiona/styles-config.css` se incorporaron `@keyframes subtleShake`, `.normativa-cta-wrap` y `.normativa-btn--shake` para resolver centrado + animación periódica sin romper la estética corporativa.
