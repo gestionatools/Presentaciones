@@ -1,6 +1,12 @@
-const APP_VERSION = 'v2.17.0';
+const APP_VERSION = 'v2.18.0';
 
 const presentations = [
+
+  {
+    title: 'Presentación padrón',
+    path: 'Presentación padrón/presentacion-padron.html',
+    description: 'Nueva presentación de padrón en HTML con estilo moderno.'
+  },
   {
     title: 'Archivo electrónico - Gestiona',
     path: 'ARCHIVO/Archivo electronico - Gestiona.html',
@@ -18,12 +24,43 @@ const presentations = [
   }
 ];
 
+
+function collectAppFolders(decks) {
+  const folderSet = new Set(['.']);
+  decks.forEach((deck) => {
+    const raw = (deck.path || '').trim();
+    if (!raw) return;
+    const parts = raw.split('/');
+    if (parts.length > 1 && parts[0]) folderSet.add(parts[0]);
+  });
+  return Array.from(folderSet);
+}
+
+function renderFolderAccess() {
+  const foldersHost = document.getElementById('appFolders');
+  if (!foldersHost) return;
+  const folders = collectAppFolders(presentations);
+  foldersHost.innerHTML = '';
+
+  folders.forEach((folder) => {
+    const item = document.createElement('a');
+    item.className = 'folder-link';
+    item.href = folder === '.' ? './' : `./${folder}/`;
+    item.target = '_blank';
+    item.rel = 'noopener noreferrer';
+    item.textContent = folder === '.' ? 'Raíz de la aplicación' : folder;
+    foldersHost.appendChild(item);
+  });
+}
+
 const container = document.getElementById('presentations');
 const appVersionNode = document.getElementById('appVersion');
 
 if (appVersionNode) {
   appVersionNode.textContent = `Versión ${APP_VERSION}`;
 }
+
+renderFolderAccess();
 
 function toAbsoluteUrl(relativeOrAbsolute, baseUrl) {
   try {
