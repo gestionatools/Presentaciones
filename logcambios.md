@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.26.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se ajustó el texto de las cajas inferiores de la slide 13 para que encaje correctamente en el ancho completo de cada tarjeta.
+- Se neutralizó la rejilla interna heredada de `.norm-quote` en esas cajas (`display:block`) para eliminar la columna vacía que comprimía el texto.
+- Se mantuvo alineación centrada del contenido y consistencia cromática por etapa en los acentos de cada caja.
+- Consolidación de versión de la app: **v2.26.0**.
+
 ## v2.25.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se reforzó la alineación centrada del texto en las cajas inferiores de la slide 13 aplicándola tanto al contenedor interno como al párrafo.
 - Se actualizó el color del círculo derecho al tono solicitado `#00ABD1`.
