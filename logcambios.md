@@ -173,3 +173,32 @@
 ## v2.9.0 - 2026-04-29
 - Se creó `AGENTS.md` en la raíz del repositorio con directrices obligatorias para diseño de presentaciones: revisión de presentaciones existentes, uso del documento de recursos gráficos, estilo elegante y consistente, animaciones sencillas y tono moderno.
 - Consolidación de versión de la app: **v2.9.0**.
+
+## v1.0.0 - 2026-04-29
+- Se construyó una aplicación web completa tipo editor de presentaciones HTML.
+- Se añadieron las pantallas `public/index.html` y `public/editor.html` con sidebar, editor Monaco, botón guardar y preview iframe en vivo.
+- Se implementaron módulos frontend en `js/` para carga de archivos, edición, preview por Blob y persistencia vía API.
+- Se implementaron API routes en `api/` para listar, leer y guardar archivos en GitHub usando variables de entorno seguras.
+- Se añadió `vercel.json` para rutas limpias (`/` y `/editor`) y despliegue compatible con Vercel.
+- Se actualizó `.gitignore` con exclusiones de entorno y artefactos locales.
+- Se creó documentación operativa y de despliegue en `README.md`.
+
+## v1.0.1 - 2026-04-29
+- Se corrigió el enrutado en `vercel.json` para evitar el error 404 NOT_FOUND al abrir `/public/editor`.
+- Se añadieron reescrituras de compatibilidad para `/public/editor`, `/public/editor.html`, `/public/index` y `/public/index.html`.
+- Se actualizó el enlace principal en `public/index.html` para usar `/editor` como ruta canónica y se documentó la ruta de compatibilidad.
+
+## v1.1.0 - 2026-04-29
+- Se añadió modo **Visualización** en el editor para ver presentaciones existentes en carpetas del repositorio.
+- Se añadió selector de presentación para navegar por carpetas y listar archivos asociados.
+- En modo visualización, el iframe carga la presentación principal (`.html`) de la carpeta seleccionada.
+- Se reforzó el modo **Edición** para permitir editar archivos existentes con Monaco y preview en vivo.
+- Se cambió la lógica de guardado: ahora cada guardado crea una nueva carpeta versionada (`<carpeta>_v001`, `<carpeta>_v002`, ...), conservando la ruta interna del archivo editado.
+- `api/getFiles.js` ahora devuelve además estructura de presentaciones agrupadas por carpeta.
+- `README.md` actualizado con el nuevo flujo de visualización + versionado.
+
+## v1.1.1 - 2026-04-29
+- Se recuperó la funcionalidad de carga de presentaciones en el selector cuando no hay variables GitHub configuradas.
+- `api/getFiles.js` ahora usa doble origen: GitHub API (si hay credenciales) o escaneo de filesystem del proyecto (fallback).
+- `api/getFile.js` también incorpora fallback a filesystem para poder abrir archivos de presentaciones locales y visualizarlos/editarlos.
+- Se añadió normalización y validación de rutas en lectura de archivo para evitar rutas inválidas.

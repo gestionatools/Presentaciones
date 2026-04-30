@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de Presentaciones</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #020617; color: #e2e8f0; height: 100vh; display: grid; grid-template-columns: 320px 1fr 42%; }
+      aside { border-right: 1px solid #1e293b; padding: 1rem; overflow: auto; }
+      .mode-switch { display: flex; gap: 8px; margin-bottom: 12px; }
+      .mode-switch button { flex: 1; }
+      select, button.file-item { width: 100%; margin-bottom: 8px; }
+      .file-item { text-align: left; border: 1px solid #334155; background: #0f172a; color: #e2e8f0; border-radius: 6px; padding: 8px 10px; cursor: pointer; }
+      .file-item.active { border-color: #38bdf8; }
+      main { display: grid; grid-template-rows: auto 1fr; border-right: 1px solid #1e293b; }
+      .toolbar { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-bottom: 1px solid #1e293b; gap: 12px; }
+      #editor { height: calc(100vh - 58px); }
+      #previewPane { display: grid; grid-template-rows: auto 1fr; }
+      #previewPane h3 { margin: 0; padding: 12px; border-bottom: 1px solid #1e293b; }
+      #livePreview { width: 100%; height: calc(100vh - 49px); border: 0; background: #fff; }
+      #status { font-size: .875rem; color: #cbd5e1; }
+      button { border: 0; border-radius: 6px; padding: 8px 12px; background: #38bdf8; color: #082f49; font-weight: 700; cursor: pointer; }
+      #saveButton[disabled] { opacity: .5; cursor: not-allowed; }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <div class="mode-switch">
+        <button id="viewModeBtn">Visualización</button>
+        <button id="editModeBtn">Edición</button>
+      </div>
+      <label for="presentationSelect">Presentación</label>
+      <select id="presentationSelect"></select>
+      <h3>Archivos</h3>
+      <div id="fileList"></div>
+    </aside>
+
+    <main>
+      <div class="toolbar">
+        <strong id="currentFile">Sin archivo seleccionado</strong>
+        <div>
+          <button id="saveButton">Guardar versión</button>
+          <span id="status">Listo</span>
+        </div>
+      </div>
+      <div id="editor" aria-label="Monaco editor"></div>
+    </main>
+
+    <section id="previewPane">
+      <h3>Preview / Visualización</h3>
+      <iframe id="livePreview" title="Preview"></iframe>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.min.js"></script>
+    <script type="module" src="/js/editor.js"></script>
+  </body>
+</html>
