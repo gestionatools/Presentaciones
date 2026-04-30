@@ -4,28 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centro de Presentaciones</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
   <link rel="stylesheet" href="recursos/app.css" />
 </head>
 <body>
-  <main class="app">
-    <header class="hero">
-      <img src="recursos/brand-wave.svg" alt="Decoración" class="hero__bg" />
-      <h1>Centro de Presentaciones</h1>
-      <p>Selecciona una presentación para abrirla en una nueva pestaña o importa un archivo PresentaJSON autónomo.</p>
-      <div class="importer">
-        <label for="presentaJsonInput" class="importer__label">Importar PresentaJSON</label>
-        <input id="presentaJsonInput" class="importer__input" type="file" accept=".json,.presentajson" />
-        <button id="importPresentaJsonBtn" class="btn btn--ghost" type="button">Abrir importado</button>
-      </div>
-    </header>
+  <div class="reveal">
+    <div class="slides" id="presentations"></div>
+  </div>
 
-    <section>
-      <h2>Presentaciones disponibles</h2>
-      <div id="presentations" class="grid" aria-live="polite"></div>
-    </section>
-    <footer class="app__footer"><small id="appVersion"></small></footer>
-  </main>
-
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

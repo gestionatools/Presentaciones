@@ -173,3 +173,10 @@
 ## v2.9.0 - 2026-04-29
 - Se creó `AGENTS.md` en la raíz del repositorio con directrices obligatorias para diseño de presentaciones: revisión de presentaciones existentes, uso del documento de recursos gráficos, estilo elegante y consistente, animaciones sencillas y tono moderno.
 - Consolidación de versión de la app: **v2.9.0**.
+
+## v3.0.0 - 2026-04-29
+- Cambio de paradigma total: la app lanzadora (`index.html` + `app.js`) se reescribió para ejecutarse como una presentación Reveal.js, con navegación por slides y acceso directo a cada deck.
+- Las tres presentaciones activas se migraron de `deck-stage` a estructura Reveal.js (`.reveal > .slides > section`) manteniendo su contenido y narrativa.
+- Se sustituyó la carga de `deck-stage.js` por recursos de Reveal.js (CSS + JS vía CDN) e inicialización estándar con hash, transición `fade` y numeración de diapositiva.
+- Se adaptaron selectores CSS de los temas de presentación para usar el estado activo de Reveal (`section.present`) en lugar de clases/atributos de `deck-stage`.
+- Consolidación de versión de la app: **v3.0.0**.

@@ -7,13 +7,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-config.css">
-<script src="deck-stage.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<deck-stage width="1920" height="1080">
+<div class="reveal"><div class="slides">
 
 <section data-label="01 Portada">
   <div class="cover-archivo">
@@ -176,7 +177,17 @@
   </div><div class="foot"><span>Gestiona · Formación</span><span class="num">14 / 15</span></div></div>
 </section>
 
-</deck-stage>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1920,
+    height: 1080,
+    hash: true,
+    slideNumber: true,
+    transition: "fade"
+  });
+</script>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel">
 const { TweaksPanel, EditModeTools } = window;
