@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.24.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aplicó en la slide 13 la paleta exacta solicitada para nodos, conectores y acentos de cajas: `#002A33`, `#005366`, `#006E87`, `#00ABD1` y `#1FD6FF`.
+- Se ajustó el color de bordes de los círculos y el color de flechas para mantener coherencia visual por etapa.
+- Se actualizó el estilo de las cajas inferiores para usar el mismo código de color por etapa (acento superior) y reforzar consistencia con los círculos.
+- Se centró el texto de todas las cajas descriptivas (`text-align:center`) según instrucción.
+- Consolidación de versión de la app: **v2.24.0**.
+
 ## v2.23.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se cambió la animación de la slide 13 para entrada de izquierda a derecha (`enter-ltr`) y se eliminó el efecto de movimiento continuo asociado a `elegant-float`.
 - Se ajustó la grilla horizontal reduciendo el ancho de las columnas de flecha para que las tarjetas de texto ganen anchura útil dentro de cada caja.
