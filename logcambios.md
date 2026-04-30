@@ -1,5 +1,58 @@
 # Log de cambios
 
+## v2.27.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aumentó en un **50%** el tamaño de letra de las 4 cajas descriptivas de la slide 13.
+- Se pasó de `font-size:16px` a `font-size:24px`, manteniendo alineación centrada y resto de ajustes de caja.
+- Consolidación de versión de la app: **v2.27.0**.
+
+## v2.26.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se ajustó el texto de las cajas inferiores de la slide 13 para que encaje correctamente en el ancho completo de cada tarjeta.
+- Se neutralizó la rejilla interna heredada de `.norm-quote` en esas cajas (`display:block`) para eliminar la columna vacía que comprimía el texto.
+- Se mantuvo alineación centrada del contenido y consistencia cromática por etapa en los acentos de cada caja.
+- Consolidación de versión de la app: **v2.26.0**.
+
+## v2.25.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se reforzó la alineación centrada del texto en las cajas inferiores de la slide 13 aplicándola tanto al contenedor interno como al párrafo.
+- Se actualizó el color del círculo derecho al tono solicitado `#00ABD1`.
+- Se ajustó también el acento cromático de la caja derecha para mantener consistencia con el nuevo color del nodo final.
+- Consolidación de versión de la app: **v2.25.0**.
+
+## v2.24.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aplicó en la slide 13 la paleta exacta solicitada para nodos, conectores y acentos de cajas: `#002A33`, `#005366`, `#006E87`, `#00ABD1` y `#1FD6FF`.
+- Se ajustó el color de bordes de los círculos y el color de flechas para mantener coherencia visual por etapa.
+- Se actualizó el estilo de las cajas inferiores para usar el mismo código de color por etapa (acento superior) y reforzar consistencia con los círculos.
+- Se centró el texto de todas las cajas descriptivas (`text-align:center`) según instrucción.
+- Consolidación de versión de la app: **v2.24.0**.
+
+## v2.23.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se cambió la animación de la slide 13 para entrada de izquierda a derecha (`enter-ltr`) y se eliminó el efecto de movimiento continuo asociado a `elegant-float`.
+- Se ajustó la grilla horizontal reduciendo el ancho de las columnas de flecha para que las tarjetas de texto ganen anchura útil dentro de cada caja.
+- Se forzó el texto de las cajas a ocupar más ancho efectivo (`max-width:none` y paddings laterales más contenidos) manteniendo legibilidad.
+- Se reemplazó el azul del último nodo/acento por un tono más alineado con la paleta corporativa (`#1a7f8e`) en lugar del azul más eléctrico anterior.
+- Consolidación de versión de la app: **v2.23.0**.
+
+## v2.22.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se corrigió la superposición del título con la cabecera/logo en la diapositiva **13 Cadena de construcción del proceso**.
+- Se ajustó el bloque superior de la slide con mayor separación vertical (`padding-top`) y se redujo el tamaño del título para mantener jerarquía sin invadir la franja de marca.
+- Se redujo drásticamente el tamaño de tipografía en las 4 cajas descriptivas inferiores para recuperar legibilidad y proporción visual.
+- Se mantuvo la progresión cromática azul de izquierda a derecha en nodos, flechas y acentos de tarjetas.
+- Consolidación de versión de la app: **v2.22.0**.
+
+## v2.21.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se reestructuró de nuevo la diapositiva **13 Cadena de construcción del proceso** para mejorar legibilidad real en pantalla.
+- Se eliminó el texto introductorio que comenzaba por **“De la documentación base...”** y se dejó el foco visual en título + secuencia de etapas.
+- Se ajustaron tamaños y proporciones (círculos, iconos, flechas y tarjetas) para evitar saturación y mejorar lectura horizontal.
+- Se refinó el contenido textual de las tarjetas inferiores para reducir longitud sin perder significado funcional.
+- Se aplicó una progresión cromática explícita de izquierda a derecha en círculos y conectores: de azul claro (`#51bfdc`) a azul profundo (`#2a6bc0`).
+- Consolidación de versión de la app: **v2.21.0**.
+
+## v2.20.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se rediseñó la diapositiva **13 Cadena de construcción del proceso** para aproximarla visualmente a un esquema de etapas con círculos prominentes.
+- Se sustituyó la composición de tarjetas lineales por una estructura de **4 nodos circulares** con doble aro y gradiente interior, reforzando el peso visual de cada etapa.
+- Se aumentó el tamaño de los iconos y de las flechas de conexión entre etapas para una lectura secuencial más clara y contundente.
+- Se mantuvieron las 4 fases funcionales existentes, trasladando sus descripciones a tarjetas inferiores para conservar legibilidad y coherencia con el tono de la presentación.
+- Consolidación de versión de la app: **v2.20.0**.
+
 ## v2.19.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se añadió una nueva diapositiva antes de **Bloque 3** con el título **Cadena de construcción del proceso**.
 - La nueva slide incorpora una disposición horizontal inspirada en cadena de etapas (tarjetas + flechas), manteniendo la paleta y el estilo visual existente de la presentación.
