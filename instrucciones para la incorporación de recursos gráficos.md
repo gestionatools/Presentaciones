@@ -82,3 +82,16 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
 - `app.css`  
   **Descripción:** hoja de estilos de la app lanzadora (no es recurso visual insertable).  
   **Uso recomendado:** estilos globales del índice de presentaciones.
+
+
+- `padron-icons/icono-alta.svg`  
+  **Descripción:** icono circular de alta/alta de inscripción.  
+  **Uso recomendado:** altas, incorporaciones y acciones positivas en flujos padronales.
+
+- `padron-icons/icono-baja.svg`  
+  **Descripción:** icono circular de baja/cancelación de inscripción.  
+  **Uso recomendado:** bajas, cancelaciones y eventos de salida.
+
+- `padron-icons/icono-busqueda.svg`  
+  **Descripción:** icono de lupa para consulta/comprobación.  
+  **Uso recomendado:** validaciones, comprobaciones y búsqueda de expedientes.

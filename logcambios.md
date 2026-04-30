@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.28.0 - 2026-04-30
+- Se creó la nueva carpeta `PADRÓN/` con la presentación `PADRÓN - Formación padrón.html`.
+- Se estructuró la presentación en HTML con el criterio solicitado de **1 imagen = 1 slide** (19 slides referenciadas).
+- Se añadieron nuevos recursos reutilizables en `recursos/padron-icons/`: `icono-alta.svg`, `icono-baja.svg`, `icono-busqueda.svg`.
+- Se dio acceso a la presentación desde el índice de la app en `app.js`.
+- Consolidación de versión de la app: **v2.28.0**.
+
 ## v2.27.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aumentó en un **50%** el tamaño de letra de las 4 cajas descriptivas de la slide 13.
 - Se pasó de `font-size:16px` a `font-size:24px`, manteniendo alineación centrada y resto de ajustes de caja.

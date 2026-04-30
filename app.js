@@ -1,6 +1,12 @@
-const APP_VERSION = 'v2.17.0';
+const APP_VERSION = 'v2.28.0';
 
 const presentations = [
+
+  {
+    title: 'PADRÓN - Formación padrón',
+    path: 'PADRÓN/PADRÓN - Formación padrón.html',
+    description: 'Conversión a HTML de la presentación de padrón (1 imagen por slide).'
+  },
   {
     title: 'Archivo electrónico - Gestiona',
     path: 'ARCHIVO/Archivo electronico - Gestiona.html',
