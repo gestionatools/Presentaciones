@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.31.0 - 2026-04-30
+- En la diapositiva **09 Los componentes de un proceso** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se eliminó el desplazamiento no deseado del bloque superior: la causa era la combinación de posicionamiento con la animación continua `elegant-float`, que alteraba su `transform` y lo movía hacia la derecha al poco de entrar.
+- Se redefinió la secuencia de entrada para que los tres bloques aparezcan **una sola vez y en cascada** (arriba → izquierda → derecha) usando `anim-3`, `anim-4` y `anim-5`, sin movimiento flotante posterior.
+- Se actualizó la versión visible de la app en `app.js` a **v2.31.0**.
+- Consolidación de versión de la app: **v2.31.0**.
+
 ## v2.30.0 - 2026-04-30
 - En la diapositiva **09 Los componentes de un proceso** (`Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html`) se reajustó la geometría del layout triangular para que quede claramente en formato isósceles: **1 bloque arriba** y **2 bloques abajo** sin solapes visuales.
 - En `Configuracion procesos - Gestiona/styles-config.css` se redujo ligeramente el ancho de tarjetas, se recentraron los bloques inferiores y se recolocaron flechas para mantener simetría y lectura limpia del triángulo.
