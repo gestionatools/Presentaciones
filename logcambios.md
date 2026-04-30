@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.27.0 - 2026-04-30
+- En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se aumentó en un **50%** el tamaño de letra de las 4 cajas descriptivas de la slide 13.
+- Se pasó de `font-size:16px` a `font-size:24px`, manteniendo alineación centrada y resto de ajustes de caja.
+- Consolidación de versión de la app: **v2.27.0**.
+
 ## v2.26.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se ajustó el texto de las cajas inferiores de la slide 13 para que encaje correctamente en el ancho completo de cada tarjeta.
 - Se neutralizó la rejilla interna heredada de `.norm-quote` en esas cajas (`display:block`) para eliminar la columna vacía que comprimía el texto.
