@@ -1,5 +1,13 @@
 # Log de cambios
 
+## v2.39.0 - 2026-05-04
+- Se reordenó el landing (`app.js`) para estructurar el acordeón en dos niveles, dejando como nivel 1: **Archivo**, **Gestión de Procesos** y **GFD**.
+- Dentro de **Archivo** (nivel 2) se incluyeron accesos a **ARCHIVO** y **ARCHIVO 2**.
+- Dentro de **Gestión de Procesos** (nivel 2) se incluyó **Configuracion procesos - Gestiona**.
+- Dentro de **GFD** (nivel 2) se incluyó **Reglada + CODE - Gestiona**.
+- Se actualizó la versión visible de la app en `app.js` a **v2.39.0**.
+- Consolidación de versión de la app: **v2.39.0**.
+
 ## v2.38.0 - 2026-05-04
 - Se refinó de nuevo la diapositiva **23 Circuitos de resolución — Simples** en `GFD/Reglada - CODE - Gestiona.html` para ajustarla más al esquema de referencia, reduciendo todavía más el título (`36px`) y manteniéndolo en la zona alta sin invadir cabecera.
 - Se corrigió la superposición visual de iconos y nodos del flujo reubicando coordenadas de `docuverde.svg` y `puntosverdes.svg` para que cada hito quede limpio y separado.
