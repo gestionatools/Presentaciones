@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.34.0 - 2026-05-04
+- Se consolidó y dejó accesible la nueva presentación en carpeta `GFD` con el taller **Reglada + CODE**, utilizando el recurso corporativo `recursos/Gestiona-PANTONE.svg` y estructura completa de 27 diapositivas en `GFD/Reglada - CODE - Gestiona.html`.
+- Se registró la presentación `GFD` en el lanzador principal (`app.js`) para que aparezca como bloque independiente en el acordeón con acceso directo y opción de expansión.
+- Se actualizó la versión visible de la app en `app.js` a **v2.34.0**.
+- Consolidación de versión de la app: **v2.34.0**.
+
 ## v2.33.0 - 2026-04-30
 - En `Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html` se movió la diapositiva **Modelo de datos del procedimiento** para situarla después de **Cadena de construcción del proceso**, según el orden solicitado.
 - Se renumeraron las etiquetas de sección para mantener la secuencia narrativa: **11 Agentes y órganos**, **12 Cadena de construcción del proceso**, **13 Modelo de datos**.
