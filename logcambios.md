@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.39.0 - 2026-05-04
+- En `GFD/Reglada - CODE - Gestiona.html` se sustituyeron los gráficos creados de las diapositivas **04, 05 y 06** por capturas reales (`recursos/Imagen1.png`, `recursos/Imagen2.png`, `recursos/Imagen3.png`) manteniendo el marco visual corporativo.
+- En la diapositiva **17 Tipos de tareas** se ajustó la aparición de cada tipo con animación sutil y secuencial para mejorar la lectura progresiva.
+- En la diapositiva **24 Circuitos de resolución — Plurales** se reposicionó el título más arriba, se amplió la ocupación vertical del diagrama (~35%) y se recalibró la tipografía interna del SVG para evitar que el texto sobresalga de las cajas.
+- En `app.js` se actualizó la versión visible de la app a **v2.39.0**.
+- Consolidación de versión de la app: **v2.39.0**.
+
 ## v2.38.0 - 2026-05-04
 - Se refinó de nuevo la diapositiva **23 Circuitos de resolución — Simples** en `GFD/Reglada - CODE - Gestiona.html` para ajustarla más al esquema de referencia, reduciendo todavía más el título (`36px`) y manteniéndolo en la zona alta sin invadir cabecera.
 - Se corrigió la superposición visual de iconos y nodos del flujo reubicando coordenadas de `docuverde.svg` y `puntosverdes.svg` para que cada hito quede limpio y separado.
