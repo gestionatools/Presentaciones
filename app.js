@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.34.0';
+const APP_VERSION = 'v2.36.0';
 
 const presentationFolders = [
   {
