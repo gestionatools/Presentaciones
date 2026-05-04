@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.41.0 - 2026-05-04
+- En `Archivo (medios)/Archivo electronico - Gestiona.html` se cambió el logo de la portada (arriba a la izquierda, slide 01) para usar `recursos/Gestiona-PANTONE.svg`.
+- Se recuperó íntegramente la slide **"Toda firma electrónica tiene fecha de caducidad técnica"** (timeline de resellado) en la versión `Archivo (medios)`.
+- Se eliminaron de `Archivo (medios)` las dos slides finales: **"Cumplimiento normativo sin fricción operativa"** y **"Lo que firmas hoy seguirá firmado dentro de 30 años."**
+- Se ajustó el total de slides y la numeración visible de la versión de medios tras la recuperación/eliminación solicitadas.
+- Se actualizó la versión visible de la app en `app.js` a **v2.41.0**.
+- Consolidación de versión de la app: **v2.41.0**.
+
+
 ## v2.40.0 - 2026-05-04
 - Se creó la nueva carpeta de presentación `Archivo (medios)/` como duplicado editado de `Archivo 2/`.
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se ajustó la diapositiva **05 Ciclo de vida** para evitar la superposición del subtítulo y se reequilibró la maquetación de las 3 cajas para ocupar todo el ancho disponible.
