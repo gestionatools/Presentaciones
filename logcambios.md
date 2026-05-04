@@ -1,3 +1,11 @@
+## v2.0.0 - Runtime autónomo PresentaJSON (2026-04-29)
+- Se reescribió completamente la entrega de presentación como `Configuracion procesos - Gestiona/configuracion-procesos-runtime.presentajson.json` en formato autónomo.
+- Se embebió todo el CSS dentro de `headHtml` mediante un bloque `<style>` sin dependencias externas.
+- Se embebió un motor JavaScript de slides en `headHtml` con navegación por teclado, activación/ocultación de slides y animaciones básicas.
+- Se eliminaron dependencias de `styles-config.css`, `deck-stage.js`, React, Babel, rutas `../../recursos` y cualquier CDN para este runtime.
+- Se sustituyeron las imágenes por SVG inline simples dentro de `bodyHtml`.
+- Consolidación de versión de la APP: **v2.0.0**.
+
 # Log de cambios
 
 ## v2.44.0 - 2026-05-04
