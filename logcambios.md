@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.39.0 - 2026-05-04
+- En `GFD/Reglada - CODE - Gestiona.html` se reajustó la diapositiva **24 Circuitos de resolución — Plurales** elevando el título hacia la cabecera (sin solape) y ampliando significativamente la ocupación vertical del diagrama para eliminar el vacío inferior.
+- En la diapositiva **19 Diagrama de flujo** del mismo archivo se rediseñó el esquema a disposición horizontal con lectura izquierda→derecha y paleta azul verdosa dominante de la APP (teales y cianes con acentos controlados).
+- En la diapositiva **23 Circuitos de resolución — Simples** se sustituyó la animación por una progresión más lenta de izquierda a derecha, incorporando iluminación secuencial de franjas verticales a medida que avanza el flujo.
+- Se actualizó la versión visible de la app en `app.js` a **v2.39.0**.
+- Consolidación de versión de la app: **v2.39.0**.
+
 ## v2.38.0 - 2026-05-04
 - Se refinó de nuevo la diapositiva **23 Circuitos de resolución — Simples** en `GFD/Reglada - CODE - Gestiona.html` para ajustarla más al esquema de referencia, reduciendo todavía más el título (`36px`) y manteniéndolo en la zona alta sin invadir cabecera.
 - Se corrigió la superposición visual de iconos y nodos del flujo reubicando coordenadas de `docuverde.svg` y `puntosverdes.svg` para que cada hito quede limpio y separado.
