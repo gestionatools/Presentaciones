@@ -18,6 +18,12 @@ const presentationFolders = [
     title: 'Configuración de procesos - Gestiona',
     path: 'Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html',
     description: 'Presentación enfocada en flujos y configuración de procesos.'
+  },
+  {
+    name: 'GFD',
+    title: 'Gestiona CODE — Tramitación Reglada',
+    path: 'GFD/Reglada - CODE - Gestiona.html',
+    description: 'Taller sobre Gestiona CODE (section, let, definition) y tramitación reglada: tareas, circuitos y lógicas.'
   }
 ];
 

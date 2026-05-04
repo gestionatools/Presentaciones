@@ -946,6 +946,209 @@ deck-stage section[data-deck-active] .elegant-float {
 .teal { color: var(--teal-600); }
 .mono { font-family: var(--font-mono); }
 
+/* ===== PPT-LIGHT LAYOUT (estilo referencia original) ===== */
+/* Layout limpio con cabecera doble y red geométrica en pie */
+.ppt-light {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  padding: 64px 96px 0;
+  background: white;
+  overflow: hidden;
+}
+.ppt-light .pl-logo {
+  position: absolute; top: 40px; left: 60px;
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+}
+.ppt-light .pl-logo-squares {
+  position: relative; width: 44px; height: 44px;
+}
+.ppt-light .pl-logo-squares::before,
+.ppt-light .pl-logo-squares::after {
+  content: '';
+  position: absolute;
+  width: 28px; height: 28px;
+  border-radius: 4px;
+  background: var(--teal-400);
+}
+.ppt-light .pl-logo-squares::before {
+  top: 0; left: 0;
+  opacity: 0.55;
+}
+.ppt-light .pl-logo-squares::after {
+  bottom: 0; right: 0;
+  background: var(--mint);
+}
+
+.ppt-light .pl-header {
+  margin-left: 68px;
+  margin-bottom: 44px;
+  flex: none;
+}
+.ppt-light .pl-header .pl-cat {
+  font-size: 42px; font-weight: 800;
+  color: var(--ink-900);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 4px 0;
+}
+.ppt-light .pl-header .pl-sub {
+  font-size: 42px; font-weight: 600;
+  color: var(--teal-600);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+.ppt-light .pl-kicker {
+  font-size: 30px; font-weight: 600;
+  color: var(--teal-600);
+  margin: 0 0 36px 0;
+  letter-spacing: -0.01em;
+}
+.ppt-light .pl-content {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; gap: 40px;
+  min-height: 0;
+  padding-bottom: 180px;
+}
+
+/* Red geométrica en el pie */
+.ppt-light .pl-net {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ppt-light .pl-net svg {
+  width: 100%; height: 100%;
+}
+
+/* Código inline estilo PPT-light */
+.inline-code {
+  font-family: var(--font-mono);
+  font-size: 30px;
+  line-height: 2;
+  color: var(--ink-900);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.inline-code .ic-line { display: flex; align-items: baseline; gap: 0; flex-wrap: wrap; }
+.inline-code .ic-indent { display: inline-block; width: 2em; }
+
+/* Caja resaltada inline (estilo referencia) */
+.ic-box {
+  display: inline-flex; align-items: center;
+  border: 1.5px solid var(--teal-400);
+  border-radius: 4px;
+  padding: 1px 6px;
+  background: rgba(63,196,208,0.07);
+  color: var(--ink-900);
+}
+.ic-box-op {
+  display: inline-flex; align-items: center;
+  border: 1.5px solid var(--teal-600);
+  border-radius: 4px;
+  padding: 1px 8px;
+  background: rgba(42,163,177,0.14);
+  color: var(--teal-800);
+  font-weight: 700;
+}
+.ic-plain { color: var(--ink-700); }
+.ic-val { color: var(--ink-500); }
+.ic-body-line {
+  display: block;
+  color: var(--ink-400);
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  padding: 4px 0;
+}
+
+/* Lista de bullets estilo PPT */
+.ppt-bullet-list {
+  display: flex; flex-direction: column; gap: 0;
+  font-size: 30px;
+}
+.ppt-bullet-row {
+  display: flex; align-items: baseline; gap: 40px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ink-100);
+}
+.ppt-bullet-row:last-child { border-bottom: none; }
+.pbt-label { flex: 1; color: var(--ink-800); display: flex; align-items: baseline; gap: 16px; }
+.pbt-label::before { content: '•'; color: var(--ink-400); font-size: 26px; flex: none; }
+.pbt-op {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--ink-800);
+  min-width: 80px;
+  text-align: right;
+  flex: none;
+  font-size: 28px;
+}
+.pbt-note {
+  color: var(--ink-500);
+  font-size: 26px;
+  display: flex; align-items: center; gap: 10px;
+}
+.pbt-note::before { content: '→'; color: var(--ink-600); }
+
+/* Mockup de circuito de resolución */
+.resolution-mockup {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.14);
+  border: 1px solid var(--ink-200);
+  font-size: 17px;
+}
+.resolution-mockup .rm-bar {
+  background: var(--teal-800);
+  color: white; padding: 16px 24px;
+  font-size: 20px; font-weight: 700;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.resolution-mockup .rm-bar .rm-close { opacity: 0.6; font-size: 18px; }
+.resolution-mockup .rm-body { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+.resolution-mockup .rm-row { display: flex; gap: 16px; align-items: flex-end; }
+.resolution-mockup .rm-field { display: flex; flex-direction: column; gap: 4px; }
+.resolution-mockup .rm-field label { font-size: 14px; color: var(--ink-400); font-weight: 600; }
+.resolution-mockup .rm-select {
+  border: 1px solid var(--ink-200); border-radius: 4px;
+  padding: 8px 12px; font-size: 15px; color: var(--ink-700);
+  background: white; display: flex; justify-content: space-between; align-items: center; gap: 40px;
+}
+.resolution-mockup .rm-select span { color: var(--ink-400); }
+.resolution-mockup .rm-text-body {
+  border: 1px solid var(--ink-200); border-radius: 4px;
+  padding: 12px 14px; font-size: 14px; line-height: 1.55; color: var(--ink-700);
+  background: var(--ink-50); max-height: 200px; overflow: hidden;
+  position: relative;
+}
+.resolution-mockup .rm-text-body::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 40px;
+  background: linear-gradient(transparent, var(--ink-50));
+}
+.resolution-mockup .rm-highlight {
+  background: rgba(255,100,100,0.2);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+.resolution-mockup .rm-label-row {
+  font-size: 14px; font-weight: 700; color: var(--ink-500);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-bottom: 1px solid var(--ink-100);
+  padding-bottom: 6px; margin-top: 4px;
+}
+.resolution-mockup .rm-dispositivo {
+  border: 1px solid var(--ink-200); border-radius: 4px;
+  padding: 10px 14px; font-size: 14px; color: var(--ink-700);
+  background: white;
+}
+
 /* ===== PRINT ===== */
 @media print {
   html, body { background: white; }
