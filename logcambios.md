@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.35.0 - 2026-05-04
+- En `GFD/Reglada - CODE - Gestiona.html` se rediseñó la diapositiva **23 Circuitos de resolución — Simples** trasladando a HTML un diagrama de carriles institucionales fiel al esquema aportado (centros gestores, órgano de control, órganos que resuelven, secretaría, notificación y publicación).
+- En `GFD/Reglada - CODE - Gestiona.html` se rediseñó la diapositiva **24 Circuitos de resolución — Plurales** con el diagrama horizontal de tramitación plural solicitado (solicitudes paralelas, propuesta/resolución plural y salidas individualizadas por expediente).
+- Se actualizó la versión visible de la app en `app.js` a **v2.35.0**.
+- Consolidación de versión de la app: **v2.35.0**.
+
 ## v2.34.0 - 2026-05-04
 - Se consolidó y dejó accesible la nueva presentación en carpeta `GFD` con el taller **Reglada + CODE**, utilizando el recurso corporativo `recursos/Gestiona-PANTONE.svg` y estructura completa de 27 diapositivas en `GFD/Reglada - CODE - Gestiona.html`.
 - Se registró la presentación `GFD` en el lanzador principal (`app.js`) para que aparezca como bloque independiente en el acordeón con acceso directo y opción de expansión.
