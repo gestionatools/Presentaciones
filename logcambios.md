@@ -1,5 +1,13 @@
 # Log de cambios
 
+## v2.37.0 - 2026-05-04
+- En `GFD/Reglada - CODE - Gestiona.html` (diapositiva **23 Circuitos de resolución — Simples**) se redujo el peso visual del título y se reposicionó más arriba para evitar cualquier solape con la cabecera/logo.
+- En esa misma diapositiva se aumentó la ocupación vertical del diagrama elevando la altura del contenedor SVG (`height:470` con `preserveAspectRatio="none"`) para evitar el efecto achatado y equilibrar el espacio útil.
+- Se sustituyeron los iconos internos del flujo para usar explícitamente `recursos/docuverde.svg` y `recursos/puntosverdes.svg` mediante símbolos SVG reutilizables.
+- Se añadió animación de flujo en el diagrama: pulsado secuencial de iconos (`flowPulse`) y desplazamiento de guías en líneas de proceso (`flowDash`) para reforzar lectura dinámica del circuito.
+- Se actualizó la versión visible de la app en `app.js` a **v2.37.0**.
+- Consolidación de versión de la app: **v2.37.0**.
+
 ## v2.36.0 - 2026-05-04
 - Se reajustaron proporciones y tamaños tipográficos de los SVG en `GFD/Reglada - CODE - Gestiona.html` para evitar solapes y mejorar legibilidad en las diapositivas 23 y 24.
 - En la diapositiva **23 Circuitos de resolución — Simples** se sustituyeron los iconos previos por una representación SVG clara de **documento** (con pliegue de esquina), manteniendo fidelidad visual con el diagrama objetivo.
