@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.44.0';
+const APP_VERSION = 'v2.45.0';
 
 const presentationGroups = [
   {

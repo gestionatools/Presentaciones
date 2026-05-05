@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.45.0 - 2026-05-05
+- En `Archivo (medios)/Archivo electronico - Gestiona.html` se eliminó la clase de animación `pulse` del hito ámbar central de la diapositiva **El reloj de la firma** para que el punto naranja permanezca inmóvil durante la presentación.
+- Se actualizó la versión visible de la app en `app.js` a **v2.45.0**.
+- Consolidación de versión de la app: **v2.45.0**.
+
 ## v2.44.0 - 2026-05-04
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se añadió una nueva diapositiva final **Roadmap de evolución del archivo electrónico** con diagrama timeline simple y animado, coherente con la paleta teal/azul del deck.
 - La slide incorpora los 4 evolutivos solicitados reinterpretados por fases: **Gestión de plazos en fase archivo**, **Descripción archivística profunda**, **Gestión de eliminaciones** y **Acceso externo (OPAC)**.
