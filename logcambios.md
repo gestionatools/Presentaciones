@@ -1,5 +1,22 @@
 # Log de cambios
 
+## v2.56.1 - 2026-05-06
+- Se corrigió el bloqueo del pull request eliminando el nuevo binario `recursos/circuito-tramitacion.gif` añadido en la consolidación anterior.
+- En `GFD/Reglada - CODE - Gestiona.html` se mantuvo la diapositiva **16 Tramitación Reglada – Circuito** con el título **Circuito de Tramitación** y se cambió la referencia para reutilizar el GIF local ya existente `recursos/Imagen4.gif`.
+- Se ajustó la documentación de recursos gráficos para describir el uso de `recursos/Imagen4.gif` como recurso del circuito de tramitación, sin incorporar nuevos binarios.
+- Se actualizó la versión visible de la app en `app.js` a **v2.56.1**.
+- Consolidación de versión de la app: **v2.56.1**.
+
+
+## v2.56.0 - 2026-05-06
+- En `GFD/Reglada - CODE - Gestiona.html` se rediseñó por completo la diapositiva **16 Tramitación Reglada – Circuito**, dejando únicamente el título **Circuito de Tramitación** y el GIF solicitado debajo.
+- Se incorporó `recursos/circuito-tramitacion.gif` como recurso local descriptivo para la nueva composición de la diapositiva.
+- Se añadió en `GFD/styles-gfd.css` el contenedor visual del GIF con borde suave, esquinas redondeadas y sombra ligera para integrarlo con el estilo del deck.
+- Se documentó el nuevo GIF en `instrucciones para la incorporación de recursos gráficos.md`.
+- Se actualizó la versión visible de la app en `app.js` a **v2.56.0**.
+- Consolidación de versión de la app: **v2.56.0**.
+
+
 ## v2.55.0 - 2026-05-06
 - En `GFD/Reglada - CODE - Gestiona.html` se sustituyó el diagrama de la diapositiva **06 CODE – Dónde configurar – Circuitos de resolución** por una recreación vectorial SVG de la pantalla **Nuevo circuito de resolución** aportada.
 - Se eliminó el titular **Tramitador · Político** de la diapositiva para mantener solo la etiqueta contextual de circuitos de resolución y el texto de apoyo.
