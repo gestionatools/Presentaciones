@@ -86,3 +86,8 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
 - `tramites-externos-ciudadano.svg`  
   **Descripción:** recreación vectorial editable de formulario externo de exposición/solicitud con datos generales de obra y selector desplegable, incorporada como SVG para evitar binarios en pull request.  
   **Uso recomendado:** diapositivas sobre trámites externos, captura de datos ciudadana y formularios CODE.
+
+- `tramitacion-reglada-informe-comision-valoracion.svg`  
+  **Descripción:** recreación vectorial editable de la tarea interna "05a-Informe Comisión de Valoración" con formulario de valoración técnica y seguimiento de tarea, incorporada como SVG para evitar binarios en pull request.  
+  **Uso recomendado:** diapositivas sobre tramitación reglada, tareas internas, formularios CODE y valoración técnica de solicitudes.
+
