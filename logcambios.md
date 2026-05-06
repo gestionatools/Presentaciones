@@ -1,5 +1,10 @@
 # Log de cambios
 
+## v2.51.0 - 2026-05-06
+- En `Archivo (medios)/Archivo electronico - Gestiona.html` se reordenó la herramienta 02 de la slide **Herramientas del módulo de archivo** para situar el icono a la derecha del texto, manteniendo la disposición lateral izquierda usada por el resto del diagrama.
+- Se actualizó la versión visible de la app en `app.js` a **v2.51.0**.
+- Consolidación de versión de la app: **v2.51.0**.
+
 ## v2.50.0 - 2026-05-06
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se ajustaron los puntos animados del diagrama **Herramientas del módulo de archivo** para que partan del centro y recorran la línea diagonal hacia su esquina correspondiente.
 - En `Archivo (medios)/styles-archivo.css` se sustituyó el pulso fijo de los puntos por una animación de desplazamiento más lenta, con ciclo de 10 segundos y pausa aproximada de 5 segundos entre recorridos.
