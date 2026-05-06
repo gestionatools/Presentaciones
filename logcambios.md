@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.52.0 - 2026-05-06
+- En `GFD/Reglada - CODE - Gestiona.html` se sustituyó el mockup construido de la diapositiva **04 CODE – Dónde configurar – Trámites externos** por una recreación vectorial SVG del formulario externo aportado.
+- En esa misma diapositiva se eliminó el título **Ciudadano** y se ajustó el texto de apoyo para evitar la etiqueta explícita de ciudadano manteniendo el foco en la captura de datos externa.
+- Se incorporó `recursos/tramites-externos-ciudadano.svg` como recurso textual editable, evitando archivos binarios en el pull request.
+- Se documentó el nuevo SVG en `instrucciones para la incorporación de recursos gráficos.md`.
+- Se añadió en `GFD/styles-gfd.css` el estilo de presentación para la nueva captura, conservando borde, radio y sombra coherentes con los mockups existentes.
+- Se actualizó la versión visible de la app en `app.js` a **v2.52.0**.
+- Consolidación de versión de la app: **v2.52.0**.
+
 ## v2.51.0 - 2026-05-06
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se reordenó la herramienta 02 de la slide **Herramientas del módulo de archivo** para situar el icono a la derecha del texto, manteniendo la disposición lateral izquierda usada por el resto del diagrama.
 - Se actualizó la versión visible de la app en `app.js` a **v2.51.0**.

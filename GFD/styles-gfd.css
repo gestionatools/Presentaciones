@@ -524,6 +524,17 @@ deck-stage section[data-deck-active] .elegant-float {
   margin-bottom: 4px;
 }
 
+
+.external-form-capture {
+  width: 100%;
+  max-width: 880px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--ink-200);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.08);
+  background: white;
+  display: block;
+}
+
 /* Task dialog mockup */
 .task-mockup {
   width: 100%;

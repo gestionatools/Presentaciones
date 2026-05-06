@@ -82,3 +82,7 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
 - `app.css`  
   **Descripción:** hoja de estilos de la app lanzadora (no es recurso visual insertable).  
   **Uso recomendado:** estilos globales del índice de presentaciones.
+
+- `tramites-externos-ciudadano.svg`  
+  **Descripción:** recreación vectorial editable de formulario externo de exposición/solicitud con datos generales de obra y selector desplegable, incorporada como SVG para evitar binarios en pull request.  
+  **Uso recomendado:** diapositivas sobre trámites externos, captura de datos ciudadana y formularios CODE.
