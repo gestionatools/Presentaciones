@@ -273,6 +273,8 @@
       this._root = this.attachShadow({ mode: 'open' });
       this._index = 0;
       this._slides = [];
+      this._allSlides = [];
+      this._selectedSlideNumbersSet = null;
       this._notes = [];
       this._hideTimer = null;
       this._mouseIdleTimer = null;
@@ -430,7 +432,12 @@
         return tag !== 'TEMPLATE' && tag !== 'SCRIPT' && tag !== 'STYLE';
       });
       const selectedSlideNumbers = this._selectedSlideNumbers(allSlides.length);
+      this._allSlides = allSlides;
+      this._selectedSlideNumbersSet = selectedSlideNumbers;
 
+      allSlides.forEach((slide, i) => {
+        slide.setAttribute('data-deck-original-slide', String(i));
+      });
 
       this._slides = selectedSlideNumbers
         ? allSlides.filter((_, i) => selectedSlideNumbers.has(i + 1))
@@ -480,13 +487,20 @@
     }
 
     _restoreIndex() {
-      // The host's ?slide= param is delivered as a #<int> hash (1-indexed) on
-      // the iframe src. No hash → slide 1; the deck itself keeps no position
-      // state across loads.
+      // The hash is 1-indexed. In filtered mode it refers to the authored
+      // slide number, not the filtered position, so reloads and legacy
+      // animation hooks keep targeting the real section.
       const h = (location.hash || '').match(/^#(\d+)$/);
       if (h) {
         const n = parseInt(h[1], 10) - 1;
-        if (n >= 0 && n < this._slides.length) this._index = n;
+        if (this._selectedSlideNumbersSet) {
+          const filteredIndex = this._slides.findIndex((slide) => {
+            return parseInt(slide.getAttribute('data-deck-original-slide'), 10) === n;
+          });
+          if (filteredIndex >= 0) this._index = filteredIndex;
+        } else if (n >= 0 && n < this._slides.length) {
+          this._index = n;
+        }
       }
     }
 
@@ -494,10 +508,20 @@
       if (!this._slides.length) return;
       const prev = this._prevIndex == null ? -1 : this._prevIndex;
       const curr = this._index;
+      const activeSlide = this._slides[curr] || null;
+      const originalIndex = activeSlide
+        ? parseInt(activeSlide.getAttribute('data-deck-original-slide'), 10)
+        : curr;
+      const publicIndex = Number.isFinite(originalIndex) ? originalIndex : curr;
       // Keep the iframe's own hash in sync so an in-iframe location.reload()
       // (reload banner path in viewer-handle.ts) lands on the current slide,
-      // not the stale deep-link hash from initial load.
-      try { history.replaceState(null, '', '#' + (curr + 1)); } catch (e) {}
+      // not the stale deep-link hash from initial load. The hash stays tied to
+      // the authored slide number so legacy animation hooks keep targeting the
+      // real section even when ?slides= filters the navigable sequence.
+      try { history.replaceState(null, '', '#' + (publicIndex + 1)); } catch (e) {}
+      this._allSlides.forEach((s) => {
+        s.classList.toggle('is-active', s === activeSlide);
+      });
       this._slides.forEach((s, i) => {
         if (i === curr) s.setAttribute('data-deck-active', '');
         else s.removeAttribute('data-deck-active');
@@ -506,7 +530,7 @@
 
       if (broadcast) {
         // (1) Legacy: host-window postMessage for speaker-notes renderers.
-        try { window.postMessage({ slideIndexChanged: curr }, '*'); } catch (e) {}
+        try { window.postMessage({ slideIndexChanged: publicIndex }, '*'); } catch (e) {}
 
         // (2) In-page CustomEvent on the <deck-stage> element itself.
         //     Bubbles and composes out of shadow DOM so slide code can listen:
@@ -515,9 +539,10 @@
         //       });
         const detail = {
           index: curr,
+          originalIndex: publicIndex,
           previousIndex: prev,
           total: this._slides.length,
-          slide: this._slides[curr] || null,
+          slide: activeSlide,
           previousSlide: prev >= 0 ? (this._slides[prev] || null) : null,
           reason: reason, // 'init' | 'keyboard' | 'click' | 'tap' | 'api'
         };

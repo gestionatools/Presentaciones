@@ -1,5 +1,12 @@
 # Log de cambios
 
+## v2.48.0 - 2026-05-06
+- Se corrigió la navegación filtrada para que el visor mantenga una correspondencia explícita entre posición visible y número original de slide.
+- `deck-stage.js` ahora conserva `data-deck-original-slide`, sincroniza el hash con el número original y emite `slideIndexChanged` con ese índice original para que las animaciones `is-active` apunten al slide real aunque se hayan desmarcado slides anteriores.
+- Se añadió activación directa de la clase `is-active` desde el runtime del deck para evitar que los slides posteriores aparezcan sin textos ni imágenes al saltar slides omitidos.
+- Se actualizó la versión visible de la app en `app.js` a **v2.48.0**.
+- Consolidación de versión de la app: **v2.48.0**.
+
 ## v2.47.0 - 2026-05-06
 - Se corrigió el comportamiento de la selección de slides desde **Ver resumen**: los slides desmarcados ahora se saltan en la navegación en lugar de recibir un ocultado adicional de contenidos.
 - Se eliminó el marcado visual `data-deck-summary-excluded` y su regla `display:none` de los runtimes `deck-stage.js`, manteniendo únicamente el filtrado de la lista navegable de slides.
