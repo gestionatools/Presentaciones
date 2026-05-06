@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1015 691" role="img" aria-labelledby="title desc">
+  <title id="title">Nuevo circuito de resolución</title>
+  <desc id="desc">Recreación vectorial editable de la pantalla Nuevo circuito de resolución, con propuesta de resolución y formulario de hechos, fundamentos y texto dispositivo.</desc>
+  <defs>
+    <style>
+      .page{fill:#eef4f8}.window{fill:#fff;stroke:#8fa5b8;stroke-width:4}.ink{fill:#18324a}.muted{fill:#587086}.line{stroke:#d6e0e8;stroke-width:1.4}.field{fill:#f7f9fb;stroke:#c9d5df;stroke-width:1}.field-warn{fill:#fff3f4;stroke:#c9d5df;stroke-width:1}.label{font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:700;fill:#203044}.tiny{font-family:Inter,Arial,sans-serif;font-size:10px;fill:#27435a}.small{font-family:Inter,Arial,sans-serif;font-size:12px;fill:#27435a}.small-i{font-family:Inter,Arial,sans-serif;font-size:11px;font-style:italic;fill:#27435a}.head{font-family:Inter,Arial,sans-serif;font-size:24px;font-weight:800;letter-spacing:-.02em;fill:#18324a}.section{font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:800;fill:#18324a}.link{font-family:Inter,Arial,sans-serif;font-size:11px;text-decoration:underline;fill:#1f4f78}.red{fill:#ef0000}.scroll{fill:#888}.scroll-track{fill:#edf2f6}.select-arrow{stroke:#203044;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;fill:none}.box{fill:#f8fbfd;stroke:#cbd7e2;stroke-width:1}
+    </style>
+  </defs>
+  <rect class="page" width="1015" height="691"/>
+  <rect class="window" x="3" y="2" width="1009" height="686"/>
+
+  <text x="32" y="55" class="head">Nuevo circuito de resolución</text>
+  <rect x="967" y="39" width="9" height="8" fill="none" stroke="#111" stroke-width="1.8"/>
+  <line x1="981" y1="37" x2="991" y2="48" stroke="#111" stroke-width="2"/>
+  <line x1="991" y1="37" x2="981" y2="48" stroke="#111" stroke-width="2"/>
+
+  <text x="30" y="112" class="section">Propuesta de Resolución</text>
+  <line x1="30" y1="124" x2="970" y2="124" class="line"/>
+
+  <text x="33" y="148" class="label">Órgano Gestor</text>
+  <rect x="33" y="155" width="558" height="15" class="field-warn"/>
+  <text x="37" y="167" class="tiny">1200-BIENESTAR SOCIAL</text>
+  <path d="M581 160l4 4 4-4" class="select-arrow"/>
+  <text x="599" y="148" class="label">Expediente</text>
+  <rect x="597" y="155" width="182" height="15" class="field"/>
+  <text x="601" y="167" class="tiny">670/2025</text>
+  <text x="786" y="148" class="label">Subexpediente</text>
+  <rect x="785" y="155" width="182" height="15" class="field"/>
+
+  <text x="33" y="195" class="label">Circuito de Resolución</text>
+  <rect x="33" y="203" width="934" height="16" class="field-warn"/>
+  <text x="38" y="215" class="tiny">Concesión de Subvenciones</text>
+  <path d="M956 208l4 4 4-4" class="select-arrow"/>
+  <rect x="33" y="225" width="934" height="16" class="field-warn"/>
+  <text x="38" y="237" class="tiny">Concesión de Subvenciones \ CR - Concesión de subvención de taxi con fines médicos</text>
+  <path d="M956 230l4 4 4-4" class="select-arrow"/>
+
+  <text x="33" y="264" class="label">Hechos y fundamentos de derecho</text>
+  <text x="914" y="264" class="link">Editar texto</text>
+  <rect x="33" y="277" width="934" height="319" rx="2" class="box"/>
+
+  <text x="46" y="294" class="small">Vistas las BASES DE LA CONVOCATORIA DE SUBVENCIONES ECONÓMICAS, DESTINADAS A LA PRESTACIÓN DEL SERVICIO DISCRECIONAL DE TAXI CON FINES MÉDICOS DE XXXXX</text>
+  <text x="46" y="309" class="small">CORRESPONDIENTES AL EJERCICIO ECONÓMICO 2023, según las cuales, figuran como obligaciones de las personas beneficiarias: Visto que mediante Resolución de Alcaldía N.º XXXX de 2023, de</text>
+  <text x="46" y="324" class="small">23 de abril, se resolvió “Aprobar la convocatoria para la concesión de subvenciones por procedimiento de concurrencia competitiva destinadas a la prestación del servicio discrecional de taxi con fines</text>
+  <text x="46" y="339" class="small-i">médicas, con el texto que figura en el documento adjunto a la presente Resolución.”</text>
+
+  <text x="46" y="366" class="small">Visto que en el BOP n.º XX, de XX de XXXXX de 2023, se publicó “Extracto de las bases de la convocatoria de subvenciones económicas, destinadas a la prestación del servicio discrecional de taxi</text>
+  <text x="46" y="381" class="small">con fines médicas de XXXXX”.</text>
+
+  <text x="46" y="407" class="small">Vista la solicitud presentada en este ayuntamiento en fecha</text>
+  <rect x="324" y="395" width="53" height="13" class="red"/>
+  <text x="382" y="407" class="small">, con registro de entrada núm</text>
+  <rect x="548" y="395" width="53" height="13" class="red"/>
+  <text x="606" y="407" class="small">, por parte de</text>
+  <rect x="695" y="395" width="54" height="13" class="red"/>
+  <text x="755" y="407" class="small">, solicitante la prestación del servicio discrecional de taxi</text>
+  <text x="46" y="422" class="small">con fines médicos de Geldo.</text>
+
+  <text x="46" y="445" class="small-i">.- Justificar ante el Ayuntamiento de XXXX el cumplimiento de los requisitos y condiciones, así como la realización de la actividad y el cumplimiento de la finalidad que determino la concesión de la</text>
+  <text x="46" y="460" class="small-i">subvención, y en concreto, y con carácter inmediato:</text>
+  <text x="46" y="485" class="small-i">.- Acreditar documentalmente la asistencia efectiva al servicio médico que constituya el objeto del desplazamiento.</text>
+  <text x="46" y="512" class="small-i">.- Aportar la facturación justificativa del coste económico del servicio de transporte discrecional en taxi. Esta facturación tendrá que ser emitida con expresión de su razón social, CIF, fecha de</text>
+  <text x="46" y="527" class="small-i">prestación del servicio y datos de identificación del usuario beneficiario de la prestación del servicio.</text>
+  <text x="46" y="551" class="small-i">.- Someterse a las actuaciones de comprobación a efectuar por el Ayuntamiento de XXXX.</text>
+  <text x="46" y="577" class="small">Examinada la documentación que lo acompaña, y en conformidad con lo establecido en los artículos 23 y siguientes de la Ley 38/2003, de 17 de noviembre, General de Subvenciones</text>
+
+  <text x="33" y="620" class="label">Texto dispositivo de la propuesta de resolución</text>
+  <rect x="33" y="627" width="934" height="51" rx="2" class="box"/>
+  <rect x="43" y="640" width="899" height="27" fill="#fff" stroke="#d6e0e8"/>
+  <text x="49" y="652" class="section">PRIMERO.</text>
+  <text x="105" y="652" class="small">Aprobar la concesión de la subvención destinada a la prestación del servicio discrecional de taxi con fines médicos, a</text>
+  <rect x="644" y="640" width="52" height="13" class="red"/>
+  <text x="701" y="652" class="small">para la visita médica:</text>
+
+  <rect x="983" y="73" width="7" height="579" class="scroll-track"/>
+  <path d="M986.5 69l4 5h-8z" class="scroll"/>
+  <rect x="983" y="87" width="7" height="199" rx="4" class="scroll"/>
+  <path d="M986.5 657l-4-5h8z" class="scroll"/>
+</svg>

@@ -91,3 +91,7 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
   **Descripción:** recreación vectorial editable de la tarea interna "05a-Informe Comisión de Valoración" con formulario de valoración técnica y seguimiento de tarea, incorporada como SVG para evitar binarios en pull request.  
   **Uso recomendado:** diapositivas sobre tramitación reglada, tareas internas, formularios CODE y valoración técnica de solicitudes.
 
+- `circuito-resolucion-propuesta.svg`  
+  **Descripción:** recreación vectorial editable de la pantalla “Nuevo circuito de resolución” con propuesta de resolución, circuito, fundamentos de derecho y texto dispositivo, incorporada como SVG para evitar binarios en pull request.  
+  **Uso recomendado:** diapositivas sobre circuitos de resolución, configuración CODE en resoluciones y formularios de propuesta resolutoria.
+
