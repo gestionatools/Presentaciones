@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.50.0 - 2026-05-06
+- En `Archivo (medios)/Archivo electronico - Gestiona.html` se ajustaron los puntos animados del diagrama **Herramientas del módulo de archivo** para que partan del centro y recorran la línea diagonal hacia su esquina correspondiente.
+- En `Archivo (medios)/styles-archivo.css` se sustituyó el pulso fijo de los puntos por una animación de desplazamiento más lenta, con ciclo de 10 segundos y pausa aproximada de 5 segundos entre recorridos.
+- Se actualizó la versión visible de la app en `app.js` a **v2.50.0**.
+- Consolidación de versión de la app: **v2.50.0**.
+
 ## v2.49.0 - 2026-05-06
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se añadió una nueva diapositiva tras la slide título de **Archivo electrónico**: **Herramientas del módulo de archivo**.
 - La nueva slide incorpora un diagrama radial animado inspirado en la referencia aportada, con nodo central y cuatro herramientas conectadas: clasificación archivística, descripción ENI extendido, control de accesos posterior al cierre y preservación de validez mediante resellado.

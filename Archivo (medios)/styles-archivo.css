@@ -996,6 +996,26 @@ body.density-compact .lifecycle .stage .desc { font-size: 18px; }
   overflow: visible;
   filter: drop-shadow(0 12px 22px rgba(5, 43, 51, 0.10));
 }
+
+.node-dot {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+deck-stage section.is-active .node-dot {
+  animation: archiveDotTravel 10s 1.15s cubic-bezier(0.24, 0.72, 0.18, 1) infinite;
+}
+deck-stage section.is-active .node-dot-nw { --dot-x: -138px; --dot-y: -88px; }
+deck-stage section.is-active .node-dot-sw { --dot-x: -140px; --dot-y: 88px; }
+deck-stage section.is-active .node-dot-ne { --dot-x: 140px; --dot-y: -88px; }
+deck-stage section.is-active .node-dot-se { --dot-x: 142px; --dot-y: 88px; }
+@keyframes archiveDotTravel {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.82); }
+  6%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  48%  { opacity: 1; transform: translate(var(--dot-x), var(--dot-y)) scale(1); }
+  52%  { opacity: 0; transform: translate(var(--dot-x), var(--dot-y)) scale(0.92); }
+  100% { opacity: 0; transform: translate(var(--dot-x), var(--dot-y)) scale(0.92); }
+}
 .tools-center {
   position: absolute;
   left: 50%; top: 50%;
