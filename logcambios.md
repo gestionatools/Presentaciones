@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.46.0 - 2026-05-06
+- Se añadió al landing (`app.js`) la acción **Ver resumen** en cada presentación para abrir una vista de thumbnails medianos con scroll lateral.
+- La vista de resumen carga los slides detectados de cada deck, muestra un check **Visualizar slide** por thumbnail y mantiene el contador de slides visibles.
+- El botón **Ver presentación** del resumen abre la presentación filtrando los slides desmarcados mediante el parámetro `?slides=`.
+- Se actualizó `deck-stage.js` en todas las presentaciones para respetar la selección recibida desde el landing y excluir de la navegación los slides no seleccionados.
+- Se añadieron estilos específicos en `recursos/app.css` para la tira horizontal de thumbnails, estados desactivados, contador y panel de resumen.
+- Se actualizó la versión visible de la app en `app.js` a **v2.46.0**.
+- Consolidación de versión de la app: **v2.46.0**.
+
 ## v2.45.0 - 2026-05-05
 - En `Archivo (medios)/Archivo electronico - Gestiona.html` se eliminó la clase de animación `pulse` del hito ámbar central de la diapositiva **El reloj de la firma** para que el punto naranja permanezca inmóvil durante la presentación.
 - Se actualizó la versión visible de la app en `app.js` a **v2.45.0**.

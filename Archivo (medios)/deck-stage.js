@@ -102,6 +102,9 @@
       pointer-events: auto;
       visibility: visible;
     }
+    ::slotted([data-deck-summary-excluded]) {
+      display: none !important;
+    }
 
     /* Tap zones for mobile — back/forward thirds like Stories.
        Transparent, no visible UI, don't block the overlay. */
@@ -411,13 +414,34 @@
       this._fit();
     }
 
+    _selectedSlideNumbers(total) {
+      const params = new URLSearchParams(location.search || '');
+      const raw = params.get('slides');
+      if (!raw) return null;
+
+      const selected = raw.split(',')
+        .map((value) => parseInt(value, 10))
+        .filter((value) => Number.isFinite(value) && value >= 1 && value <= total);
+      return selected.length ? new Set(selected) : null;
+    }
+
     _collectSlides() {
       const assigned = this._slot.assignedElements({ flatten: true });
-      this._slides = assigned.filter((el) => {
+      const allSlides = assigned.filter((el) => {
         // Skip template/style/script nodes even if someone slots them.
         const tag = el.tagName;
         return tag !== 'TEMPLATE' && tag !== 'SCRIPT' && tag !== 'STYLE';
       });
+      const selectedSlideNumbers = this._selectedSlideNumbers(allSlides.length);
+
+      allSlides.forEach((slide, i) => {
+        const shouldShow = !selectedSlideNumbers || selectedSlideNumbers.has(i + 1);
+        slide.toggleAttribute('data-deck-summary-excluded', !shouldShow);
+      });
+
+      this._slides = selectedSlideNumbers
+        ? allSlides.filter((_, i) => selectedSlideNumbers.has(i + 1))
+        : allSlides;
 
       this._slides.forEach((slide, i) => {
         const n = i + 1;

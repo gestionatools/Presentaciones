@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.45.0';
+const APP_VERSION = 'v2.46.0';
 
 const presentationGroups = [
   {
@@ -55,8 +55,18 @@ if (appVersionNode) {
   appVersionNode.textContent = `Versión ${APP_VERSION}`;
 }
 
-function openFullscreenPresentation(path) {
-  const presentationWindow = window.open(encodeURI(path), '_blank', 'noopener,noreferrer');
+const reviewState = new Map();
+
+function buildPresentationUrl(path, selectedSlides) {
+  const encodedPath = encodeURI(path);
+  if (!Array.isArray(selectedSlides) || !selectedSlides.length) return encodedPath;
+  const slideParam = selectedSlides.map((slideNumber) => Number(slideNumber)).filter(Number.isFinite).join(',');
+  if (!slideParam) return encodedPath;
+  return `${encodedPath}?slides=${encodeURIComponent(slideParam)}`;
+}
+
+function openFullscreenPresentation(path, selectedSlides) {
+  const presentationWindow = window.open(buildPresentationUrl(path, selectedSlides), '_blank', 'noopener,noreferrer');
   if (!presentationWindow) return;
 
   const triggerFullscreen = () => {
@@ -71,6 +81,119 @@ function openFullscreenPresentation(path) {
   presentationWindow.addEventListener('load', () => {
     try { triggerFullscreen(); } catch (_) {}
   }, { once: true });
+}
+
+function getSlideLabel(slide, index) {
+  const rawLabel = slide.getAttribute('data-label') || slide.getAttribute('data-screen-label') || '';
+  const heading = slide.querySelector('h1, h2, h3, [data-title]');
+  const fallback = heading ? heading.textContent.trim() : `Slide ${index + 1}`;
+  return (rawLabel || fallback).replace(/^\s*\d+\s*/, '').trim() || fallback;
+}
+
+async function loadPresentationSummary(item, mountNode) {
+  const response = await fetch(encodeURI(item.path));
+  if (!response.ok) throw new Error(`No se pudo cargar ${item.path}`);
+
+  const html = await response.text();
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const slides = Array.from(doc.querySelectorAll('deck-stage > section'));
+  if (!slides.length) throw new Error('La presentación no contiene slides detectables.');
+
+  const previousSelection = reviewState.get(item.path);
+  const selected = previousSelection instanceof Set
+    ? new Set([...previousSelection].filter((slideNumber) => slideNumber >= 1 && slideNumber <= slides.length))
+    : new Set(slides.map((_, index) => index + 1));
+  if (!selected.size) selected.add(1);
+  reviewState.set(item.path, selected);
+
+  mountNode.replaceChildren();
+
+  const toolbar = document.createElement('div');
+  toolbar.className = 'summary__toolbar';
+
+  const intro = document.createElement('p');
+  intro.className = 'summary__hint';
+  intro.textContent = 'Revisa los thumbnails, desmarca los slides que quieras omitir y abre la presentación con esa selección.';
+
+  const viewButton = document.createElement('button');
+  viewButton.className = 'btn summary__view-btn';
+  viewButton.type = 'button';
+  viewButton.textContent = 'Ver presentación';
+
+  const counter = document.createElement('span');
+  counter.className = 'summary__counter';
+
+  toolbar.append(intro, viewButton, counter);
+
+  const rail = document.createElement('div');
+  rail.className = 'summary__rail';
+  rail.setAttribute('aria-label', `Resumen de slides de ${item.title}`);
+
+  const updateCounter = () => {
+    counter.textContent = `${selected.size} de ${slides.length} slides visibles`;
+    viewButton.disabled = selected.size === 0;
+  };
+
+  slides.forEach((slide, index) => {
+    const slideNumber = index + 1;
+    const card = document.createElement('article');
+    card.className = 'summary-card';
+
+    const frameWrap = document.createElement('div');
+    frameWrap.className = 'summary-card__frame';
+
+    const iframe = document.createElement('iframe');
+    iframe.title = `${item.title} · slide ${slideNumber}`;
+    iframe.src = `${encodeURI(item.path)}#${slideNumber}`;
+    iframe.loading = 'lazy';
+    iframe.tabIndex = -1;
+    iframe.setAttribute('aria-hidden', 'true');
+    frameWrap.appendChild(iframe);
+
+    const label = document.createElement('label');
+    label.className = 'summary-card__check';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = selected.has(slideNumber);
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) selected.add(slideNumber);
+      else selected.delete(slideNumber);
+      reviewState.set(item.path, selected);
+      card.classList.toggle('summary-card--disabled', !checkbox.checked);
+      updateCounter();
+    });
+
+    const labelText = document.createElement('span');
+    labelText.textContent = `Visualizar slide ${slideNumber}`;
+
+    label.append(checkbox, labelText);
+
+    const title = document.createElement('h4');
+    title.textContent = getSlideLabel(slide, index);
+
+    card.classList.toggle('summary-card--disabled', !checkbox.checked);
+    card.append(frameWrap, label, title);
+    rail.appendChild(card);
+  });
+
+  viewButton.addEventListener('click', () => openFullscreenPresentation(item.path, [...selected].sort((a, b) => a - b)));
+
+  mountNode.append(toolbar, rail);
+  updateCounter();
+}
+
+function showSummary(item, mountNode, triggerButton) {
+  mountNode.hidden = false;
+  mountNode.innerHTML = '<div class="summary__loading">Cargando resumen de slides…</div>';
+  triggerButton.textContent = 'Actualizar resumen';
+  loadPresentationSummary(item, mountNode).catch((error) => {
+    mountNode.innerHTML = '';
+    const errorNode = document.createElement('p');
+    errorNode.className = 'summary__error';
+    errorNode.textContent = error.message || 'No se pudo preparar el resumen de la presentación.';
+    mountNode.appendChild(errorNode);
+  });
 }
 
 presentationGroups.forEach((group) => {
@@ -96,10 +219,16 @@ presentationGroups.forEach((group) => {
         <p>${item.description}</p>
         <div class="card__actions">
           <a class="btn" href="${encodeURI(item.path)}" target="_blank" rel="noopener noreferrer">Acceder a la presentación</a>
+          <button class="btn btn--ghost" type="button" data-summary-path="${item.path}">Ver resumen</button>
           <button class="btn btn--ghost" type="button" data-expand-path="${item.path}">Expandir</button>
         </div>
+        <div class="summary" data-summary-mount hidden></div>
       </div>
     `;
+
+    const summaryButton = levelTwo.querySelector('[data-summary-path]');
+    const summaryMount = levelTwo.querySelector('[data-summary-mount]');
+    summaryButton?.addEventListener('click', () => showSummary(item, summaryMount, summaryButton));
 
     const expandButton = levelTwo.querySelector('[data-expand-path]');
     expandButton?.addEventListener('click', () => openFullscreenPresentation(item.path));
