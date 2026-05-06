@@ -1,5 +1,11 @@
 # Log de cambios
 
+## v2.47.0 - 2026-05-06
+- Se corrigió el comportamiento de la selección de slides desde **Ver resumen**: los slides desmarcados ahora se saltan en la navegación en lugar de recibir un ocultado adicional de contenidos.
+- Se eliminó el marcado visual `data-deck-summary-excluded` y su regla `display:none` de los runtimes `deck-stage.js`, manteniendo únicamente el filtrado de la lista navegable de slides.
+- Se actualizó la versión visible de la app en `app.js` a **v2.47.0**.
+- Consolidación de versión de la app: **v2.47.0**.
+
 ## v2.46.0 - 2026-05-06
 - Se añadió al landing (`app.js`) la acción **Ver resumen** en cada presentación para abrir una vista de thumbnails medianos con scroll lateral.
 - La vista de resumen carga los slides detectados de cada deck, muestra un check **Visualizar slide** por thumbnail y mantiene el contador de slides visibles.

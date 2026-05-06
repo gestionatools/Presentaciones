@@ -102,9 +102,6 @@
       pointer-events: auto;
       visibility: visible;
     }
-    ::slotted([data-deck-summary-excluded]) {
-      display: none !important;
-    }
 
     /* Tap zones for mobile — back/forward thirds like Stories.
        Transparent, no visible UI, don't block the overlay. */
@@ -434,10 +431,6 @@
       });
       const selectedSlideNumbers = this._selectedSlideNumbers(allSlides.length);
 
-      allSlides.forEach((slide, i) => {
-        const shouldShow = !selectedSlideNumbers || selectedSlideNumbers.has(i + 1);
-        slide.toggleAttribute('data-deck-summary-excluded', !shouldShow);
-      });
 
       this._slides = selectedSlideNumbers
         ? allSlides.filter((_, i) => selectedSlideNumbers.has(i + 1))
