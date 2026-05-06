@@ -1,5 +1,13 @@
 # Log de cambios
 
+## v2.54.0 - 2026-05-06
+- Se eliminó del repositorio el recurso binario `recursos/tramitacion-reglada-informe-comision-valoracion.png` para evitar el bloqueo de pull request por archivos binarios.
+- Se incorporó `recursos/tramitacion-reglada-informe-comision-valoracion.svg` como recreación vectorial editable de la captura aportada para la diapositiva **05 CODE – Dónde configurar – Tramitación reglada**.
+- En `GFD/Reglada - CODE - Gestiona.html` se actualizó la referencia de imagen para usar el nuevo SVG local.
+- Se actualizó la documentación de recursos gráficos para registrar el SVG y su finalidad.
+- Se actualizó la versión visible de la app en `app.js` a **v2.54.0**.
+- Consolidación de versión de la app: **v2.54.0**.
+
 ## v2.52.0 - 2026-05-06
 - En `GFD/Reglada - CODE - Gestiona.html` se sustituyó el mockup construido de la diapositiva **04 CODE – Dónde configurar – Trámites externos** por una recreación vectorial SVG del formulario externo aportado.
 - En esa misma diapositiva se eliminó el título **Ciudadano** y se ajustó el texto de apoyo para evitar la etiqueta explícita de ciudadano manteniendo el foco en la captura de datos externa.

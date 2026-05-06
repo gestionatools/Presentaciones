@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1015 691" role="img" aria-labelledby="title desc">
+  <title id="title">05a-Informe Comisión de Valoración</title>
+  <desc id="desc">Recreación vectorial de una tarea interna de Gestiona con valoración técnica de solicitudes, metadatos de expediente y seguimiento de tarea.</desc>
+  <defs>
+    <style>
+      .page{fill:#eff4f8}.panel{fill:#fff;stroke:#c8d3df;stroke-width:1.2}.soft{fill:#f4f7fa;stroke:#ccd8e3;stroke-width:1}.ink{fill:#203044}.muted{fill:#486072}.tiny{font-family:Inter,Arial,sans-serif;font-size:11px;fill:#203044}.small{font-family:Inter,Arial,sans-serif;font-size:12px;fill:#203044}.body{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#203044}.head{font-family:Inter,Arial,sans-serif;font-size:25px;font-weight:800;fill:#203044}.title{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:800;letter-spacing:.02em;fill:#203044}.strong{font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:800;fill:#203044}.label{font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:800;fill:#203044}.link{font-family:Inter,Arial,sans-serif;font-size:12px;font-style:italic;text-decoration:underline;fill:#5b87bd}.line{stroke:#d1d6dc;stroke-width:1}.field{fill:#cfe3f6;stroke:#6b95c4;stroke-width:1.2}.tag{fill:#dce5ec}.comment{fill:#fff;stroke:#ccd8e3;stroke-width:1}.red{fill:#d94255}.scroll{fill:#8a8a8a}.folder{fill:#f5a623}.score{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#203044}.italic{font-style:italic}
+    </style>
+  </defs>
+  <rect class="page" width="1015" height="691"/>
+  <rect x="14" y="8" width="987" height="671" fill="#fff" stroke="#a9b7c5"/>
+  <text x="43" y="61" class="head">05a-Informe Comisión de Valoración</text>
+  <rect x="964" y="43" width="9" height="9" fill="none" stroke="#111" stroke-width="2"/>
+  <line x1="979" y1="42" x2="988" y2="53" stroke="#111" stroke-width="2"/>
+  <line x1="988" y1="42" x2="979" y2="53" stroke="#111" stroke-width="2"/>
+
+  <rect x="40" y="79" width="926" height="88" class="soft"/>
+  <text x="54" y="102" class="label">Número de tarea</text>
+  <text x="190" y="102" class="tiny">T/2025/3690</text>
+  <text x="54" y="121" class="label">Expediente</text>
+  <path d="M192 112h12l4 4h12v12h-28z" class="folder"/>
+  <text x="225" y="121" class="tiny">670/2025</text>
+  <text x="506" y="102" class="label">Asignada a</text>
+  <rect x="506" y="111" width="166" height="21" rx="3" class="tag"/>
+  <text x="514" y="126" class="tiny">1400-VÍAS E INFRAESTRUCTURAS</text>
+  <text x="54" y="151" class="small" text-decoration="underline">[+] Mostrar más información</text>
+  <path d="M191 145l5 5 5-5" fill="none" stroke="#203044" stroke-width="1.6"/>
+  <text x="205" y="151" class="small" text-decoration="underline">Más Opciones</text>
+
+  <rect x="40" y="194" width="641" height="505" class="panel"/>
+  <text x="58" y="238" class="title">VALORACIÓN TÉCNICA DE LAS SOLICITUDES</text>
+
+  <rect x="52" y="268" width="617" height="260" fill="#fff" stroke="#d1d6dc"/>
+  <line x1="52" y1="299" x2="669" y2="299" class="line"/>
+  <line x1="52" y1="353" x2="669" y2="353" class="line"/>
+  <line x1="52" y1="390" x2="669" y2="390" class="line"/>
+  <line x1="52" y1="428" x2="669" y2="428" class="line"/>
+  <line x1="52" y1="471" x2="669" y2="471" class="line"/>
+  <line x1="345" y1="268" x2="345" y2="528" class="line"/>
+  <line x1="582" y1="268" x2="582" y2="528" class="line"/>
+  <text x="64" y="287" class="strong">CRITERIO</text>
+  <text x="357" y="287" class="strong">VALORACIÓN</text>
+  <text x="606" y="287" class="strong">PUNTUACIÓN</text>
+
+  <text x="64" y="320" class="small">Valoración afección del camino a más de un núcleo de</text>
+  <text x="64" y="342" class="small">población</text>
+  <rect x="357" y="307" width="213" height="29" rx="2" class="field"/>
+  <text x="364" y="320" class="link">Valoración afección del camino a más de un</text>
+  <text x="420" y="333" class="link">núcleo de población</text>
+  <text x="625" y="320" class="score">0</text>
+
+  <text x="64" y="374" class="small">Necesidad o urgencia de mejora del camino</text>
+  <rect x="357" y="360" width="203" height="16" rx="2" class="field"/>
+  <text x="362" y="372" class="link">Necesidad o urgencia de mejora del camino</text>
+  <text x="625" y="374" class="score">0</text>
+
+  <text x="64" y="411" class="small">Importancia y usos del camino.</text>
+  <rect x="357" y="392" width="147" height="15" rx="2" class="field"/>
+  <text x="361" y="404" class="link">Importancia y usos del camino.</text>
+  <text x="625" y="411" class="score">0</text>
+
+  <text x="64" y="439" class="small">Año de ejecución o última intervención del camino que se</text>
+  <text x="64" y="461" class="small">pretende arreglar</text>
+  <rect x="357" y="424" width="213" height="30" rx="2" class="field"/>
+  <text x="401" y="438" class="link">Año última intervención de reparación o</text>
+  <text x="416" y="451" class="link">mantenimiento en el camino</text>
+  <text x="625" y="439" class="score">0</text>
+
+  <text x="64" y="488" class="small">Haber sido beneficiario el Ayuntamiento con ayudas para</text>
+  <text x="64" y="510" class="small">esa misma actuación en anteriores convocatorias</text>
+  <rect x="357" y="478" width="211" height="42" rx="2" class="field"/>
+  <text x="365" y="489" class="link">Haber sido beneficiario el Ayuntamiento con</text>
+  <text x="367" y="503" class="link">ayudas para misma actuación en anteriores</text>
+  <text x="431" y="517" class="link">convocatorias</text>
+  <text x="625" y="488" class="score">0</text>
+
+  <rect x="52" y="545" width="617" height="33" fill="#fff" stroke="#d1d6dc"/>
+  <line x1="454" y1="545" x2="454" y2="578" class="line"/>
+  <text x="64" y="566" class="strong">PUNTUACIÓN TOTAL DE LA VALORACIÓN TÉCNICA</text>
+  <rect x="556" y="551" width="12" height="16" rx="2" fill="#eef4fb" stroke="#6b95c4"/>
+  <text x="559" y="563" class="score">0</text>
+
+  <rect x="52" y="596" width="617" height="92" fill="#fff" stroke="#d1d6dc"/>
+  <line x1="52" y1="630" x2="669" y2="630" class="line"/>
+  <line x1="207" y1="596" x2="207" y2="688" class="line"/>
+  <line x1="361" y1="596" x2="361" y2="688" class="line"/>
+  <line x1="515" y1="596" x2="515" y2="688" class="line"/>
+  <text x="79" y="615" class="strong">PRESUPUESTO OBRA</text>
+  <text x="221" y="615" class="strong">LÍMITE A CONCEDER (60%</text>
+  <text x="221" y="637" class="strong">DEL PRESUPUESTO) Y MAX</text>
+  <text x="287" y="655" class="strong">15.000€</text>
+  <text x="386" y="615" class="strong">CUANTÍA SOLICITADA</text>
+  <text x="539" y="615" class="strong">CUANTÍA A CONCEDER</text>
+
+  <text x="706" y="205" class="strong">Seguimiento de la tarea</text>
+  <rect x="706" y="222" width="249" height="80" class="comment"/>
+  <text x="711" y="239" class="strong">09/10/2025 12:14 - JAVIER GARCIA-ARAEZ</text>
+  <text x="711" y="254" class="strong">MARTIN-MONTALVO</text>
+  <text x="721" y="274" class="small italic">Ha asignado la tarea a 1400-VÍAS E</text>
+  <text x="721" y="289" class="small italic">INFRAESTRUCTURAS</text>
+  <text x="706" y="320" class="small red">[+] Nuevo comentario</text>
+
+  <rect x="978" y="76" width="8" height="268" rx="4" class="scroll"/>
+  <path d="M982 74l-4 6h8z" fill="#808080"/>
+  <path d="M982 427l-4-6h8z" fill="#808080"/>
+</svg>
