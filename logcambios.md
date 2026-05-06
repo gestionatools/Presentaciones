@@ -1,5 +1,13 @@
 # Log de cambios
 
+## v2.49.0 - 2026-05-06
+- En `Archivo (medios)/Archivo electronico - Gestiona.html` se añadió una nueva diapositiva tras la slide título de **Archivo electrónico**: **Herramientas del módulo de archivo**.
+- La nueva slide incorpora un diagrama radial animado inspirado en la referencia aportada, con nodo central y cuatro herramientas conectadas: clasificación archivística, descripción ENI extendido, control de accesos posterior al cierre y preservación de validez mediante resellado.
+- Se añadieron estilos específicos en `Archivo (medios)/styles-archivo.css` para el diagrama, respetando la paleta teal/azul propia de la presentación y las animaciones existentes del deck.
+- Se actualizó el contador de portada de la presentación en **12** slides reales tras la inserción y se ajustó la numeración visible de pies posteriores a **/12**.
+- Se actualizó la versión visible de la app en `app.js` a **v2.49.0**.
+- Consolidación de versión de la app: **v2.49.0**.
+
 ## v2.48.0 - 2026-05-06
 - Se corrigió la navegación filtrada para que el visor mantenga una correspondencia explícita entre posición visible y número original de slide.
 - `deck-stage.js` ahora conserva `data-deck-original-slide`, sincroniza el hash con el número original y emite `slideIndexChanged` con ese índice original para que las animaciones `is-active` apunten al slide real aunque se hayan desmarcado slides anteriores.
