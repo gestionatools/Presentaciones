@@ -95,3 +95,6 @@ Cuando se solicite añadir nuevos recursos gráficos, deben:
   **Descripción:** recreación vectorial editable de la pantalla “Nuevo circuito de resolución” con propuesta de resolución, circuito, fundamentos de derecho y texto dispositivo, incorporada como SVG para evitar binarios en pull request.  
   **Uso recomendado:** diapositivas sobre circuitos de resolución, configuración CODE en resoluciones y formularios de propuesta resolutoria.
 
+- `Imagen4.gif`  
+  **Descripción:** GIF/captura de la pantalla “Nuevo circuito” para configurar un circuito de tramitación en Gestiona.  
+  **Uso recomendado:** diapositivas sobre tramitación reglada, creación de circuitos y configuración operativa de flujos administrativos.
