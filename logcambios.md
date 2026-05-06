@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.55.0 - 2026-05-06
+- En `GFD/Reglada - CODE - Gestiona.html` se sustituyó el diagrama de la diapositiva **06 CODE – Dónde configurar – Circuitos de resolución** por una recreación vectorial SVG de la pantalla **Nuevo circuito de resolución** aportada.
+- Se eliminó el titular **Tramitador · Político** de la diapositiva para mantener solo la etiqueta contextual de circuitos de resolución y el texto de apoyo.
+- Se incorporó `recursos/circuito-resolucion-propuesta.svg` como recurso textual editable, evitando archivos binarios en el pull request.
+- Se añadió en `GFD/styles-gfd.css` el estilo de presentación para la nueva captura, coherente con las capturas SVG previas.
+- Se documentó el nuevo SVG en `instrucciones para la incorporación de recursos gráficos.md`.
+- Se actualizó la versión visible de la app en `app.js` a **v2.55.0**.
+- Consolidación de versión de la app: **v2.55.0**.
+
 ## v2.54.0 - 2026-05-06
 - Se eliminó del repositorio el recurso binario `recursos/tramitacion-reglada-informe-comision-valoracion.png` para evitar el bloqueo de pull request por archivos binarios.
 - Se incorporó `recursos/tramitacion-reglada-informe-comision-valoracion.svg` como recreación vectorial editable de la captura aportada para la diapositiva **05 CODE – Dónde configurar – Tramitación reglada**.
