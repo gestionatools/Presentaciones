@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.56.1';
+const APP_VERSION = 'v2.57.0';
 
 const presentationGroups = [
   {
@@ -32,6 +32,17 @@ const presentationGroups = [
         title: 'Configuración de procesos - Gestiona',
         path: 'Configuracion procesos - Gestiona/Configuración de procesos - Gestiona.html',
         description: 'Presentación enfocada en flujos y configuración de procesos.'
+      }
+    ]
+  },
+  {
+    name: 'Certificación',
+    items: [
+      {
+        name: 'I Hackathon Gestiona Eivissa',
+        title: 'I Hackathon Gestiona Eivissa',
+        path: 'Hackathon Certificados/I Hackathon Gestiona Eivissa.html',
+        description: 'Sesión informativa sobre comunicación y presentación de proyectos del I Hackathon Gestiona · Comunidad de Certificados. Ibiza, mayo 2026.'
       }
     ]
   },
