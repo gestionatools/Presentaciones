@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funcionalidades desarrollo archivo · Gestiona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-funcionalidades-archivo.css">
+<script src="deck-stage.js"></script>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+<section data-label="01 Acceso interno configuracion">
+  <div class="slide access-config">
+    <div class="brand-squares" aria-hidden="true"><span></span><span></span></div>
+    <header class="reference-title anim anim-1">
+      <h1>ACCESO INTERNO: CONFIGURACION</h1>
+    </header>
+
+    <main class="config-layout">
+      <section class="config-panel anim anim-2" aria-label="Configuración de la serie">
+        <h2>Configuración de la serie</h2>
+        <div class="form-card">
+          <div class="field field-position"><span>Posición</span><div class="input long">/ACCIÓN Y ÓRGANOS DE GOBIERNO/ÓRGANOS DE GOBIERNO</div><button>Mover</button></div>
+          <div class="field"><span>Categoría</span><div class="select">Serie de Expedientes</div></div>
+          <div class="field"><span>Identificación de la serie</span><div class="input code">G0009</div></div>
+          <div class="field"><span>Sección / Serie documental</span><div class="input soft">Constitución de la Junta Local de Gobierno</div></div>
+          <div class="field"><span>Unidad gestora</span><div class="input soft short"></div><div class="search-icon">⌕</div></div>
+        </div>
+      </section>
+
+      <section class="tabs-zone anim anim-3" aria-label="Pestañas de configuración">
+        <div class="tabs">
+          <span>METADATOS</span>
+          <span>DOCUMENTOS BÁSICOS</span>
+          <span>ACTIVIDADES</span>
+          <span class="tab-active">ACCESO</span>
+        </div>
+        <div class="rule"></div>
+        <div class="access-box callout-target">
+          <div class="lookup"><div class="search-field"></div><div class="search-icon">⌕</div></div>
+          <div class="chips"><span>× &nbsp; 0100-SECRETARÍA GENERAL</span><span>× &nbsp; 0200-RECURSOS HUMANOS</span></div>
+        </div>
+        <div class="rule bottom"></div>
+        <label class="external-list"><span></span> Listar en buscador externo</label>
+      </section>
+    </main>
+
+    <aside class="note note-left anim anim-4">
+      <p><strong>El acceso en el listado de archivos también depende de la SERIE DOCUMENTAL.</strong></p>
+      <p>Solo permite establecer Grupos. Es ADITIVO a la lógica normal de gestiona. Aplica solo a expedientes ARCHIVADOS</p>
+    </aside>
+    <svg class="annotation annotation-config" viewBox="0 0 1920 1080" aria-hidden="true">
+      <path class="red-line" d="M430 646 C760 612 1058 605 1216 604" />
+      <path class="red-line" d="M430 646 L668 730" />
+      <rect class="red-rect" x="1143" y="587" width="144" height="51" rx="8" />
+      <rect class="red-rect" x="669" y="678" width="652" height="116" rx="18" />
+    </svg>
+  </div>
+</section>
+
+<section data-label="02 Solicitud de acceso">
+  <div class="slide access-request">
+    <main class="request-stage anim anim-1">
+      <section class="archive-app" aria-label="Listado de archivo">
+        <nav class="topbar"><span class="home-dot">⌂</span><span>Inicio</span><span>Atención Ciudadana ▾</span><span>Registro Electrónico ▾</span><span>Tramitación Administrativa ▾</span></nav>
+        <div class="module-tabs"><span>ARCHIVO</span><span class="selected">Listado</span><span>Búsqueda Avanzada</span></div>
+        <button class="actions-btn">Más acciones⌄</button>
+        <div class="dropdown"><div>Solicitar acceso</div></div>
+        <div class="table-tools"><div class="filter"></div><div class="filter small"></div><div class="filter tiny"></div></div>
+        <div class="archive-table">
+          <div class="row header"><span></span><span>Expediente</span><span>Resumen</span><span>Apertura</span></div>
+          <div class="group-title">Concesión de subvenciones</div>
+          <div class="row"><span class="check"></span><span class="folder dark">▴</span><span><b>EXP2025/159</b><br>Licencias de Ocupación OBSOLETO<br><small>09636 · Licencias de vados</small></span><span>11/03/2025</span></div>
+          <div class="row"><span class="check"></span><span class="folder dark">▴</span><span><b>EXP2025/248</b><br>Licencias de Ocupación OBSOLETO<br><small>09636 · Licencias de vados</small></span><span>11/03/2025</span></div>
+          <div class="row"><span class="check"></span><span class="folder gold">▸</span><span><b>62/2025</b><br>Concesión de Subvenciones<br><small>Ayudas sociales municipales<br>00467 · Concesión de Becas, Ayudas o Premios</small></span><span>11/03/2025</span></div>
+        </div>
+      </section>
+
+      <section class="modal-card request-modal" aria-label="Solicitud de acceso">
+        <button class="close">×</button>
+        <h2>Solicitud de acceso</h2>
+        <label>Observaciones a la solicitud</label>
+        <div class="textarea"></div>
+        <div class="date-row"><span>Inicio</span><div class="date-input"></div><span class="calendar"></span><div class="time-input"></div><span>:</span><div class="time-input short"></div><span class="date-label">Fin</span><div class="date-input"></div><span class="calendar"></span><div class="time-input"></div><span>:</span><div class="time-input short"></div></div>
+      </section>
+    </main>
+
+    <aside class="note note-right anim anim-2">
+      <p>Los usuarios con LISTAR ARCHIVO pueden solicitar acceso a uno o varios expedientes.</p>
+      <p>Esto genera una tarea en el expediente.</p>
+    </aside>
+    <svg class="annotation annotation-request" viewBox="0 0 1920 1080" aria-hidden="true">
+      <path class="red-line" d="M322 291 C505 242 615 210 690 180" />
+      <path class="red-line" d="M922 430 C1055 474 1184 509 1328 545" />
+      <rect class="red-rect" x="62" y="174" width="145" height="48" rx="4" />
+      <rect class="red-rect" x="71" y="252" width="260" height="34" rx="5" />
+      <rect class="red-rect" x="690" y="104" width="530" height="350" rx="44" />
+      <rect class="red-rect" x="1062" y="531" width="760" height="174" rx="0" />
+    </svg>
+  </div>
+</section>
+
+</deck-stage>
+<script src="script.js"></script>
+</body>
+</html>
