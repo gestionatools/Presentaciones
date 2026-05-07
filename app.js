@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.57.0';
+const APP_VERSION = 'v2.58.0';
 
 const presentationGroups = [
   {
@@ -21,6 +21,12 @@ const presentationGroups = [
         title: 'Archivo (medios) - Gestiona',
         path: 'Archivo (medios)/Archivo electronico - Gestiona.html',
         description: 'Duplicado editado de ARCHIVO 2 para el itinerario de medios.'
+      },
+      {
+        name: 'Funcionalidades desarrollo archivo',
+        title: 'Funcionalidades desarrollo archivo - Gestiona',
+        path: 'Funcionalidades desarrollo archivo/Funcionalidades desarrollo archivo.html',
+        description: 'Recreación HTML/CSS/JS de las funcionalidades de acceso interno y solicitud de acceso del módulo de archivo.'
       }
     ]
   },

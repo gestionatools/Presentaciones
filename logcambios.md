@@ -1,5 +1,14 @@
 # Log de cambios
 
+## v2.58.0 - 2026-05-07
+- Se creó la nueva carpeta `Funcionalidades desarrollo archivo` con una presentación HTML/CSS/JS dedicada al desarrollo funcional de archivo.
+- Se reprodujo como slide HTML la pantalla **Acceso interno: configuración**, incluyendo formulario de serie documental, pestaña **ACCESO**, grupos autorizados y anotaciones rojas explicativas.
+- Se reprodujo como slide HTML la pantalla **Solicitud de acceso**, incluyendo listado de archivo, acción **Solicitar acceso**, modal de solicitud y anotación funcional sobre permisos **LISTAR ARCHIVO**.
+- Se reutilizó el runtime local `deck-stage.js` y se aplicó la paleta de la app/landing (`#005166`, `#0f5e73`, `#2a8aa3`, `#7ad5eb`) para mantener coherencia visual con Gestiona.
+- Se añadió la nueva presentación al acordeón **Archivo** del landing (`app.js`).
+- Se actualizó la versión visible de la app en `app.js` a **v2.58.0**.
+- Consolidación de versión de la app: **v2.58.0**.
+
 ## v2.56.1 - 2026-05-06
 - Se corrigió el bloqueo del pull request eliminando el nuevo binario `recursos/circuito-tramitacion.gif` añadido en la consolidación anterior.
 - En `GFD/Reglada - CODE - Gestiona.html` se mantuvo la diapositiva **16 Tramitación Reglada – Circuito** con el título **Circuito de Tramitación** y se cambió la referencia para reutilizar el GIF local ya existente `recursos/Imagen4.gif`.
