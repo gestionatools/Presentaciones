@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Funcionalidades de desarrollo · Archivo · Gestiona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-archivo.css">
+<link rel="stylesheet" href="styles-fda.css">
+<script src="deck-stage.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+<!-- ============ 01 SOLICITUD DE ACCESO ============ -->
+<section data-label="01 Solicitud de acceso">
+  <div class="frame">
+    <div class="head">
+      <div class="brand-mini">
+        <img src="../recursos/Gestiona-PANTONE.svg" alt="Gestiona">
+        <span class="sep"></span>
+        <span>Archivo · Funcionalidades</span>
+      </div>
+      <span class="crumb">Acceso · 01</span>
+    </div>
+
+    <div class="body" style="gap: 80px; align-items: stretch;">
+
+      <!-- LEFT: TEXTO -->
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+        <div class="anim anim-1">
+          <p class="display-eyebrow">Solicitud de acceso</p>
+          <h2 class="h2">Pedir acceso<br>a expedientes<br><span style="color: var(--teal-600);">de archivo.</span></h2>
+        </div>
+        <p class="lead anim anim-2">Los usuarios con permiso <span class="mono-tag">LISTAR ARCHIVO</span> pueden solicitar acceso a uno o varios expedientes. La solicitud queda registrada y genera una tarea en el expediente.</p>
+
+        <div class="feature-callout anim anim-3">
+          <div class="feature-callout__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <p class="feature-callout__title">Permiso necesario</p>
+            <p class="feature-callout__body">Sólo usuarios con <b>LISTAR ARCHIVO</b> ven la opción "Solicitar acceso" en el menú "Más acciones".</p>
+          </div>
+        </div>
+
+        <div class="feature-callout feature-callout--teal anim anim-4">
+          <div class="feature-callout__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div>
+            <p class="feature-callout__title">Tarea generada automáticamente</p>
+            <p class="feature-callout__body">La solicitud crea una tarea asignada en el expediente, con las observaciones y el rango de fechas indicados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: MOCKUP UI -->
+      <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 32px; position: relative;">
+
+        <!-- LISTADO CON MÁS ACCIONES -->
+        <div class="ui-window anim anim-2" style="width: 100%;">
+          <div class="ui-window__bar">
+            <span class="ui-dot" style="background:#ff5f57;"></span>
+            <span class="ui-dot" style="background:#febc2e;"></span>
+            <span class="ui-dot" style="background:#28c840;"></span>
+            <span style="margin-left: 16px; font-family: var(--font-mono); font-size: 16px; color: rgba(255,255,255,0.5);">gestiona.es · /archivo/listado</span>
+          </div>
+          <div class="ui-window__body">
+            <!-- Tab bar -->
+            <div class="ui-tabbar">
+              <span class="ui-tab ui-tab--active">ARCHIVO</span>
+              <span class="ui-tab">Listado</span>
+              <span class="ui-tab">Búsqueda Avanzada</span>
+            </div>
+            <!-- Actions row -->
+            <div class="ui-toolbar">
+              <div class="ui-dropdown">
+                <button class="ui-btn ui-btn--primary">Más acciones <span class="ui-caret">▾</span></button>
+                <div class="ui-dropdown__menu">
+                  <div class="ui-dropdown__item ui-dropdown__item--highlighted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    Solicitar acceso
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fake list rows -->
+            <div class="ui-list">
+              <div class="ui-list__row ui-list__row--selected">
+                <span class="ui-check ui-check--on"></span>
+                <div class="ui-row-icon ui-row-icon--warn">▲</div>
+                <div class="ui-row-meta">
+                  <span class="ui-code">EXT/2025-1<br>0034</span>
+                  <div>
+                    <div class="ui-row-title">Licencias de Ocupación <span class="ui-badge ui-badge--warn">OBSOLETO</span></div>
+                    <div class="ui-row-sub">G0363 · Licencias de varios</div>
+                  </div>
+                </div>
+                <span class="ui-date">11/03/2025</span>
+              </div>
+              <div class="ui-list__row ui-list__row--selected">
+                <span class="ui-check ui-check--on"></span>
+                <div class="ui-row-icon ui-row-icon--warn">▲</div>
+                <div class="ui-row-meta">
+                  <span class="ui-code">EXT/2025-2<br>0035</span>
+                  <div>
+                    <div class="ui-row-title">Licencias de Ocupación <span class="ui-badge ui-badge--warn">OBSOLETO</span></div>
+                    <div class="ui-row-sub">G0363 · Licencias de varios</div>
+                  </div>
+                </div>
+                <span class="ui-date">11/03/2025</span>
+              </div>
+              <div class="ui-list__row">
+                <span class="ui-check"></span>
+                <div class="ui-row-icon ui-row-icon--amber">⚡</div>
+                <div class="ui-row-meta">
+                  <span class="ui-code">02/2025</span>
+                  <div>
+                    <div class="ui-row-title">Concesión de Subvenciones · Ayudas sociales municipales</div>
+                    <div class="ui-row-sub">G0407 · Concesión de Becas</div>
+                  </div>
+                </div>
+                <span class="ui-date">11/03/2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARROW -->
+        <div class="ui-arrow anim anim-3">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--teal-500)" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+
+        <!-- MODAL SOLICITUD -->
+        <div class="ui-modal anim anim-4">
+          <div class="ui-modal__header">
+            <span class="ui-modal__title">Solicitud de acceso</span>
+            <span class="ui-modal__close">✕</span>
+          </div>
+          <div class="ui-modal__body">
+            <label class="ui-label">Observaciones a la solicitud</label>
+            <textarea class="ui-textarea" rows="3" placeholder="Necesito acceso para revisar la documentación adjunta…" readonly></textarea>
+            <div class="ui-date-row">
+              <div class="ui-date-field">
+                <label class="ui-label">Inicio</label>
+                <div class="ui-input-icon"><input class="ui-input" type="text" value="" readonly><span class="ui-icon-cal">📅</span></div>
+              </div>
+              <div class="ui-date-field">
+                <label class="ui-label">Fin</label>
+                <div class="ui-input-icon"><input class="ui-input" type="text" value="" readonly><span class="ui-icon-cal">📅</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>Gestiona · Archivo</span><span class="num">01 / 02</span></div>
+  </div>
+</section>
+
+<!-- ============ 02 ACCESO INTERNO: CONFIGURACIÓN ============ -->
+<section data-label="02 Acceso interno configuracion">
+  <div class="frame">
+    <div class="head">
+      <div class="brand-mini">
+        <img src="../recursos/Gestiona-PANTONE.svg" alt="Gestiona">
+        <span class="sep"></span>
+        <span>Archivo · Funcionalidades</span>
+      </div>
+      <span class="crumb">Acceso · 02</span>
+    </div>
+
+    <div class="body" style="gap: 80px; align-items: stretch;">
+
+      <!-- LEFT: TEXTO -->
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+        <div class="anim anim-1">
+          <p class="display-eyebrow">Acceso interno</p>
+          <h2 class="h2">Configuración<br>de acceso por<br><span style="color: var(--teal-600);">serie documental.</span></h2>
+        </div>
+        <p class="lead anim anim-2">El acceso al listado del archivo también depende de la <b>Serie Documental</b>. La pestaña ACCESO en la configuración de la serie permite definir los grupos con visibilidad.</p>
+
+        <div class="pill-list anim anim-3">
+          <div class="pill-item pill-item--additive">
+            <span class="pill-item__icon">＋</span>
+            <div>
+              <p class="pill-item__label">ADITIVO a la gestión normal</p>
+              <p class="pill-item__desc">Los grupos aquí configurados se suman a los accesos ya otorgados por la lógica de tramitación.</p>
+            </div>
+          </div>
+          <div class="pill-item pill-item--archive">
+            <span class="pill-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+            </span>
+            <div>
+              <p class="pill-item__label">Solo expedientes ARCHIVADOS</p>
+              <p class="pill-item__desc">Esta configuración aplica únicamente sobre expedientes en estado de archivo, no en tramitación activa.</p>
+            </div>
+          </div>
+          <div class="pill-item pill-item--group">
+            <span class="pill-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div>
+              <p class="pill-item__label">Solo grupos (no usuarios individuales)</p>
+              <p class="pill-item__desc">El control granular es por grupos organizativos, no por usuario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: MOCKUP CONFIGURACIÓN -->
+      <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px; position: relative;">
+
+        <div class="ui-window anim anim-2" style="width: 100%;">
+          <div class="ui-window__bar">
+            <span class="ui-dot" style="background:#ff5f57;"></span>
+            <span class="ui-dot" style="background:#febc2e;"></span>
+            <span class="ui-dot" style="background:#28c840;"></span>
+            <span style="margin-left: 16px; font-family: var(--font-mono); font-size: 16px; color: rgba(255,255,255,0.5);">gestiona.es · /admin/series/G0009/acceso</span>
+          </div>
+          <div class="ui-window__body" style="padding: 28px 32px; display: flex; flex-direction: column; gap: 20px;">
+
+            <!-- Título de sección -->
+            <div style="font-size: 20px; font-weight: 600; color: var(--ink-700); border-bottom: 1px solid var(--ink-100); padding-bottom: 14px;">
+              Configuración de la serie
+            </div>
+
+            <!-- Campos de configuración -->
+            <div class="cfg-form">
+              <div class="cfg-row">
+                <span class="cfg-label">Posición</span>
+                <div class="cfg-value cfg-value--path">/ACCIÓN Y ÓRGANOS DE GOBIERNO/ÓRGANOS DE GOBIER…
+                  <button class="cfg-btn-mover">Mover</button>
+                </div>
+              </div>
+              <div class="cfg-row">
+                <span class="cfg-label">Categoría</span>
+                <div class="cfg-value">Serie de Expedientes <span class="cfg-caret">▾</span></div>
+              </div>
+              <div class="cfg-row">
+                <span class="cfg-label">Identificación de la serie</span>
+                <div class="cfg-value cfg-value--input">G0009</div>
+              </div>
+              <div class="cfg-row">
+                <span class="cfg-label">Sección / Serie documental</span>
+                <div class="cfg-value">Constitución de la Junta Local de Gobierno</div>
+              </div>
+            </div>
+
+            <!-- Pestañas -->
+            <div class="cfg-tabs">
+              <span class="cfg-tab">METADATOS</span>
+              <span class="cfg-tab">DOCUMENTOS BÁSICOS</span>
+              <span class="cfg-tab">ACTIVIDADES</span>
+              <span class="cfg-tab cfg-tab--active">ACCESO</span>
+            </div>
+
+            <!-- Contenido pestaña ACCESO -->
+            <div class="cfg-access-panel anim anim-4">
+              <div class="cfg-search-row">
+                <input class="ui-input cfg-search-input" type="text" placeholder="" readonly>
+                <span class="cfg-search-icon">🔍</span>
+              </div>
+              <div class="cfg-groups">
+                <div class="cfg-group-chip">
+                  <span class="cfg-chip-x">✕</span>
+                  <span>0100-SECRETARÍA GENERAL</span>
+                </div>
+                <div class="cfg-group-chip">
+                  <span class="cfg-chip-x">✕</span>
+                  <span>0200-RECURSOS HUMANOS</span>
+                </div>
+              </div>
+              <div class="cfg-ext-check" style="margin-top: 12px;">
+                <span class="cfg-radio"></span>
+                <span style="font-size: 17px; color: var(--ink-500);">Listar en buscador externo</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ANNOTATION BADGE -->
+        <div class="annotation-badge anim anim-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal-600)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>La configuración de acceso es <b>por serie</b> y afecta a todo el fondo documental de esa serie en estado archivado.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>Gestiona · Archivo</span><span class="num">02 / 02</span></div>
+  </div>
+</section>
+
+</deck-stage>
+
+<!-- Tweak state -->
+<script>
+const FDA_TWEAKS = /*EDITMODE-BEGIN*/{
+  "palette": "default",
+  "density": "regular"
+}/*EDITMODE-END*/;
+</script>
+
+<!-- Active slide detection -->
+<script>
+(function() {
+  const stage = document.querySelector('deck-stage');
+  function applyActive(idx) {
+    const sections = stage.querySelectorAll('section');
+    sections.forEach((s, i) => {
+      if (i === idx) s.classList.add('is-active');
+      else s.classList.remove('is-active');
+    });
+  }
+  window.addEventListener('message', function(e) {
+    if (e.data && typeof e.data.slideIndexChanged === 'number') {
+      applyActive(e.data.slideIndexChanged);
+    }
+  });
+  function readHash() {
+    const m = location.hash.match(/(\d+)/);
+    return m ? Math.max(0, parseInt(m[1]) - 1) : 0;
+  }
+  setTimeout(() => applyActive(readHash()), 100);
+  window.addEventListener('hashchange', () => applyActive(readHash()));
+})();
+</script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useEffect } = React;
+const { TweaksPanel, useTweaks, TweakSection, TweakRadio, EditModeTools } = window;
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(FDA_TWEAKS);
+
+  useEffect(() => {
+    document.body.classList.remove('palette-paper', 'palette-night');
+    if (tweaks.palette === 'paper') document.body.classList.add('palette-paper');
+    if (tweaks.palette === 'night') document.body.classList.add('palette-night');
+  }, [tweaks.palette]);
+
+  useEffect(() => {
+    document.body.classList.remove('density-comfortable', 'density-compact');
+    if (tweaks.density === 'comfortable') document.body.classList.add('density-comfortable');
+    if (tweaks.density === 'compact') document.body.classList.add('density-compact');
+  }, [tweaks.density]);
+
+  return (
+    <TweaksPanel title="Tweaks · FDA">
+      <TweakSection title="Paleta">
+        <TweakRadio
+          value={tweaks.palette}
+          onChange={(v) => setTweak('palette', v)}
+          options={[
+            { value: 'default', label: 'Teal' },
+            { value: 'paper', label: 'Papel' },
+            { value: 'night', label: 'Noche' },
+          ]}
+        />
+      </TweakSection>
+      <TweakSection title="Densidad">
+        <TweakRadio
+          value={tweaks.density}
+          onChange={(v) => setTweak('density', v)}
+          options={[
+            { value: 'compact', label: 'Compacta' },
+            { value: 'regular', label: 'Regular' },
+            { value: 'comfortable', label: 'Cómoda' },
+          ]}
+        />
+      </TweakSection>
+      <EditModeTools resourcesPath='../../recursos' />
+    </TweaksPanel>
+  );
+}
+
+const root = document.createElement('div');
+document.body.appendChild(root);
+ReactDOM.createRoot(root).render(<App />);
+</script>
+
+</body>
+</html>

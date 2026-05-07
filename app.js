@@ -21,6 +21,12 @@ const presentationGroups = [
         title: 'Archivo (medios) - Gestiona',
         path: 'Archivo (medios)/Archivo electronico - Gestiona.html',
         description: 'Duplicado editado de ARCHIVO 2 para el itinerario de medios.'
+      },
+      {
+        name: 'Funcionalidades desarrollo archivo',
+        title: 'Funcionalidades de desarrollo · Archivo',
+        path: 'Funcionalidades desarrollo archivo/Funcionalidades desarrollo archivo.html',
+        description: 'Solicitud de acceso a expedientes y configuración de acceso por serie documental.'
       }
     ]
   },
