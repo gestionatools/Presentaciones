@@ -34,13 +34,22 @@ section{
 .slab{font-family:'Roboto Slab',Georgia,serif}
 .roboto{font-family:'Roboto',system-ui,sans-serif}
 
+/* ---- GESTIONA LOGO (todas las diapositivas) ---- */
+section::after{
+  content:'';
+  position:absolute;top:22px;right:24px;
+  width:110px;height:52px;
+  background:url('../recursos/Gestiona-PANTONE.svg') no-repeat center / contain;
+  z-index:20;pointer-events:none;
+}
+
 /* ---- SLIDE HEADER ---- */
 .s-header-bar{
   display:flex;align-items:center;gap:12px;
   margin-bottom:32px;border-bottom:3px solid var(--teal);padding-bottom:14px;
 }
 .s-header-bar .icon-sq{width:16px;height:16px;background:var(--teal);border-radius:3px;opacity:.75;flex-shrink:0}
-.s-header-bar h2{font-size:1.9rem;font-weight:800;color:var(--dark);font-family:'Roboto Slab',serif}
+.s-header-bar h2{font-size:2.1rem;font-weight:800;color:var(--dark);font-family:'Roboto Slab',serif}
 .s-header-bar h2 span{color:var(--teal)}
 
 /* ---- TOP BAR (dark slides) ---- */
@@ -67,18 +76,18 @@ section{
 /* ---- TWO-COL ---- */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .col-section{background:var(--gray);border-radius:16px;padding:22px 26px}
-.col-section h3{color:var(--teal);font-size:.9rem;font-weight:800;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;font-family:'Roboto',sans-serif}
+.col-section h3{color:var(--teal);font-size:1.05rem;font-weight:800;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;font-family:'Roboto',sans-serif}
 
 /* ---- BULLETS ---- */
 .bullets{display:flex;flex-direction:column;gap:11px}
-.bullet{display:flex;gap:13px;align-items:flex-start;font-size:.92rem;color:var(--text);line-height:1.5}
+.bullet{display:flex;gap:13px;align-items:flex-start;font-size:1.05rem;color:var(--text);line-height:1.5}
 .bullet::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--g-accent);flex-shrink:0;margin-top:5px}
 
 /* ---- NUM LIST ---- */
 .num-list{display:grid;gap:12px}
 .num-item{display:flex;align-items:center;gap:18px;background:var(--gray);border-radius:14px;padding:16px 22px}
 .num{min-width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--dark));color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;font-family:'Roboto Slab',serif}
-.num-text{color:var(--dark);font-size:.97rem;font-weight:600}
+.num-text{color:var(--dark);font-size:1.1rem;font-weight:600}
 
 /* ---- ROLES GRID ---- */
 .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
@@ -96,14 +105,14 @@ section{
 .block-card.highlight{background:rgba(0,223,178,.18);border-color:var(--g-accent)}
 .block-num{font-family:'Roboto Slab',serif;font-size:3.5rem;color:var(--g-accent);font-weight:300;line-height:1}
 .block-divider{height:2px;width:40px;background:var(--g-accent-l);margin:12px 0 16px}
-.block-title{font-family:'Roboto Slab',serif;font-size:1.15rem;font-weight:600;color:#fff;line-height:1.2}
+.block-title{font-family:'Roboto Slab',serif;font-size:1.3rem;font-weight:600;color:#fff;line-height:1.2}
 .block-badge{position:absolute;top:14px;right:14px;background:var(--g-accent);color:var(--g-primary-dd);font-family:'Roboto',sans-serif;font-weight:700;font-size:.65rem;padding:4px 10px;border-radius:6px;letter-spacing:.1em}
 
 /* ---- DATA ROW ---- */
 .data-rows{display:flex;flex-direction:column;gap:8px}
 .data-row{display:grid;grid-template-columns:160px 1fr;align-items:start;padding:14px 18px;background:#fff;border-radius:10px;gap:12px}
-.data-label{font-family:'Roboto',sans-serif;font-weight:600;color:var(--g-primary);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
-.data-value{font-size:.92rem;color:var(--g-ink-soft);line-height:1.4}
+.data-label{font-family:'Roboto',sans-serif;font-weight:600;color:var(--g-primary);font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.data-value{font-size:1.05rem;color:var(--g-ink-soft);line-height:1.4}
 
 /* ---- CONTACT BOX ---- */
 .contact-box{background:linear-gradient(135deg,var(--g-primary),var(--g-primary-d));border-radius:18px;padding:36px;color:#fff;position:relative;overflow:hidden}
