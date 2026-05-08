@@ -53,6 +53,17 @@ const presentationGroups = [
     ]
   },
   {
+    name: 'Analiza',
+    items: [
+      {
+        name: 'Analiza – Producto e Implantación',
+        title: 'Analiza – Producto e Implantación',
+        path: 'Analiza/analiza-producto-implantacion/index.html',
+        description: 'Presentación de la plataforma gobernada de analítica de datos de Gestiona: arquitectura, régimen de explotación, democratización del dato e implantación progresiva. 23 slides.'
+      }
+    ]
+  },
+  {
     name: 'GFD',
     items: [
       {
