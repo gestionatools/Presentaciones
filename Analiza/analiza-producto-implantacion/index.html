@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analiza – Producto e Implantación · gestiona analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="deck-stage.js"></script>
+</head>
+<body>
+<deck-stage width="1280" height="720">
+
+<!-- ═══════════════════════════════════════════════════
+     01 — PORTADA  (Tipo B)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-b" data-label="01 Portada">
+
+  <!-- Logo -->
+  <div class="ga-logo">
+    <div class="ga-logo__icon">
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text>
+      </svg>
+    </div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <!-- Left column -->
+  <div class="col-left">
+    <h1 class="cover-title">Demo: Plataforma gobernada de analítica de datos</h1>
+    <div class="cover-divider"></div>
+    <p class="cover-entity">Nombre entidad</p>
+    <p class="cover-date">Mayo 2026</p>
+  </div>
+
+  <!-- Right column: dashboard placeholder -->
+  <div class="col-right">
+    <div class="dashboard-placeholder">
+      <!-- Simulated bar charts -->
+      <div class="db-bar" style="width:60px;height:90px;background:rgba(0,180,182,0.5);left:30px;bottom:50px;"></div>
+      <div class="db-bar" style="width:60px;height:130px;background:rgba(0,180,182,0.65);left:100px;bottom:50px;"></div>
+      <div class="db-bar" style="width:60px;height:75px;background:rgba(0,180,182,0.4);left:170px;bottom:50px;"></div>
+      <div class="db-bar" style="width:60px;height:160px;background:rgba(0,180,182,0.75);left:240px;bottom:50px;"></div>
+      <div class="db-bar" style="width:60px;height:110px;background:rgba(0,180,182,0.55);left:310px;bottom:50px;"></div>
+      <!-- Grid lines -->
+      <div class="db-line" style="width:90%;left:5%;top:80px;"></div>
+      <div class="db-line" style="width:90%;left:5%;top:120px;"></div>
+      <div class="db-line" style="width:90%;left:5%;top:160px;"></div>
+      <div class="db-line" style="width:90%;left:5%;top:200px;"></div>
+      <!-- KPI boxes -->
+      <div class="db-kpi" style="width:100px;height:50px;top:20px;right:20px;">KPI: 98.4%</div>
+      <div class="db-kpi" style="width:100px;height:50px;top:80px;right:20px;">▲ 12.3%</div>
+      <div class="db-kpi" style="width:100px;height:50px;top:140px;right:20px;">1.554 reg.</div>
+      <!-- Area chart line -->
+      <svg style="position:absolute;bottom:0;left:0;width:100%;height:50px;opacity:0.4" viewBox="0 0 400 50" preserveAspectRatio="none">
+        <polyline points="0,40 60,25 120,30 180,10 240,18 300,8 360,15 400,5" fill="none" stroke="#00B4B6" stroke-width="2"/>
+        <polygon points="0,40 60,25 120,30 180,10 240,18 300,8 360,15 400,5 400,50 0,50" fill="rgba(0,180,182,0.15)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     02 — SECCIÓN: Analítica en Gestiona  (Tipo A)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-a" data-label="02 Analítica en Gestiona">
+  <h2 class="section-title">Analítica de datos en Gestiona</h2>
+  <p class="section-subtitle">Contexto y arquitectura general</p>
+  <footer class="slide-footer">Plataforma gobernada de analítica de datos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mayo 2026</footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     03 — Objetivo: Administraciones data-driven  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="03 Objetivo data-driven">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Objetivo: Administraciones data-driven</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left -->
+    <div class="col-45" style="display:flex;flex-direction:column;gap:16px;">
+      <p class="body-text">Toma de decisiones estratégicas basadas en el análisis e interpretación de datos con el objetivo de mejorar el servicio ofrecido al ciudadano. El nuevo proceso de operación con centro en el dato (data-centric) permite poner al ciudadano en el centro de la actividad (citizen-centric).</p>
+
+      <!-- Person placeholder -->
+      <div class="person-placeholder" style="flex:1;min-height:140px;">
+        <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Group of people silhouettes -->
+          <circle cx="20" cy="24" r="10" fill="#00B4B6" opacity="0.6"/>
+          <path d="M5 60 Q5 42 20 42 Q35 42 35 60" fill="#00B4B6" opacity="0.6"/>
+          <circle cx="60" cy="20" r="12" fill="#007E80" opacity="0.7"/>
+          <path d="M42 60 Q42 38 60 38 Q78 38 78 60" fill="#007E80" opacity="0.7"/>
+          <circle cx="100" cy="24" r="10" fill="#00B4B6" opacity="0.6"/>
+          <path d="M85 60 Q85 42 100 42 Q115 42 115 60" fill="#00B4B6" opacity="0.6"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Right: 5 teal bars -->
+    <div class="col-55" style="display:flex;align-items:center;">
+      <div class="dd-bars">
+        <div class="dd-bar">🏛️&nbsp; Gobernanza y cultura del dato</div>
+        <div class="dd-bar">🧭&nbsp; Mejor apoyo en la toma de decisiones</div>
+        <div class="dd-bar">⚡&nbsp; Aumento eficiencia del servicio</div>
+        <div class="dd-bar">🔍&nbsp; Aumentar la confianza y la transparencia</div>
+        <div class="dd-bar">👤&nbsp; Mejorar experiencia del ciudadano</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     04 — Audiencias del dato. Democratización.  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="04 Audiencias del dato">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Audiencias del dato. Democratización.</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left -->
+    <div class="col-40" style="display:flex;align-items:center;">
+      <p class="body-text">El proceso de democratización de datos significa que los datos estarán disponibles a tantas personas como sea posible dentro de una organización. Gracias a esto las decisiones se pueden tomar usando datos que sean tangibles, fáciles de entender y adaptadas a cada una de las audiencias del dato.</p>
+    </div>
+
+    <!-- Right: Pyramid -->
+    <div class="col-60" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;">
+      <!-- Level 0 – Ciudadano (top/narrow) -->
+      <div class="pyramid-level pyramid-level--0">
+        <div class="level-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="9" r="5" fill="white"/>
+            <path d="M4 26 Q4 16 14 16 Q24 16 24 26" fill="white"/>
+          </svg>
+        </div>
+        <div class="level-label" style="color:var(--navy);font-weight:700;font-size:13px;margin-left:8px;">CIUDADANO</div>
+      </div>
+
+      <div class="pyramid-connector"></div>
+
+      <!-- Level 1 -->
+      <div class="pyramid-level pyramid-level--1">
+        <span class="level-ico">👥</span>
+        <div>
+          <div style="font-size:11px;opacity:0.8;">"Audiencias Pasivas"</div>
+          <div style="font-size:12px;font-weight:700;">Analítica Guiada</div>
+        </div>
+      </div>
+
+      <div class="pyramid-connector"></div>
+
+      <!-- Level 2 -->
+      <div class="pyramid-level pyramid-level--2">
+        <span class="level-ico">📊</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;">Analistas</div>
+          <div style="font-size:11px;opacity:0.8;">Analítica Autoservicio</div>
+        </div>
+      </div>
+
+      <div class="pyramid-connector"></div>
+
+      <!-- Level 3 -->
+      <div class="pyramid-level pyramid-level--3">
+        <span class="level-ico">⚙️</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;">Generadores Contenido Analítico</div>
+          <div style="font-size:11px;opacity:0.8;">Técnicos &amp; Data Stewards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     05 — Arquitectura plataforma analítica gobernada  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="05 Arquitectura plataforma">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title xs">Arquitectura plataforma analítica gobernada</h2>
+  </div>
+
+  <div class="slide-body" style="flex-direction:column;gap:10px;">
+    <div class="arch-wrap" style="flex:1;">
+      <!-- Header -->
+      <div class="arch-header">⚙️&nbsp; MOTOR DATOS GOBERNADOS</div>
+
+      <!-- Row 1 -->
+      <div class="arch-row">
+        <div class="arch-cell"><span class="cell-ico">🔍</span>Búsqueda Avanzada</div>
+        <div class="arch-cell"><span class="cell-ico">📊</span>Analítica Guiada</div>
+        <div class="arch-cell"><span class="cell-ico">🛠️</span>Analítica Autoservicio</div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="arch-row">
+        <div class="arch-cell"><span class="cell-ico">🗄️</span>Data Provider</div>
+        <div class="arch-cell span2"><span class="cell-ico">🧩</span>Modelo de Datos</div>
+        <div class="arch-cell"><span class="cell-ico">🌐</span>Capa Semántica</div>
+        <div class="arch-cell"><span class="cell-ico">🤖</span>Motor Cognitivo</div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="arch-row">
+        <div class="arch-cell"><span class="cell-ico">📥</span>Ingestión</div>
+        <div class="arch-cell"><span class="cell-ico">✅</span>Calidad</div>
+        <div class="arch-cell span2"><span class="cell-ico">🔄</span>Transformación</div>
+        <div class="arch-cell span2"><span class="cell-ico">🔒</span>Securización</div>
+      </div>
+    </div>
+
+    <!-- Tech badges -->
+    <div class="arch-footer-logos">
+      <span class="tech-badge">Git</span>
+      <span class="tech-badge">Apache Spark</span>
+      <span class="tech-badge">Qlik Sense</span>
+      <span class="tech-badge">Qlik Cloud</span>
+      <span class="tech-badge">Java / Spring</span>
+      <span class="tech-badge">PostgreSQL</span>
+      <span class="tech-badge">REST API</span>
+      <span class="tech-badge">OAuth 2.0</span>
+      <span class="tech-badge">Kubernetes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     06 — SECCIÓN: Régimen de explotación  (Tipo A)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-a" data-label="06 Régimen de explotación">
+  <div class="section-icon">🔍</div>
+  <h2 class="section-title">Analítica de datos en Gestiona</h2>
+  <p class="section-subtitle">Régimen de explotación</p>
+  <footer class="slide-footer">Plataforma gobernada de analítica de datos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mayo 2026</footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     07 — Nuevo paradigma de Gestiona  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="07 Nuevo paradigma Gestiona">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Nuevo paradigma de Gestiona: Organizaciones Data-driven</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left: 3 navy boxes -->
+    <div class="col-55" style="display:flex;align-items:center;">
+      <div class="paradigm-boxes">
+        <div class="paradigm-box">
+          <div class="pb-title">Asimilación de herramientas de explotación y análisis de los datos</div>
+        </div>
+        <div class="paradigm-arrow">→</div>
+        <div class="paradigm-box">
+          <div class="pb-title">Herramientas de extracción simétricas a funcionalidades de la plataforma</div>
+          <div class="pb-sub">Actualización permanente de modelos de extracción en paralelo a desarrollo</div>
+        </div>
+        <div class="paradigm-arrow">→</div>
+        <div class="paradigm-box">
+          <div class="pb-title">Enfoque de desarrollo de funcionalidades al nuevo paradigma</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: big italic text -->
+    <div class="col-45">
+      <div class="paradigm-right-text">
+        <span>CORE DE GESTIONA<br>ENFOCADO A ESTE<br>PARADIGMA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     08 — Explotación datos en Gestiona  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="08 Explotación datos">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title navy">Explotación datos en Gestiona</h2>
+  </div>
+
+  <div class="slide-body" style="flex-direction:column;">
+    <!-- Banner -->
+    <div class="expl-banner">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="ga-logo__icon" style="width:32px;height:32px;">
+          <svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg>
+        </div>
+        <span style="color:white;font-size:16px;font-weight:700;letter-spacing:0.08em;">gestiona analytics</span>
+      </div>
+    </div>
+
+    <!-- 4 cards -->
+    <div class="expl-cards">
+      <div class="expl-card">
+        <span class="card-ico">🔍</span>
+        <span class="card-label">Búsqueda Avanzada</span>
+      </div>
+      <div class="expl-card">
+        <span class="card-ico">📊</span>
+        <span class="card-label">Analítica Guiada</span>
+      </div>
+      <div class="expl-card">
+        <span class="card-ico">⚙️</span>
+        <span class="card-label">Analítica Autoservicio</span>
+      </div>
+      <div class="expl-card">
+        <span class="card-ico">🎓</span>
+        <span class="card-label">Academy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     09 — Búsquedas avanzadas  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="09 Búsquedas avanzadas">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Búsquedas avanzadas</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left bullets -->
+    <div class="col-45" style="display:flex;align-items:center;">
+      <ul class="bullets">
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Para cada módulo, con capacidades de selección libre dentro de cada contexto.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Integrado en el circuito de trabajo de Gestiona, con links directos a elementos de trabajo.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: screen placeholder -->
+    <div class="col-55" style="display:flex;align-items:center;">
+      <div class="screen-placeholder" style="width:100%;max-height:360px;">
+        <div class="screen-titlebar">
+          <div class="screen-dot red"></div>
+          <div class="screen-dot yellow"></div>
+          <div class="screen-dot green"></div>
+          <div style="flex:1;height:10px;background:#3d3d3d;border-radius:4px;margin-left:8px;"></div>
+        </div>
+        <div class="screen-content">
+          <!-- Search bar -->
+          <div style="height:28px;background:#2a2a2a;border:1px solid #00B4B6;border-radius:6px;display:flex;align-items:center;padding:0 10px;gap:6px;flex-shrink:0;">
+            <span style="color:#00B4B6;font-size:12px;">🔍</span>
+            <div style="flex:1;height:8px;background:#3a3a3a;border-radius:3px;"></div>
+          </div>
+          <!-- Table header -->
+          <div class="screen-table-head" style="flex-shrink:0;"></div>
+          <!-- Table rows -->
+          <div class="screen-table-row" style="background:rgba(0,180,182,0.1);"></div>
+          <div class="screen-table-row" style="background:rgba(255,255,255,0.05);"></div>
+          <div class="screen-table-row" style="background:rgba(0,180,182,0.07);"></div>
+          <div class="screen-table-row" style="background:rgba(255,255,255,0.05);"></div>
+          <div class="screen-table-row" style="background:rgba(0,180,182,0.07);"></div>
+          <div class="screen-table-row" style="background:rgba(255,255,255,0.05);"></div>
+          <div class="screen-table-row" style="background:rgba(0,180,182,0.07);"></div>
+          <div class="screen-table-row" style="background:rgba(255,255,255,0.05);"></div>
+          <!-- Pagination -->
+          <div style="height:22px;display:flex;align-items:center;gap:6px;flex-shrink:0;margin-top:4px;">
+            <div style="width:22px;height:22px;border-radius:4px;background:rgba(0,180,182,0.3);"></div>
+            <div style="width:22px;height:22px;border-radius:4px;background:rgba(255,255,255,0.08);"></div>
+            <div style="width:22px;height:22px;border-radius:4px;background:rgba(255,255,255,0.08);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     10 — Cultura del dato: Búsquedas avanzadas  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="10 Cultura dato – Búsquedas">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Cultura del dato – Búsquedas avanzadas</h2>
+  </div>
+
+  <div class="slide-body" style="flex-direction:column;gap:20px;">
+    <!-- Cycle flow -->
+    <div class="cycle-wrap" style="flex:1;justify-content:center;">
+      <!-- Top flow row -->
+      <div class="cycle-row" style="margin-bottom:8px;">
+        <div class="cycle-node">
+          <div class="cycle-node__icon">📝</div>
+          <div class="cycle-node__label">Creación Transaccional</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">🔍</div>
+          <div class="cycle-node__label">Búsqueda &amp; Análisis</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">🧭</div>
+          <div class="cycle-node__label">Toma de Decisiones</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">⚡</div>
+          <div class="cycle-node__label">Actuaciones</div>
+        </div>
+      </div>
+
+      <!-- Return arrow -->
+      <div style="width:80%;display:flex;align-items:center;justify-content:flex-end;padding-right:40px;">
+        <div style="flex:1;height:2px;background:rgba(0,180,182,0.3);"></div>
+        <div style="font-size:11px;color:var(--teal-primary);padding:0 8px;">↑</div>
+        <div style="width:2px;height:18px;background:rgba(0,180,182,0.3);"></div>
+      </div>
+
+      <!-- Highlight box -->
+      <div style="margin-top:8px;">
+        <div style="font-size:11px;color:#888;text-align:center;margin-bottom:4px;font-style:italic;">
+          Nuevo ciclo de trabajo basado en los datos
+        </div>
+        <div class="cycle-highlight">
+          <div class="cycle-highlight__main">Búsquedas avanzadas embebidas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     11 — Analítica guiada  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="11 Analítica guiada">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Analítica guiada</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left bullets -->
+    <div class="col-40" style="display:flex;align-items:center;">
+      <ul class="bullets">
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Informes analíticos con visión agregada.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Adaptados a cada módulo, selecciones integradas y drill-down.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: dashboard with colorful bars + person placeholder -->
+    <div class="col-60" style="display:flex;flex-direction:column;gap:12px;">
+      <!-- Dashboard bars simulation -->
+      <div style="background:#f0fafa;border:1px solid #c8ecec;border-radius:8px;padding:14px;flex:1;position:relative;overflow:hidden;">
+        <div style="font-size:10px;color:#888;margin-bottom:10px;font-weight:600;">INFORME ANALÍTICO — VISTA AGREGADA</div>
+        <!-- Bar chart CSS -->
+        <div style="display:flex;align-items:flex-end;gap:8px;height:120px;padding-bottom:4px;">
+          <div style="flex:1;background:var(--teal-primary);height:80%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--navy);height:60%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--orange-accent);height:90%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--teal-dark);height:50%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--teal-primary);height:70%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--navy);height:45%;border-radius:4px 4px 0 0;"></div>
+          <div style="flex:1;background:var(--orange-accent);height:85%;border-radius:4px 4px 0 0;"></div>
+        </div>
+        <!-- x-axis -->
+        <div style="height:1px;background:rgba(0,0,0,0.1);margin-top:0;"></div>
+        <div style="display:flex;gap:8px;margin-top:4px;">
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+          <div style="flex:1;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;"></div>
+        </div>
+      </div>
+
+      <!-- Person working placeholder -->
+      <div style="background:linear-gradient(135deg,#e3f0f5 0%,#c8e0ec 100%);border-radius:8px;height:100px;display:flex;align-items:center;justify-content:center;gap:16px;">
+        <svg width="60" height="70" viewBox="0 0 60 70" fill="none">
+          <circle cx="30" cy="18" r="12" fill="#007E80" opacity="0.6"/>
+          <path d="M10 65 Q10 38 30 38 Q50 38 50 65" fill="#007E80" opacity="0.6"/>
+          <!-- laptop suggestion -->
+          <rect x="8" y="52" width="44" height="6" rx="2" fill="#1B3A4B" opacity="0.3"/>
+        </svg>
+        <span style="font-size:12px;color:var(--teal-dark);font-weight:600;">Análisis en tiempo real</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     12 — Cultura del dato: Analítica guiada  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="12 Cultura dato – Analítica guiada">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Cultura del dato – Analítica guiada</h2>
+  </div>
+
+  <div class="slide-body" style="flex-direction:column;gap:20px;">
+    <div class="cycle-wrap" style="flex:1;justify-content:center;">
+      <!-- Flow row -->
+      <div class="cycle-row" style="margin-bottom:8px;">
+        <div class="cycle-node">
+          <div class="cycle-node__icon">📊</div>
+          <div class="cycle-node__label">Visualización Analítica</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">🔬</div>
+          <div class="cycle-node__label">Análisis</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">🧭</div>
+          <div class="cycle-node__label">Toma de Decisiones</div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-node">
+          <div class="cycle-node__icon">⚡</div>
+          <div class="cycle-node__label">Actuaciones</div>
+        </div>
+      </div>
+
+      <!-- Return arrow -->
+      <div style="width:80%;display:flex;align-items:center;justify-content:flex-end;padding-right:40px;">
+        <div style="flex:1;height:2px;background:rgba(0,180,182,0.3);"></div>
+        <div style="font-size:11px;color:var(--teal-primary);padding:0 8px;">↑</div>
+        <div style="width:2px;height:18px;background:rgba(0,180,182,0.3);"></div>
+      </div>
+
+      <!-- Highlight box -->
+      <div style="margin-top:8px;">
+        <div style="font-size:11px;color:#888;text-align:center;margin-bottom:4px;font-style:italic;">
+          Procesamiento gobernado en tiempo real
+        </div>
+        <div class="cycle-highlight">
+          <div class="cycle-highlight__main">Analítica guiada embebida</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     13 — Analítica autoservicio (1)  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="13 Analítica autoservicio 1">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Analítica autoservicio</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left bullets -->
+    <div class="col-42" style="display:flex;align-items:center;">
+      <ul class="bullets">
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Creación de contenido analítico autoservicio para cada módulo.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Entorno colaborativo donde compartir análisis y obtener nuevas conclusiones en equipo.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: KPI dashboard -->
+    <div class="col-58">
+      <div class="kpi-dashboard">
+        <div>
+          <div class="kpi-number">1.554</div>
+          <div class="kpi-label">registros activos · actualizado ahora</div>
+        </div>
+
+        <!-- Area chart SVG -->
+        <div class="kpi-area-chart">
+          <svg viewBox="0 0 400 80" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00B4B6" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#00B4B6" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <polygon points="0,70 40,55 80,60 120,30 160,40 200,20 240,35 280,15 320,25 360,10 400,18 400,80 0,80" fill="url(#areaGrad)"/>
+            <polyline points="0,70 40,55 80,60 120,30 160,40 200,20 240,35 280,15 320,25 360,10 400,18" fill="none" stroke="#00B4B6" stroke-width="2.5"/>
+          </svg>
+        </div>
+
+        <!-- KPI row -->
+        <div class="kpi-row">
+          <div class="kpi-mini"><span>98.4%</span>Tasa completado</div>
+          <div class="kpi-mini"><span>+12%</span>vs. mes anterior</div>
+          <div class="kpi-mini"><span>247</span>Expedientes hoy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     14 — Analítica autoservicio (2)  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="14 Analítica autoservicio 2">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Analítica autoservicio</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left bullets -->
+    <div class="col-42" style="display:flex;align-items:center;">
+      <ul class="bullets">
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Acceso al modelo completo, base + campos personalizados.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Creación "a la carta" según necesidades de explotación.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Exportable para su reutilización en procesos fuera de la plataforma.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: table placeholder -->
+    <div class="col-58">
+      <div class="table-placeholder">
+        <div class="table-ph-head">
+          <div class="table-ph-col"></div>
+          <div class="table-ph-col"></div>
+          <div class="table-ph-col"></div>
+          <div class="table-ph-col short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell teal short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray short"></div>
+        </div>
+        <div class="table-ph-row">
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell teal"></div>
+          <div class="table-ph-cell gray"></div>
+          <div class="table-ph-cell gray short"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     15 — Analítica autoservicio – Mapas  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="15 Analítica autoservicio – Mapas">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Analítica autoservicio – Mapas</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left bullets -->
+    <div class="col-42" style="display:flex;align-items:center;">
+      <ul class="bullets">
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Generación autónoma de mapas analíticos multicapa.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>"Seleccionables", conectados al resto del módulo analítico.</span>
+        </li>
+        <li>
+          <span class="bul-icon">›</span>
+          <span>Permite integrar capas geo públicas/open data.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Map placeholder -->
+    <div class="col-58">
+      <div class="map-placeholder" style="height:380px;">
+        <!-- Simulated geographic borders -->
+        <svg class="map-border-svg" viewBox="0 0 400 300" preserveAspectRatio="none">
+          <path d="M 20 80 L 60 40 L 120 50 L 160 30 L 200 60 L 260 40 L 320 70 L 370 50 L 380 100 L 360 150 L 300 170 L 260 200 L 200 210 L 140 200 L 80 220 L 30 180 Z" fill="none" stroke="#2e7d32" stroke-width="2"/>
+          <path d="M 80 120 L 140 100 L 180 130 L 160 170 L 100 160 Z" fill="none" stroke="#388e3c" stroke-width="1.5"/>
+          <path d="M 200 90 L 260 80 L 300 120 L 280 160 L 220 155 L 190 130 Z" fill="none" stroke="#388e3c" stroke-width="1.5"/>
+          <path d="M 280 140 L 350 130 L 370 180 L 320 200 L 270 185 Z" fill="none" stroke="#388e3c" stroke-width="1.5"/>
+        </svg>
+
+        <!-- Data dots -->
+        <div class="map-dot" style="width:14px;height:14px;background:var(--teal-primary);top:80px;left:120px;"></div>
+        <div class="map-dot" style="width:10px;height:10px;background:var(--orange-accent);top:60px;left:220px;"></div>
+        <div class="map-dot" style="width:16px;height:16px;background:var(--teal-primary);top:120px;left:280px;"></div>
+        <div class="map-dot" style="width:8px;height:8px;background:var(--orange-accent);top:150px;left:160px;"></div>
+        <div class="map-dot" style="width:12px;height:12px;background:var(--navy);top:100px;left:60px;opacity:0.8;"></div>
+        <div class="map-dot" style="width:10px;height:10px;background:var(--teal-dark);top:180px;left:320px;"></div>
+        <div class="map-dot" style="width:14px;height:14px;background:var(--teal-primary);top:200px;left:200px;"></div>
+
+        <!-- Legend -->
+        <div class="map-legend">
+          <div class="map-legend-row">
+            <div class="map-legend-dot" style="background:var(--teal-primary);"></div>
+            <span>Capa analítica 1</span>
+          </div>
+          <div class="map-legend-row">
+            <div class="map-legend-dot" style="background:var(--orange-accent);"></div>
+            <span>Open data</span>
+          </div>
+          <div class="map-legend-row">
+            <div class="map-legend-dot" style="background:var(--navy);"></div>
+            <span>Indicadores</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     16 — Cultura del dato: Cuadro de mando  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="16 Cultura dato – Cuadro de mando">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Cultura del dato – Cuadro de mando</h2>
+  </div>
+
+  <div class="slide-body" style="align-items:flex-start;">
+    <!-- Left: main flow in dashed area -->
+    <div style="flex:1;height:100%;">
+      <div class="cdm-wrap" style="height:100%;">
+        <div class="cdm-area" style="flex:1;height:100%;">
+          <span class="cdm-area__label">ÁREA DE ANÁLISIS</span>
+
+          <!-- Motor Datos Gobernados -->
+          <div class="flow-box full" style="background:#f0fafa;">
+            ⚙️&nbsp; <strong>Motor Datos Gobernados real-time</strong>
+          </div>
+          <div class="flow-arrow" style="align-self:center;">↓</div>
+
+          <!-- 2 Visualización -->
+          <div class="flow-row">
+            <div class="flow-box" style="flex:1;justify-content:center;">📊 Visualización Analítica</div>
+            <div style="width:20px;"></div>
+            <div class="flow-box" style="flex:1;justify-content:center;">📊 Visualización Analítica</div>
+          </div>
+          <div class="flow-arrow" style="align-self:center;">↓</div>
+
+          <!-- Creación D&D -->
+          <div class="flow-box full" style="justify-content:center;">
+            🖱️&nbsp; Creación Drag &amp; Drop
+          </div>
+          <div class="flow-arrow" style="align-self:center;">↓</div>
+
+          <!-- Motor Cognitivo + Capa Semántica -->
+          <div class="flow-row" style="align-items:center;">
+            <div class="flow-box" style="flex:1;justify-content:center;">🤖 Motor Cognitivo (IA)</div>
+            <div class="flow-arrow">↗</div>
+            <div class="flow-box" style="flex:1;justify-content:center;">🌐 Capa Semántica</div>
+          </div>
+        </div>
+
+        <!-- Right sidebar -->
+        <div class="cdm-side" style="width:160px;">
+          <div class="flow-box" style="flex-direction:column;align-items:center;padding:12px 10px;gap:6px;">
+            <span style="font-size:20px;">👩‍💻</span>
+            <span style="font-size:11px;font-weight:700;color:var(--navy);text-align:center;">Generadores Contenido</span>
+          </div>
+          <div class="flow-arrow" style="align-self:center;font-size:18px;">↓</div>
+          <div class="flow-box" style="flex-direction:column;align-items:center;padding:12px 10px;gap:6px;">
+            <span style="font-size:20px;">👥</span>
+            <span style="font-size:11px;font-weight:700;color:var(--navy);text-align:center;">Audiencia Analítica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     17 — SECCIÓN: Proyecto analítica global  (Tipo A)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-a" data-label="17 Proyecto analítica global">
+  <h2 class="section-title">Extracción, explotación y<br>análisis de datos</h2>
+  <p class="section-subtitle">Proyecto de analítica de datos global</p>
+  <footer class="slide-footer">Plataforma gobernada de analítica de datos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mayo 2026</footer>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     18 — Implantación progresiva (1)  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="18 Implantación progresiva 1">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Implantación progresiva</h2>
+  </div>
+  <div class="slide-header__subtitle">De la normalización a la explotación</div>
+
+  <div class="slide-body" style="flex:1;padding-bottom:8px;">
+    <!-- Staircase with 4 steps -->
+    <div style="width:100%;height:100%;position:relative;display:flex;align-items:flex-end;gap:12px;padding-bottom:32px;">
+
+      <!-- Base label -->
+      <div class="stair-base-label">Analítica de día 0</div>
+
+      <!-- Step 1 -->
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Búsqueda Avanzada</div>
+        <div class="stair-step__block" style="height:80px;"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Informes generales embebidos</div>
+        <div class="stair-step__block" style="height:140px;"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Cuadros de mando: Monitorización Migración</div>
+        <div class="stair-step__block" style="height:200px;"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label highlight">Analítica avanzada personalizada</div>
+        <div class="stair-step__block" style="height:260px;background:#E8813A;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     19 — Analítica de día 0: Metodología  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="19 Analítica día 0 metodología">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Analítica de día 0: Metodología de implantación</h2>
+  </div>
+
+  <div class="slide-body" style="align-items:flex-start;">
+    <div class="col-full">
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">Identificación de perfiles de control y monitorización; definición de recursos analíticos personalizados.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">Identificación y clasificación de productores y consumidores de información analítica centrados en el proceso de migración.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">Capacitación global en herramientas de analítica embebida e informes personalizados iniciales.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     20 — Implantación progresiva (2)  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="20 Implantación progresiva 2">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Implantación progresiva</h2>
+  </div>
+  <div class="slide-header__subtitle">De la normalización a la explotación</div>
+
+  <div class="slide-body" style="flex:1;padding-bottom:8px;">
+    <div style="width:100%;height:100%;position:relative;display:flex;align-items:flex-end;gap:10px;padding-bottom:32px;">
+      <div class="stair-base-label">Analítica de día 0</div>
+
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Búsqueda Avanzada</div>
+        <div class="stair-step__block" style="height:60px;"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Informes generales embebidos</div>
+        <div class="stair-step__block" style="height:110px;"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Cuadros de mando: Monitorización General</div>
+        <div class="stair-step__block" style="height:160px;"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Capacitación personal técnico</div>
+        <div class="stair-step__block" style="height:210px;"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label highlight">Proyecto de analítica completo</div>
+        <div class="stair-step__block" style="height:260px;background:linear-gradient(180deg,#00C9CB,#006F80);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     21 — Capacitación de personal técnico  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="21 Capacitación personal técnico">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title sm">Capacitación de personal técnico</h2>
+  </div>
+
+  <div class="slide-body">
+    <!-- Left -->
+    <div class="col-55" style="display:flex;flex-direction:column;gap:16px;justify-content:center;">
+      <div class="cert-subtitle">Programa de certificación de analítica de datos</div>
+      <ul class="bullets">
+        <li>
+          <span class="bul-check">✓</span>
+          <span>Programa de formación híbrido: online y presencial.</span>
+        </li>
+        <li>
+          <span class="bul-check">✓</span>
+          <span>Contenido y formación de dificultad gradual.</span>
+        </li>
+        <li>
+          <span class="bul-check">✓</span>
+          <span>Tutorización y acompañamiento personalizado.</span>
+        </li>
+        <li>
+          <span class="bul-check">✓</span>
+          <span>Acceso permanente a recursos exclusivos, información prioritaria de novedades, proyectos piloto.</span>
+        </li>
+        <li>
+          <span class="bul-check">✓</span>
+          <span>Pertenencia a Comunidad especializada.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: 2 chart placeholders -->
+    <div class="col-45">
+      <div class="cert-charts">
+        <!-- Bar chart -->
+        <div class="bar-chart-mini">
+          <div style="font-size:10px;color:#888;margin-bottom:6px;font-weight:600;">PROGRESO DE FORMACIÓN</div>
+          <div class="bar-chart-mini__bars">
+            <div class="bar-chart-mini__bar" style="height:55%;background:var(--teal-primary);"></div>
+            <div class="bar-chart-mini__bar" style="height:80%;background:var(--teal-dark);"></div>
+            <div class="bar-chart-mini__bar" style="height:65%;background:var(--teal-primary);"></div>
+            <div class="bar-chart-mini__bar" style="height:90%;background:var(--orange-accent);"></div>
+            <div class="bar-chart-mini__bar" style="height:70%;background:var(--teal-dark);"></div>
+          </div>
+        </div>
+
+        <!-- Pie chart -->
+        <div class="pie-chart-mini">
+          <div class="pie-circle"></div>
+          <div class="pie-legend">
+            <div class="pie-legend-row">
+              <div class="pie-legend-dot" style="background:var(--teal-primary);"></div>
+              <span>Online (50%)</span>
+            </div>
+            <div class="pie-legend-row">
+              <div class="pie-legend-dot" style="background:var(--orange-accent);"></div>
+              <span>Presencial (25%)</span>
+            </div>
+            <div class="pie-legend-row">
+              <div class="pie-legend-dot" style="background:#ccc;"></div>
+              <span>Pendiente (25%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     22 — Implantación progresiva (3 – Final)  (Tipo C)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-c" data-label="22 Implantación progresiva final">
+  <div class="ga-logo">
+    <div class="ga-logo__icon"><svg viewBox="0 0 14 14" fill="none"><text x="2" y="11" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="white">g</text></svg></div>
+    <span class="ga-logo__text">gestiona analytics</span>
+  </div>
+
+  <div class="slide-header" style="margin-top:36px;">
+    <div class="slide-header__dot"></div>
+    <h2 class="slide-header__title">Implantación progresiva</h2>
+  </div>
+  <div class="slide-header__subtitle">Escalera completa · Todos los peldaños activos</div>
+
+  <div class="slide-body" style="flex:1;padding-bottom:8px;">
+    <div style="width:100%;height:100%;position:relative;display:flex;align-items:flex-end;gap:10px;padding-bottom:32px;">
+      <div class="stair-base-label">Inicio</div>
+
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Búsqueda Avanzada</div>
+        <div class="stair-step__block" style="height:60px;background:var(--teal-primary);"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Informes generales embebidos</div>
+        <div class="stair-step__block" style="height:110px;background:var(--teal-primary);"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Cuadros de mando: Monitorización General</div>
+        <div class="stair-step__block" style="height:160px;background:var(--teal-dark);"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label">Capacitación personal técnico</div>
+        <div class="stair-step__block" style="height:210px;background:var(--teal-dark);"></div>
+      </div>
+      <div class="stair-step" style="flex:1;">
+        <div class="stair-step__label highlight" style="background:var(--teal-primary);box-shadow:0 4px 16px rgba(0,180,182,0.5);">Analítica avanzada personalizada</div>
+        <div class="stair-step__block" style="height:260px;background:linear-gradient(180deg,var(--teal-gradient-start),var(--teal-gradient-end));"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     23 — Cierre: ¡Muchas gracias!  (Tipo A)
+     ═══════════════════════════════════════════════════ -->
+<section class="type-a" data-label="23 Muchas gracias">
+  <h2 class="section-title" style="font-size:52px;">¡Muchas gracias!</h2>
+  <footer class="slide-footer">Plataforma gobernada de analítica de datos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mayo 2026</footer>
+</section>
+
+</deck-stage>
+
+<script src="slides.js"></script>
+</body>
+</html>
