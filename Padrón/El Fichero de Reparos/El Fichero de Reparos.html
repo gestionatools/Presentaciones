@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Fichero de Reparos – Padrón Municipal</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<script src="deck-stage.js"></script>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+<!-- ══ SLIDE 01 · PORTADA ══════════════════════════════════════════ -->
+<section data-label="01 Portada" class="s-cover">
+  <div class="ptcls" id="p1"></div>
+  <div class="grid3d"></div>
+  <div style="position:relative;z-index:2;text-align:center;">
+    <div class="cbadge"><i class="fas fa-file-alt"></i>&nbsp; Padrón Municipal · Procedimiento de Cifras</div>
+    <h1 class="ctitle">El <span>Fichero de Reparos</span><br>del INE</h1>
+    <p class="csub">Carga del fichero R, revisión de incidencias y presentación de alegaciones</p>
+    <div class="cmeta">
+      <div class="cmi"><i class="fas fa-gavel"></i><span>Res. 20 jul. 2018 · BOE-A-2018-12742</span></div>
+      <div class="cmi"><i class="fas fa-building"></i><span>esPublico · Gestiona</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 02 · ¿QUÉ SON LOS REPAROS? ══════════════════════════ -->
+<section data-label="02 Qué son los reparos" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Contexto</div>
+    <h2 class="stitle">¿Qué son los reparos del INE?</h2>
+    <p class="ssub">Resultado de la comparación entre el fichero del Ayuntamiento y la base del INE</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:960px;width:100%;">
+    <div class="card ai d1">
+      <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+      <div class="card-title">Hasta el 13 de abril de 2026</div>
+      <p class="card-text">El Ayuntamiento envía al INE la copia completa del Padrón a 1 de enero: el fichero <strong>CppmmmAI.aaa</strong>. El INE lo contrasta con su propia base.</p>
+    </div>
+    <div class="card ai d2">
+      <div class="card-icon"><i class="fas fa-not-equal"></i></div>
+      <div class="card-title">Desde el 21 de abril de 2026</div>
+      <p class="card-text">Desde el <strong>21 de abril de 2026</strong> el INE contrasta los ficheros <strong>CppmmmAI.aaa</strong> y, si detecta diferencias, devuelve los reparos <strong>RppmmmIA.aaa</strong>, <strong>DppmmmIA.aaa</strong> y <strong>EppmmmIA.aaa</strong> antes del <strong>10 de mayo</strong> en <strong>IDA-Padrón</strong>.</p>
+    </div>
+    <div class="card ai d3">
+      <div class="card-icon"><i class="fas fa-reply-all"></i></div>
+      <div class="card-title">Hasta el 1 de junio de 2026</div>
+      <p class="card-text">El Ayuntamiento presenta alegaciones mediante el fichero <strong>AppmmmAI.aaa</strong> y la documentación correspondiente hasta el <strong>1 de junio de 2026</strong>. Si necesita nuevos envíos, puede remitir sucesivos ficheros hasta el <strong>12 de junio</strong>.</p>
+    </div>
+  </div>
+
+  <div class="flow ai d4">
+    <div class="fnode"><div class="fntl">C.aaa</div><div class="fnlb">Ayto. → INE</div></div>
+    <div class="farr">→</div>
+    <div class="fnode fon"><div class="fntl">R.aaa</div><div class="fnlb">INE → Ayto.</div></div>
+    <div class="farr">→</div>
+    <div class="fnode"><div class="fntl">A.aaa</div><div class="fnlb">Ayto. → INE</div></div>
+    <div class="farr">→</div>
+    <div class="fnode"><div class="fntl">F.aaa</div><div class="fnlb">INE → Ayto.</div></div>
+  </div>
+
+  <div class="ai d5" style="margin-top:16px;background:rgba(0,109,133,.06);border:1px solid rgba(0,109,133,.15);border-radius:9px;padding:11px 18px;max-width:700px;font-size:12.5px;color:var(--text);text-align:left;">
+    <i class="fas fa-balance-scale" style="color:var(--pri);margin-right:7px;"></i>
+    <strong>Base legal:</strong> Art. 82 del Reglamento de Población y Demarcación Territorial (RD 1690/1986) y Resolución de 20 de julio de 2018 del INE y la DGCAL.
+  </div>
+</section>
+
+<!-- ══ SLIDE 03 · LA FÓRMULA ══════════════════════════════════════ -->
+<section data-label="03 La fórmula de los reparos" class="s-white">
+  <div class="sh ai">
+    <div class="stag">La clave matemática</div>
+    <h2 class="stitle">La fórmula de los reparos</h2>
+    <p class="ssub">Esta ecuación explica la diferencia entre la cifra del Ayuntamiento y la del INE</p>
+  </div>
+
+  <div class="formula ai d1">
+    <div class="fb2"><div class="fcode">Cifra AY</div><div class="flbl">Cifra del Ayuntamiento</div></div>
+    <div class="fop">−</div>
+    <div class="fb2"><div class="fcode" style="color:#F59E0B;">Reg. D</div><div class="flbl">No pasan validación</div></div>
+    <div class="fop">−</div>
+    <div class="fb2"><div class="fcode" style="color:#EF4444;">Reg. R</div><div class="flbl">Solo en Ayuntamiento</div></div>
+    <div class="fop">+</div>
+    <div class="fb2"><div class="fcode" style="color:var(--pri);">Reg. S</div><div class="flbl">Solo en INE</div></div>
+    <div class="fop">=</div>
+    <div class="fb2 hl"><div class="fcode">Cifra INE</div><div class="flbl">Propuesta del INE</div></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:880px;width:100%;margin-top:12px;">
+    <div class="ai d2" style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:14px 16px;">
+      <div style="font-family:var(--fm);font-size:16px;font-weight:700;color:#D97706;">Tipo D</div>
+      <p style="font-size:12px;color:var(--muted);margin-top:5px;line-height:1.55;">Registro del fichero C del Ayuntamiento que no supera la validación técnica del INE (bajas incluidas, FVAR fuera de rango, CVAR+CAUV no admitidos). <strong>TIPOINF=D</strong>.</p>
+    </div>
+    <div class="ai d3" style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);border-radius:9px;padding:14px 16px;">
+      <div style="font-family:var(--fm);font-size:16px;font-weight:700;color:#DC2626;">Tipo R</div>
+      <p style="font-size:12px;color:var(--muted);margin-top:5px;line-height:1.55;">El Ayuntamiento lo contabiliza pero el INE <em>no</em>. El campo <strong>CDEV</strong> indica la causa: incidencia pendiente (NO), error de gestión (GE), error invalidante (IN) o no encontrado (NE).</p>
+    </div>
+    <div class="ai d4" style="background:rgba(0,109,133,.08);border:1px solid rgba(0,109,133,.3);border-radius:9px;padding:14px 16px;">
+      <div style="font-family:var(--fm);font-size:16px;font-weight:700;color:var(--pri);">Tipo S</div>
+      <p style="font-size:12px;color:var(--muted);margin-top:5px;line-height:1.55;">El INE lo contabiliza pero <em>no está</em> en el fichero C del Ayuntamiento. El Ayuntamiento debe confirmar si es una baja (CALEG=BAJA) o investigar el motivo de la ausencia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 04 · TARJETAS FLIP D / R / S ═════════════════════════ -->
+<section data-label="04 Tipos de registros D R S" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Fichero RppmmmIA.aaa</div>
+    <h2 class="stitle">Tres tipos de registros</h2>
+    <p class="ssub">Pasa el cursor sobre cada tarjeta para ver el detalle</p>
+  </div>
+
+  <div class="flips ai d1">
+    <div class="fc fd">
+      <div class="fci">
+        <div class="ff"><div class="fltr">D</div><p>No supera validación</p></div>
+        <div class="fb"><p>Registro del fichero C que presenta un problema técnico: se incluyó una baja, la FVAR está fuera del rango admitido, o CVAR+CAUV tiene valores no válidos. El INE lo devuelve con <strong>TIPOINF=D</strong> sin contrastarlo.</p></div>
+      </div>
+    </div>
+    <div class="fc fr">
+      <div class="fci">
+        <div class="ff"><div class="fltr">R</div><p>Solo en el Ayuntamiento</p></div>
+        <div class="fb"><p>El habitante consta en el Padrón del Ayuntamiento pero el INE <em>no lo contabiliza</em>. El campo <strong>CDEV</strong> explica el motivo: NO (incidencia pendiente), GE (error de gestión), IN (error invalidante) o NE (no encontrado en base INE).</p></div>
+      </div>
+    </div>
+    <div class="fc fs">
+      <div class="fci">
+        <div class="ff"><div class="fltr">S</div><p>Solo en el INE</p></div>
+        <div class="fb"><p>El INE contabiliza al habitante pero <em>no aparece</em> en el fichero C del Ayuntamiento. El Ayuntamiento decide: si está de baja, alegar con <strong>CALEG=BAJA</strong>; si sigue empadronado, investigar por qué faltó en el fichero C.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="fhint ai d2"><i class="fas fa-hand-pointer"></i>&nbsp; Pasa el cursor sobre las tarjetas para ver más información</p>
+
+  <div class="ai d3" style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+    <div style="background:rgba(245,158,11,.1);border-radius:7px;padding:9px 16px;font-size:12px;color:#D97706;font-family:var(--fm);">TIPOINF = D&nbsp;→&nbsp;problema técnico</div>
+    <div style="background:rgba(239,68,68,.1);border-radius:7px;padding:9px 16px;font-size:12px;color:#DC2626;font-family:var(--fm);">TIPOINF = R&nbsp;→&nbsp;solo en Ayto.</div>
+    <div style="background:rgba(0,109,133,.1);border-radius:7px;padding:9px 16px;font-size:12px;color:var(--pri);font-family:var(--fm);">TIPOINF = S&nbsp;→&nbsp;solo en INE</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 05 · CÓDIGO CDEV ════════════════════════════════════ -->
+<section data-label="05 Código CDEV" class="s-white">
+  <div class="sh ai">
+    <div class="stag">Registros R · Campo CDEV</div>
+    <h2 class="stitle">¿Por qué el INE no contabiliza el registro?</h2>
+    <p class="ssub">El campo CDEV indica la causa del reparo en cada registro con TIPOINF=R</p>
+  </div>
+
+  <div class="cdevg ai d1">
+    <div class="ccrd cno">
+      <div class="ccode">CDEV = NO</div>
+      <div class="ctname">Incidencia de coordinación pendiente</div>
+      <p class="ctdesc">El habitante existe en la base del INE pero hay una incidencia sin resolver: alta por nacimiento no confirmada (error 72), baja por defunción pendiente (77/82), duplicado (83X/84X), expulsión de extranjero (115), extranjero no comunitario con inscripción caducada (112), etc.</p>
+    </div>
+    <div class="ccrd cge">
+      <div class="ccode">CDEV = GE</div>
+      <div class="ctname">Error de gestión</div>
+      <p class="ctdesc">La variación enviada tiene un problema de gestión: alta duplicada en el municipio (71), modificación no encontrada (78), movimiento pendiente de confirmación (79), habitante fallecido (89), par alta-baja con la misma fecha (92), o variación con movimiento posterior ya registrado (99).</p>
+    </div>
+    <div class="ccrd cin">
+      <div class="ccode">CDEV = IN</div>
+      <div class="ctname">Error invalidante</div>
+      <p class="ctdesc">La variación contiene un error técnico grave que impide su carga en la base del INE. La <strong>cola de errores</strong> del registro especifica el campo afectado. En la alegación solo se pueden modificar los campos señalados por dicho error.</p>
+    </div>
+    <div class="ccrd cne">
+      <div class="ccode">CDEV = NE</div>
+      <div class="ctname">No encontrado en base INE</div>
+      <p class="ctdesc">El habitante sencillamente no existe en la base del INE o está indebidamente de baja. Es el caso más habitual en altas recientes. Se alega con <strong>CALEG=CINEX</strong>, pero previamente hay que verificar en IDA-Padrón que no existe ya bajo otro identificador para evitar duplicados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 06 · INCIDENCIAS PENDIENTES (NO) ════════════════════ -->
+<section data-label="06 CDEV NO · Incidencias pendientes" class="s-light">
+  <div class="sh ai">
+    <div class="stag">CDEV = NO · Detalle completo</div>
+    <h2 class="stitle">Incidencias de coordinación pendientes</h2>
+    <p class="ssub">Registros que constan en la base del INE pero con una incidencia sin resolver en la fecha de referencia (1 de enero)</p>
+  </div>
+
+  <div class="incg ai d1">
+    <div class="incit"><div class="icode">Error 72</div><div class="idesc">Alta por nacimiento no confirmada por el Registro Civil</div></div>
+    <div class="incit"><div class="icode">Errores 76, 80, 106</div><div class="idesc">Baja por cambio de residencia pendiente de confirmación</div></div>
+    <div class="incit"><div class="icode">Error 82</div><div class="idesc">Baja por defunción del Registro Civil, pendiente de confirmación</div></div>
+    <div class="incit"><div class="icode">Error 77</div><div class="idesc">Baja por defunción del Ayuntamiento, no confirmada con RC</div></div>
+    <div class="incit"><div class="icode">Errores 83X, 84X</div><div class="idesc">Baja por duplicado pendiente de resolver</div></div>
+    <div class="incit"><div class="icode">Error 101</div><div class="idesc">Baja acordada con informe del Consejo de Empadronamiento</div></div>
+    <div class="incit"><div class="icode">Error 112 (BBC 111 sin MRN)</div><div class="idesc">Inscripción caducada de ENCSARP sin renovación recibida</div></div>
+    <div class="incit"><div class="icode">Error 114</div><div class="idesc">Baja por duplicado gestionada por la OCE</div></div>
+    <div class="incit"><div class="icode">Error 115</div><div class="idesc">Baja por expulsión de extranjero ejecutada</div></div>
+    <div class="incit"><div class="icode">Error 116</div><div class="idesc">Baja por retorno voluntario al país de origen</div></div>
+    <div class="incit"><div class="icode">Incidencia 135</div><div class="idesc">Mayor de 16 años sin identificador; el INE comunicó el DNI/NIEX</div></div>
+    <div class="incit"><div class="icode">Incidencia 137</div><div class="idesc">Extranjero que adquirió la nacionalidad española; INE comunicó el DNI</div></div>
+    <div class="incit"><div class="icode">Incidencia 144</div><div class="idesc">Español mayor de 16 años que no figura en la base de DNIs</div></div>
+    <div class="incit"><div class="icode">Incidencias 141, 142, 143</div><div class="idesc">NO_ENCSARP con comprobación de residencia pendiente</div></div>
+  </div>
+
+  <div class="ai d2" style="margin-top:14px;font-size:11.5px;color:var(--muted);text-align:center;">
+    <i class="fas fa-info-circle" style="color:var(--pri);"></i>&nbsp;
+    Esta relación podrá ser actualizada, previo informe favorable del Consejo de Empadronamiento; la versión vigente se publica en <strong>IDA-Padrón</strong>.
+  </div>
+</section>
+
+<!-- ══ SLIDE 07 · ERRORES DE GESTIÓN (GE) ════════════════════════ -->
+<section data-label="07 CDEV GE · Errores de gestión" class="s-white">
+  <div class="sh ai">
+    <div class="stag">CDEV = GE · Detalle completo</div>
+    <h2 class="stitle">Errores de gestión en registros R</h2>
+    <p class="ssub">Variaciones cuya existencia consta en la base del INE pero con un problema de gestión que impide su cómputo en cifras</p>
+  </div>
+
+  <div class="incg ai d1" style="grid-template-columns:repeat(3,1fr);">
+    <div class="incit" style="border-left-color:var(--danger);">
+      <div class="icode" style="color:var(--danger);">Error 71</div>
+      <div class="idesc">Alta duplicada en el municipio: ya existe una inscripción válida del mismo habitante en la base del INE</div>
+    </div>
+    <div class="incit" style="border-left-color:var(--danger);">
+      <div class="icode" style="color:var(--danger);">Error 78</div>
+      <div class="idesc">Modificación no encontrada: la variación hace referencia a una inscripción no localizada en la base del INE</div>
+    </div>
+    <div class="incit" style="border-left-color:var(--danger);">
+      <div class="icode" style="color:var(--danger);">Error 79</div>
+      <div class="idesc">Movimiento pendiente de confirmación: existe un movimiento previo del mismo habitante sin resolver en la base del INE</div>
+    </div>
+    <div class="incit" style="border-left-color:var(--danger);">
+      <div class="icode" style="color:var(--danger);">Error 89</div>
+      <div class="idesc">Habitante fallecido: consta defunción en la base del INE — verificar si es correcto o si procede alegación (fe de vida)</div>
+    </div>
+    <div class="incit" style="border-left-color:var(--danger);">
+      <div class="icode" style="color:var(--danger);">Error 92</div>
+      <div class="idesc">Par alta-baja con la misma fecha: las fechas de salida y entrada del movimiento coinciden exactamente</div>
+    </div>
+    <div class="incit" style="border-left-color:var(--warning);">
+      <div class="icode" style="color:#D97706;">Error 99 · CALEG = ERR99</div>
+      <div class="idesc">Variación con movimiento posterior más reciente ya registrado — alegación diferenciada con <strong>ERR99</strong>; verificar cronología de movimientos</div>
+    </div>
+  </div>
+
+  <div class="ai d2" style="display:grid;grid-template-columns:1fr 1fr;gap:11px;max-width:880px;width:100%;margin-top:14px;">
+    <div class="note note-err">
+      <i class="fas fa-user-minus"></i>
+      <span><strong>Si el INE tiene razón</strong>: no se alega. Se acepta la corrección y se actúa sobre la inscripción del habitante en Gestiona (baja, depuración del duplicado, corrección de fechas…).</span>
+    </div>
+    <div class="note note-ok">
+      <i class="fas fa-paper-plane"></i>
+      <span><strong>Si el INE está equivocado</strong>: alegar con <strong>CALEG=GEST</strong> aportando documentación que acredite la situación real del habitante. Para el error 99, usar específicamente <strong>CALEG=ERR99</strong>.</span>
+    </div>
+  </div>
+
+  <div class="ai d3" style="margin-top:12px;font-size:11.5px;color:var(--muted);text-align:center;">
+    <i class="fas fa-info-circle" style="color:var(--danger);"></i>&nbsp;
+    Esta relación podrá verse ampliada, previo informe favorable del Consejo de Empadronamiento; la versión vigente se publica en <strong>IDA-Padrón</strong>.
+  </div>
+</section>
+
+<!-- ══ SLIDE 08 · ERRORES INVALIDANTES (IN) ══════════════════════ -->
+<section data-label="08 CDEV IN · Errores invalidantes" class="s-light">
+  <div class="sh ai">
+    <div class="stag">CDEV = IN · Detalle completo</div>
+    <h2 class="stitle">Errores invalidantes: identificar y corregir</h2>
+    <p class="ssub">La variación contiene un error técnico grave que impide al INE cargarla en su base de datos; la cola de errores indica el campo afectado</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;width:100%;">
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <div class="card ai d1" style="padding:18px 20px;">
+        <div class="card-icon" style="background:linear-gradient(135deg,var(--purple),#7C3AED);"><i class="fas fa-list-ol"></i></div>
+        <div class="card-title">Paso 1 · Leer la cola de errores</div>
+        <p class="card-text">En el registro R con CDEV=IN, el campo <strong>cola de errores</strong> identifica el campo o campos del movimiento que presentan un valor inválido. Es el punto de partida imprescindible antes de cualquier actuación.</p>
+      </div>
+      <div class="card ai d2" style="padding:18px 20px;">
+        <div class="card-icon" style="background:linear-gradient(135deg,var(--purple),#7C3AED);"><i class="fas fa-edit"></i></div>
+        <div class="card-title">Paso 2 · Corregir solo los campos afectados</div>
+        <p class="card-text">La Resolución prohíbe expresamente modificar campos no señalados por el error. Solo se corrigen los valores indicados en la cola: fecha, código de variación, causa, identificador u otro campo técnico.</p>
+      </div>
+      <div class="card ai d3" style="padding:18px 20px;">
+        <div class="card-icon" style="background:linear-gradient(135deg,var(--purple),#7C3AED);"><i class="fas fa-paper-plane"></i></div>
+        <div class="card-title">Paso 3 · Alegar con CALEG = INVAL</div>
+        <p class="card-text">Una vez corregido el campo afectado, se presenta la alegación con <strong>CALEG=INVAL</strong>. No suele requerirse documentación adicional salvo que el campo corregido la exija por su naturaleza (ej. identificador de documento).</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px;" class="ai d4">
+      <div class="note note-prp">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span><strong>Restricción clave</strong>: en un registro con CDEV=IN únicamente pueden modificarse los campos señalados por el error invalidante. Cualquier otro cambio en el movimiento no será aceptado por el INE.</span>
+      </div>
+      <div class="note note-inf">
+        <i class="fas fa-database"></i>
+        <span><strong>Consultar IDA-Padrón</strong> antes de corregir: puede que el problema derive de un movimiento previo mal registrado o de un identificador erróneo en la variación original. La consulta evita reincidencias.</span>
+      </div>
+      <div class="note note-wrn">
+        <i class="fas fa-sync-alt"></i>
+        <span><strong>Reenvío del movimiento</strong>: en algunos casos el error invalidante proviene de que el movimiento original no llegó correctamente al INE. Puede procederse al reenvío del movimiento en lugar de alegar, si el problema es de transmisión.</span>
+      </div>
+      <div style="background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.2);border-radius:9px;padding:13px 16px;">
+        <div style="font-family:var(--fu);font-size:10.5px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px;"><i class="fas fa-key"></i>&nbsp; Clave única de alegación</div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-family:var(--fm);font-size:18px;font-weight:700;color:var(--purple);">INVAL</span>
+          <span style="font-size:12px;color:var(--muted);line-height:1.45;">Ciudadano devuelto con error invalidante. Se aplica siempre, independientemente del campo afectado.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 09 · NO ENCONTRADO EN BASE INE (NE) ════════════════ -->
+<section data-label="09 CDEV NE · No encontrado" class="s-white">
+  <div class="sh ai">
+    <div class="stag">CDEV = NE · Detalle completo</div>
+    <h2 class="stitle">Habitante no encontrado en la base del INE</h2>
+    <p class="ssub">El registro figura en el Padrón del Ayuntamiento pero el INE no lo localiza en su base de datos</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;width:100%;">
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <div class="card ai d1" style="padding:18px 20px;">
+        <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+        <div class="card-title">Causas habituales</div>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-top:6px;">
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;display:flex;gap:7px;"><span style="color:var(--pri);font-weight:700;flex-shrink:0;">·</span><span>Alta reciente todavía no incorporada a la base del INE</span></div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;display:flex;gap:7px;"><span style="color:var(--pri);font-weight:700;flex-shrink:0;">·</span><span>Movimiento de alta no remitido en el fichero mensual de variaciones</span></div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;display:flex;gap:7px;"><span style="color:var(--pri);font-weight:700;flex-shrink:0;">·</span><span>Diferencias de identificación que impiden el cruce de registros</span></div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;display:flex;gap:7px;"><span style="color:var(--pri);font-weight:700;flex-shrink:0;">·</span><span>Habitante indebidamente de baja en la base del INE</span></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(0,109,133,.08);border:1px solid rgba(0,109,133,.2);border-radius:9px;padding:13px 16px;" class="ai d2">
+        <div style="font-family:var(--fu);font-size:10.5px;font-weight:600;color:var(--pri);text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px;"><i class="fas fa-key"></i>&nbsp; Clave única de alegación</div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-family:var(--fm);font-size:20px;font-weight:700;color:var(--pri);">CINEX</span>
+          <span style="font-size:12px;color:var(--muted);line-height:1.45;">Ciudadano inexistente en base del INE o indebidamente de baja. Solo válida tras verificar en IDA-Padrón que no existe bajo otro identificador.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:11px;" class="ai d3">
+      <div class="note note-err">
+        <i class="fas fa-search"></i>
+        <span><strong>Verificación obligatoria en IDA-Padrón</strong>: antes de alegar con CINEX hay que comprobar que el habitante no existe en la base del INE bajo otro identificador. Alegar CINEX sobre un habitante ya existente genera un duplicado que el INE desestima automáticamente.</span>
+      </div>
+      <div class="note note-inf">
+        <i class="fas fa-sync-alt"></i>
+        <span><strong>Si falta el movimiento de alta</strong>: puede procederse al reenvío del movimiento en el fichero mensual de variaciones, al margen del procedimiento de cifras.</span>
+      </div>
+      <div class="note note-wrn">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span><strong>Excepción BCR · Resolución, apartado XI</strong>: las altas alegadas con CINEX que generen una baja por cambio de residencia en otro municipio <em>no se contabilizan en la revisión del año en curso</em> si esa baja no está ya confirmada por el municipio de origen. Se contabilizarán en la revisión del año siguiente.</span>
+      </div>
+      <div class="note note-ok">
+        <i class="fas fa-file-alt"></i>
+        <span><strong>Diferencias de identificación</strong>: si el habitante existe en la base del INE pero con datos distintos, el fichero <strong>EppmmmIA.aaa</strong> permite corregir esas diferencias de forma desligada del procedimiento de cifras, antes de que acabe el año.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 10 · PROCESO DE REVISIÓN ════════════════════════════ -->
+<section data-label="10 Proceso de revisión" class="s-white">
+  <div class="sh ai">
+    <div class="stag">Hoja de ruta</div>
+    <h2 class="stitle">Proceso de revisión del fichero R</h2>
+    <p class="ssub">Desde la descarga en IDA-Padrón hasta la presentación de alegaciones</p>
+  </div>
+
+  <div class="steps ai d1">
+    <div class="step">
+      <div class="snum">1</div>
+      <div class="sttl">Descargar en IDA-Padrón</div>
+      <p class="sdsc">Descargar en IDA-Padrón el fichero RppmmmIA.aaa devuelto antes del 10 de mayo de 2026 y revisar su resumen</p>
+    </div>
+    <div class="step">
+      <div class="snum">2</div>
+      <div class="sttl">Cargar en Gestiona</div>
+      <p class="sdsc">El módulo de Padrón muestra los registros D, R y S de forma legible</p>
+    </div>
+    <div class="step">
+      <div class="snum">3</div>
+      <div class="sttl">Revisar cada registro</div>
+      <p class="sdsc">Identificar TIPOINF, CDEV y el error de la cola. Consultar IDA-Padrón si es necesario</p>
+    </div>
+    <div class="step">
+      <div class="snum">4</div>
+      <div class="sttl">Seleccionar CALEG</div>
+      <p class="sdsc">Elegir la clave de alegación correcta según TIPOINF + CDEV + Error</p>
+    </div>
+    <div class="step">
+      <div class="snum">5</div>
+      <div class="sttl">Adjuntar documentación</div>
+      <p class="sdsc">Reunir DNI, partida de nacimiento, fe de vida u otro justificante según la clave</p>
+    </div>
+    <div class="step">
+      <div class="snum">6</div>
+      <div class="sttl">Enviar AppmmmAI.aaa</div>
+      <p class="sdsc">Generar y enviar el fichero de alegaciones por IDA-Padrón hasta el 1 de junio de 2026; sucesivos envíos hasta el 12 de junio</p>
+    </div>
+  </div>
+
+  <div class="note note-err ai d2" style="max-width:880px;margin-top:22px;">
+    <i class="fas fa-clock"></i>
+    <span><strong>¡Atención al plazo!</strong> El primer envío de alegaciones debe presentarse hasta el <strong>1 de junio de 2026</strong> y los sucesivos hasta el <strong>12 de junio</strong>. A partir del <strong>15 de junio</strong> comienza la estimación o desestimación automática; lo presentado fuera de plazo <em>no será considerado</em>.</span>
+  </div>
+</section>
+
+<!-- ══ SLIDE 11 · TABLA CLAVES CALEG ════════════════════════════ -->
+<section data-label="11 Tabla de claves CALEG" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Fichero AppmmmAI.aaa · Campo CALEG</div>
+    <h2 class="stitle">Tabla de claves de alegación</h2>
+    <p class="ssub">Cada combinación TIPOINF + CDEV + Error tiene su clave específica</p>
+  </div>
+
+  <div class="tblw ai d1">
+    <table>
+      <thead>
+        <tr>
+          <th>CALEG</th>
+          <th>Significado</th>
+          <th>TIPOINF / CDEV</th>
+          <th>Documentación exigida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="kc">CINEX</span></td><td>Ciudadano inexistente en base INE o indebidamente de baja</td><td>R / NE</td><td>Verificar en IDA-Padrón que no existe para evitar duplicados</td></tr>
+        <tr><td><span class="kc">ANA72</span></td><td>Alta por nacimiento no confirmada por RC</td><td>R / NO (Error 72)</td><td>Partida de nacimiento o libro de familia escaneado</td></tr>
+        <tr><td><span class="kc">BDE82</span></td><td>Defunción errónea generada por el Registro Civil</td><td>R / NO (Error 82)</td><td>Fe de vida u otro documento acreditativo</td></tr>
+        <tr><td><span class="kc">BDE77</span></td><td>Defunción errónea enviada por el Ayuntamiento</td><td>R / NO (Error 77)</td><td>Fe de vida u otro documento acreditativo</td></tr>
+        <tr><td><span class="kc">BCR76</span></td><td>Rechazo de baja por cambio de residencia al extranjero</td><td>R / NO (Error 76)</td><td>Documentación de residencia continuada en España</td></tr>
+        <tr><td><span class="kc">FBCR</span></td><td>Falso duplicado BCR (errores 80, 106, 101-BCR)</td><td>R / NO</td><td>Documentación que acredite que no hay duplicidad</td></tr>
+        <tr><td><span class="kc">FBDU</span></td><td>Falso duplicado (errores 83X, 84X, 101-BDU)</td><td>R / NO</td><td>Documentación que acredite que no hay duplicidad</td></tr>
+        <tr><td><span class="kc">EXTRJ</span></td><td>Inscripción de extranjero no caducada (BBC 111)</td><td>R / NO (Error 112)</td><td>Declaración de renovación del interesado; FVAR = fecha de renovación</td></tr>
+        <tr><td><span class="kc">CR115</span></td><td>Expulsión de extranjero errónea</td><td>R / NO (Error 115)</td><td>Documentación acreditativa del error en la expulsión</td></tr>
+        <tr><td><span class="kc">CR116</span></td><td>Baja por retorno voluntario errónea</td><td>R / NO (Error 116)</td><td>Documentación acreditativa</td></tr>
+        <tr><td><span class="kc">DU114</span></td><td>Duplicado erróneo gestionado por la OCE</td><td>R / NO (Error 114)</td><td>Documentación acreditativa del error</td></tr>
+        <tr><td><span class="kc">IN101</span></td><td>Baja por caducidad o inscripción indebida (error 101 BBC/BII)</td><td>R / NO (Error 101)</td><td>Documentación acreditativa</td></tr>
+        <tr><td><span class="kc">IN135</span></td><td>Mayor de 16 años; el INE comunicó el DNI/NIEX mediante incidencia 135</td><td>R / NO (Inc. 135)</td><td>Sin documentación; consignar datos del documento de la comunicación 135</td></tr>
+        <tr><td><span class="kc">IN137</span></td><td>Extranjero que adquirió la nacionalidad española; INE comunicó DNI</td><td>R / NO (Inc. 137)</td><td>Sin documentación; CVAR=M, CAUV=PE, NACI=108</td></tr>
+        <tr><td><span class="kc">IN144</span></td><td>Español mayor de 16 años no figura en base de DNIs</td><td>R / NO (Inc. 144)</td><td>Copia escaneada del DNI</td></tr>
+        <tr><td><span class="kc">NOENC</span></td><td>NO_ENCSARP que sigue residiendo en el municipio</td><td>R / NO (Inc. 141/142/143)</td><td>Documentación justificativa de la comprobación de residencia</td></tr>
+        <tr><td><span class="kc">GEST</span></td><td>Ciudadano devuelto con error de gestión genérico</td><td>R / GE</td><td>Acreditar la situación real del habitante</td></tr>
+        <tr><td><span class="kc">ERR99</span></td><td>Habitante devuelto con error 99 (movimiento posterior más reciente)</td><td>R / GE (Error 99)</td><td>Verificar la cronología de movimientos</td></tr>
+        <tr><td><span class="kc">INVAL</span></td><td>Ciudadano devuelto con error invalidante</td><td>R / IN</td><td>Corregir los campos afectados por el error invalidante</td></tr>
+        <tr><td><span class="kc">BAJA</span></td><td>Habitante baja en el Padrón del Ayuntamiento</td><td>S</td><td>FVAR = fecha de baja; CVAR+CAUV = causa de la baja</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="ai d2" style="margin-top:10px;font-size:11px;color:var(--muted);"><i class="fas fa-sync-alt" style="color:var(--pri);"></i>&nbsp; Esta relación podrá modificarse entre revisiones anuales, previo informe favorable del Consejo de Empadronamiento; la versión vigente se publica en IDA-Padrón.</p>
+</section>
+
+<!-- ══ SLIDE 12 · DIVISOR CASOS PRÁCTICOS ════════════════════════ -->
+<section data-label="12 Casos prácticos" class="s-divider">
+  <div class="ptcls" id="p2"></div>
+  <div class="grid3d"></div>
+  <div class="divnum">05</div>
+  <div style="position:relative;z-index:2;text-align:center;">
+    <div class="cbadge" style="animation:none;opacity:1;"><i class="fas fa-flask"></i>&nbsp; Casos Prácticos · Ayto. de Valdepinar</div>
+    <h2 class="divttl">Ejemplos de uso<br><span>¿Cómo proceder ante cada reparo?</span></h2>
+    <p class="divsub">Provincia 44 · Municipio 145 · Fichero R44145IA.025</p>
+  </div>
+</section>
+
+<!-- ══ SLIDE 13 · CASO 1 · REGISTRO S ════════════════════════════ -->
+<section data-label="13 Caso 1 · Registro S" class="s-white">
+  <div class="sh ai">
+    <div class="stag">Caso 1 · Registro S</div>
+    <h2 class="stitle">El INE contabiliza a un habitante que nosotros no tenemos</h2>
+    <p class="ssub">Situación SUMA: el INE lo cuenta y el fichero C del Ayuntamiento no lo incluye</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-i"><i class="fas fa-user-plus"></i></div>
+        <div><div class="exttl">Habitante devuelto como registro S</div><span class="extag ts">TIPOINF S · sin nº de error</span></div>
+      </div>
+      <p class="exbody">Si el INE contabiliza al habitante y nosotros no lo tenemos en el fichero C, primero hay que comprobar por qué no aparece en nuestro padrón o por qué no salió en el envío. Aquí el INE ya <strong>suma</strong> ese habitante y nosotros tenemos que decidir si completar, dar de alta o alegar la baja real.</p>
+      <div style="background:#F8FAFC;border-radius:7px;padding:10px 13px;font-family:var(--fm);font-size:12px;color:var(--pri)">TIPOINF S &nbsp;&nbsp; CDEV en blanco<br>El INE lo tiene y el Ayuntamiento no lo ha incluido en el fichero C</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-search"></i> Comprobación en Gestiona</div>
+        <p>Buscar al habitante en el padrón por datos personales e histórico. Puede ocurrir que realmente sí lo tengamos y simplemente no se incluyera correctamente en el fichero remitido al INE.</p>
+      </div>
+      <div class="note note-ok"><i class="fas fa-check-circle"></i><span><strong>Si sí lo tenemos</strong>, le daremos a <strong>completar</strong> porque el habitante ya consta en nuestro padrón y no procede ninguna otra actuación material sobre la inscripción.</span></div>
+      <div class="note note-inf"><i class="fas fa-user-plus"></i><span><strong>Si no lo tenemos y debe estar empadronado</strong>, crearemos el habitante y le daremos de alta en nuestro padrón para regularizar la situación municipal.</span></div>
+      <div class="note note-err"><i class="fas fa-file-export"></i><span><strong>Si de verdad está de baja</strong>, alegaremos para que el INE deje de contarlo, aportando la documentación acreditativa desde el expediente de revisión de cifras.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 14 · CASO 2 · REGISTRO R · CDEV NE ══════════════════ -->
+<section data-label="14 Caso 2 · CDEV NE" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Caso 2 · Registro R · CDEV NE</div>
+    <h2 class="stitle">Habitante que el INE no encuentra en su base de datos</h2>
+    <p class="ssub">Situación RESTA: nosotros lo tenemos en el padrón, pero el INE no lo localiza</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-d"><i class="fas fa-user-slash"></i></div>
+        <div><div class="exttl">Registro R no encontrado por el INE</div><span class="extag tr">TIPOINF R · CDEV NE</span></div>
+      </div>
+      <p class="exbody">Aquí el habitante <strong>resta</strong> porque el INE no lo tiene, pero nosotros sí lo tenemos en nuestro padrón. Debemos comprobar si existe un problema de identificación, si no se envió el movimiento previo o si realmente el habitante no debe seguir de alta.</p>
+      <div style="background:#F8FAFC;border-radius:7px;padding:10px 13px">
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--pri);font-weight:700">TIPOINF R &nbsp;&nbsp; CDEV NE</div>
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--muted)">El INE no lo encuentra en su base de datos</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-search-location"></i> Paso 1 · Buscar y verificar</div>
+        <p>Buscaremos al habitante por nombre y datos identificativos en nuestro padrón. Puede ocurrir que lo tengamos con otro NIF o con diferencias de identificación; si es así, tras comprobarlo, alegaremos con la documentación acreditativa.</p>
+      </div>
+      <div class="note note-inf"><i class="fas fa-paper-plane"></i><span><strong>Puede faltar un envío previo</strong>: el movimiento no se remitió en el fichero de variaciones o hay movimientos anteriores pendientes. En ese caso, puede procederse al <strong>reenvío del movimiento</strong>.</span></div>
+      <div class="note note-ok"><i class="fas fa-file-signature"></i><span><strong>Si nosotros lo tenemos correctamente</strong>, alegaremos desde el expediente de revisión de cifras con el documento acreditativo oportuno.</span></div>
+      <div class="note note-wrn"><i class="fas fa-user-minus"></i><span><strong>Si realmente no debe figurar en nuestro padrón</strong>, le daremos a <strong>completar</strong> el error, iremos al habitante y tramitaremos la baja.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 15 · CASO 3 · ERROR 89 ══════════════════════════════ -->
+<section data-label="15 Caso 3 · Error 89 habitante fallecido" class="s-white">
+  <div class="sh ai">
+    <div class="stag">Caso 3 · Registro R · CDEV GE · Error 89</div>
+    <h2 class="stitle">Habitante devuelto por error de gestión: habitante fallecido</h2>
+    <p class="ssub">El INE tiene registrada una defunción que al Ayuntamiento no le consta o debe comprobar</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-w"><i class="fas fa-times-circle"></i></div>
+        <div><div class="exttl">Error 89 · Habitante fallecido</div><span class="extag tge">TIPOINF R · CDEV GE · Error 89</span></div>
+      </div>
+      <p class="exbody">El INE devuelve el registro porque en su base consta una defunción. En Gestiona debemos verificar si el fallecimiento es real o si se trata de un error que exige alegación documental.</p>
+      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:7px;padding:10px 13px">
+        <div style="font-family:var(--fm);font-size:11.5px;color:#DC2626;font-weight:700">TIPOINF R &nbsp;&nbsp; CDEV GE &nbsp;&nbsp; Error 89</div>
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--muted)">Habitante fallecido en la base del INE</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-book-open"></i> Paso 1 · Verificar la situación real</div>
+        <p>Comprobar si realmente falleció. Si el dato del INE es correcto, en Gestiona iremos al habitante y tramitaremos la <strong>baja por defunción</strong>, dando la razón al INE porque ese registro resta.</p>
+      </div>
+      <div class="note note-err"><i class="fas fa-user-minus"></i><span><strong>Si realmente falleció</strong>, no alegaremos: se tramita la baja por defunción en el padrón municipal.</span></div>
+      <div class="note note-ok"><i class="fas fa-file-medical"></i><span><strong>Si hay error</strong>, alegaremos aportando <strong>fe de vida</strong> o documento acreditativo de que sigue vivo.</span></div>
+      <div class="note note-inf"><i class="fas fa-folder-open"></i><span>Toda la documentación de alegaciones se remitirá desde el <strong>expediente de revisión de cifras</strong> abierto en Gestiona, con salida por <strong>SIR</strong>. Debe reflejarse el <strong>número de documento</strong>; la <strong>minuta cuenta</strong>.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 16 · CASO 4 · ERROR 72 ══════════════════════════════ -->
+<section data-label="16 Caso 4 · Error 72 nacimiento" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Caso 4 · Registro R · CDEV NO · Error 72</div>
+    <h2 class="stitle">Alta por nacimiento no confirmada por el Registro Civil</h2>
+    <p class="ssub">Nosotros sí lo tenemos en el padrón, pero el Registro Civil no lo ha confirmado todavía al INE</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-p"><i class="fas fa-baby"></i></div>
+        <div><div class="exttl">Nacimiento pendiente de confirmación</div><span class="extag tno">TIPOINF R · CDEV NO · Error 72</span></div>
+      </div>
+      <p class="exbody">Es el caso en que el menor sí consta en nuestro padrón, pero el INE todavía no lo incorpora porque el Registro Civil no ha confirmado el nacimiento. Debemos decidir entre alegar con documentación o reenviar el movimiento.</p>
+      <div style="background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.2);border-radius:7px;padding:10px 13px">
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--purple);font-weight:700">TIPOINF R &nbsp;&nbsp; CDEV NO &nbsp;&nbsp; Error 72</div>
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--muted)">Alta por nacimiento no confirmada al INE</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-file-medical"></i> Documentación y actuación</div>
+        <p>Si el nacimiento es real y el menor está correctamente inscrito en nuestro padrón, alegaremos aportando <strong>copia de la partida de nacimiento</strong> o <strong>libro de familia</strong>. También puede procederse al <strong>reenvío del movimiento</strong> sin alegar, según el caso.</p>
+      </div>
+      <div class="note note-prp"><i class="fas fa-pen"></i><span><strong>Alegación</strong>: la documentación se envía electrónicamente a la Delegación Provincial del INE desde el expediente correspondiente.</span></div>
+      <div class="note note-inf"><i class="fas fa-sync-alt"></i><span><strong>Alternativa</strong>: reenviar el movimiento cuando proceda, si el problema deriva de que no llegó correctamente al INE.</span></div>
+      <div class="note note-err"><i class="fas fa-user-times"></i><span><strong>Si el nacimiento no es real</strong>, daremos de baja por <strong>inscripción indebida</strong> y marcaremos el caso como <strong>completar</strong>.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 17 · CASO 5 · BBC 111 / ERROR 112 ══════════════════ -->
+<section data-label="17 Caso 5 · Error 112 ENCSARP" class="s-white">
+  <div class="sh ai">
+    <div class="stag">Caso 5 · Registro R · CDEV NO · BBC 111 / Error 112</div>
+    <h2 class="stitle">Inscripción de extranjero no comunitario caducada (ENCSARP)</h2>
+    <p class="ssub">La inscripción venció sin renovación computable y el INE excluye al habitante de las cifras</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-w"><i class="fas fa-passport"></i></div>
+        <div><div class="exttl">Caducidad ENCSARP</div><span class="extag tno">TIPOINF R · CDEV NO · BBC 111 / 112</span></div>
+      </div>
+      <p class="exbody">El INE excluye al habitante porque la inscripción ha caducado sin renovación válida incorporada a su base. En este supuesto, <strong>ese habitante no va a contar en ningún caso</strong> mientras la situación no quede correctamente regularizada.</p>
+      <div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:7px;padding:10px 13px">
+        <div style="font-family:var(--fm);font-size:11.5px;color:#D97706;font-weight:700">TIPOINF R &nbsp;&nbsp; CDEV NO &nbsp;&nbsp; BBC 111 / Error 112</div>
+        <div style="font-family:var(--fm);font-size:11.5px;color:var(--muted)">Caducidad sin renovación computada por el INE</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-home"></i> Comprobar si la caducidad es correcta</div>
+        <p>Si el habitante no renovó, procede tramitar la <strong>baja por caducidad</strong>, bien mediante expediente de oficio o directamente desde el propio habitante en Gestiona.</p>
+      </div>
+      <div class="note note-wrn"><i class="fas fa-user-minus"></i><span><strong>Si es correcto</strong>, se tramita la baja por caducidad. Mientras no exista renovación válida, el habitante no computará en cifras.</span></div>
+      <div class="note note-ok"><i class="fas fa-file-signature"></i><span><strong>Si no es correcto</strong>, alegaremos porque el interesado sí renovó y esa información no llegó al INE. Se aportará la <strong>declaración de renovación</strong> o documento acreditativo del error de calificación.</span></div>
+      <div class="note note-inf"><i class="fas fa-cogs"></i><span>Puede ocurrir por automatismos del <strong>error 111</strong>: se abrió el expediente, pero al confirmar al extranjero no se ejecutaron o finalizaron correctamente las tareas.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 18 · CASO 6 · DUPLICIDAD ══════════════════════════ -->
+<section data-label="18 Caso 6 · Duplicidad" class="s-light">
+  <div class="sh ai">
+    <div class="stag">Caso 6 · Registro R · Duplicidad</div>
+    <h2 class="stitle">Habitante duplicado en nuestro padrón con incidencia Resta</h2>
+    <p class="ssub">El INE ya contabiliza correctamente a la persona una vez y rechaza el segundo registro duplicado que mantenemos en el Ayuntamiento</p>
+  </div>
+  <div class="exrow">
+    <div class="excrd ai d1">
+      <div class="exhdr">
+        <div class="exico ico-d"><i class="fas fa-copy"></i></div>
+        <div><div class="exttl">Registro duplicado en el padrón municipal</div><span class="extag tr">TIPOINF R · situación de resta</span></div>
+      </div>
+      <p class="exbody">Al comprobar el reparo en nuestro padrón vemos que el habitante está inscrito <strong>dos veces</strong>. El INE ya está contando una inscripción válida y nos devuelve la otra porque somos nosotros quienes mantenemos ese duplicado.</p>
+      <div style="background:#F8FAFC;border-radius:7px;padding:10px 13px;font-family:var(--fm);font-size:12px;color:var(--pri)">Una inscripción ya la cuenta el INE<br>La segunda inscripción es la que debe depurarse en Gestiona</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px" class="ai d2">
+      <div class="exact">
+        <div class="exatl"><i class="fas fa-search"></i> Paso 1 · Verificación en Gestiona</div>
+        <p>Comprobar en el padrón que ambos registros corresponden realmente a la misma persona y que una de las inscripciones ya está correctamente computada por el INE.</p>
+      </div>
+      <div class="note note-inf"><i class="fas fa-equals"></i><span><strong>Interpretación correcta</strong>: no hay que crear nada ni alegar para que el INE lo sume dos veces. El INE ya lo está contando una sola vez, que es lo procedente.</span></div>
+      <div class="note note-err"><i class="fas fa-user-minus"></i><span><strong>Actuación</strong>: debemos dar de baja en nuestro padrón el registro duplicado para dejar una única inscripción válida del habitante.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 19 · CIERRE ══════════════════════════════════════════ -->
+<section data-label="19 Cierre" class="s-close">
+  <div class="ptcls" id="p3"></div>
+  <div class="grid3d"></div>
+  <div style="position:relative;z-index:2;text-align:center;max-width:760px;">
+    <div class="cbadge" style="animation:none;opacity:1;margin-bottom:28px;"><i class="fas fa-check-circle"></i>&nbsp; Resumen</div>
+    <h2 style="font-family:var(--fh);font-size:clamp(26px,4vw,46px);font-weight:700;color:#fff;margin-bottom:22px;line-height:1.2;">
+      Los <span style="color:var(--acc);">tres pasos clave</span> para gestionar los reparos
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 auto 28px;">
+      <div style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:18px 14px;text-align:center;">
+        <div style="font-size:32px;color:var(--acc);margin-bottom:9px;"><i class="fas fa-download"></i></div>
+        <div style="font-family:var(--fh);font-weight:700;color:#fff;font-size:14px;margin-bottom:5px;">Descargar y revisar</div>
+        <p style="font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.5;">Identificar TIPOINF, CDEV y el error de cola de cada registro en el fichero R</p>
+      </div>
+      <div style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:18px 14px;text-align:center;">
+        <div style="font-size:32px;color:var(--acc);margin-bottom:9px;"><i class="fas fa-key"></i></div>
+        <div style="font-family:var(--fh);font-weight:700;color:#fff;font-size:14px;margin-bottom:5px;">Elegir la CALEG correcta</div>
+        <p style="font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.5;">Cada combinación TIPOINF + CDEV + Error tiene su propia clave de alegación</p>
+      </div>
+      <div style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:18px 14px;text-align:center;">
+        <div style="font-size:32px;color:var(--acc);margin-bottom:9px;"><i class="fas fa-paper-plane"></i></div>
+        <div style="font-family:var(--fh);font-weight:700;color:#fff;font-size:14px;margin-bottom:5px;">Enviar antes del plazo</div>
+        <p style="font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.5;">El calendario anual es el límite absoluto; los ficheros tardíos no son considerados</p>
+      </div>
+    </div>
+    <div style="background:rgba(0,223,178,.14);border:1px solid rgba(0,223,178,.28);border-radius:9px;padding:14px 22px;margin-bottom:20px;">
+      <p style="font-size:13px;color:rgba(255,255,255,.82);line-height:1.6;">
+        Base legal: <strong style="color:var(--acc);">Resolución de 20 de julio de 2018</strong> de la Presidencia del INE y la DGCAL
+        · BOE n.º 228, 20 de septiembre de 2018 · Ref. BOE-A-2018-12742
+      </p>
+    </div>
+    <p style="color:rgba(255,255,255,.45);font-size:12px;font-family:var(--fu);">
+      <i class="fas fa-building"></i>&nbsp; esPublico · Gestiona · Padrón Municipal de Habitantes
+    </p>
+  </div>
+</section>
+
+</deck-stage>
+
+<script>
+(function () {
+  function mkParticles(id) {
+    const c = document.getElementById(id);
+    if (!c) return;
+    for (let i = 0; i < 16; i++) {
+      const p = document.createElement('div');
+      p.className = 'ptcl';
+      const sz = Math.random() * 55 + 18;
+      p.style.cssText = `
+        width:${sz}px; height:${sz}px;
+        left:${Math.random() * 100}%;
+        top:${Math.random() * 100}%;
+        animation-delay:${Math.random() * 9}s;
+        animation-duration:${6 + Math.random() * 6}s;
+        opacity:${.1 + Math.random() * .2};
+      `;
+      c.appendChild(p);
+    }
+  }
+
+  function animateSlide(slide) {
+    const els = slide.querySelectorAll('.ai');
+    els.forEach(el => el.classList.remove('vis'));
+    els.forEach((el, i) => setTimeout(() => el.classList.add('vis'), 80 + i * 90));
+  }
+
+  const stage = document.querySelector('deck-stage');
+
+  stage.addEventListener('slidechange', (e) => {
+    animateSlide(e.detail.slide);
+  });
+
+  mkParticles('p1');
+  mkParticles('p2');
+  mkParticles('p3');
+})();
+</script>
+</body>
+</html>

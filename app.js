@@ -1,4 +1,4 @@
-const APP_VERSION = 'v2.58.0';
+const APP_VERSION = 'v2.59.0';
 
 const presentationGroups = [
   {
@@ -49,6 +49,17 @@ const presentationGroups = [
         title: 'I Hackathon Gestiona Eivissa',
         path: 'Hackathon Certificados/I Hackathon Gestiona Eivissa.html',
         description: 'Sesión informativa sobre comunicación y presentación de proyectos del I Hackathon Gestiona · Comunidad de Certificados. Ibiza, mayo 2026.'
+      }
+    ]
+  },
+  {
+    name: 'Padrón',
+    items: [
+      {
+        name: 'El Fichero de Reparos',
+        title: 'El Fichero de Reparos del INE',
+        path: 'Padrón/El Fichero de Reparos/El Fichero de Reparos.html',
+        description: 'Carga del fichero R, revisión de incidencias (TIPOINF D/R/S, CDEV NO/GE/IN/NE) y presentación de alegaciones ante el INE. Incluye tabla de claves CALEG y casos prácticos.'
       }
     ]
   },
